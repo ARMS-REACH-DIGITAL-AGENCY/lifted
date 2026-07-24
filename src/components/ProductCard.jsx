@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 import { getProductCTA, getStatusBadge, getStatusColor } from '../config/launchState.js'
 
 const COLLECTION_COLORS = {
-  core: '#C8922A',
+  core: 'var(--gold-deep)',
   pickup: '#5B8DB8',
   athlete: '#1A2744',
   youth: '#7B9E4A',
@@ -20,7 +20,7 @@ export default function ProductCard({ product }) {
   const cta = getProductCTA(product)
   const statusLabel = getStatusBadge(product.status)
   const statusColor = getStatusColor(product.status)
-  const colColor = COLLECTION_COLORS[product.collectionId] || '#C8922A'
+  const colColor = COLLECTION_COLORS[product.collectionId] || 'var(--gold-deep)'
 
   const frontImg = product.sampleFront || product.frontMockup || product.frontArtwork
   const backImg = product.sampleBack || product.backMockup || product.backArtwork

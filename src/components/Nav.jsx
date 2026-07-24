@@ -96,7 +96,7 @@ export default function Nav() {
               textDecoration: 'none', padding: '9px 18px', borderRadius: 100,
               transition: 'background 0.18s, box-shadow 0.18s', whiteSpace: 'nowrap',
             }}
-            onMouseEnter={e => { e.currentTarget.style.background = 'var(--gold-light)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(200,146,42,0.35)' }}
+            onMouseEnter={e => { e.currentTarget.style.background = 'var(--gold-light)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(238,191,104,0.4)' }}
             onMouseLeave={e => { e.currentTarget.style.background = 'var(--gold)'; e.currentTarget.style.boxShadow = 'none' }}
             >Join the Community</Link>
           </div>

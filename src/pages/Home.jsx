@@ -16,7 +16,7 @@ function useLiftIn(ref) {
 }
 
 const collections = [
-  { name: 'Core', color: '#C8922A', icon: '◈', desc: 'Simple, elegant daily brand affinity.', messages: ['Stay Liftêd™', 'Lift Yourself. Lift Others.', 'Wear Encouragement.', 'The World Needs More Liftêd™'] },
+  { name: 'Core', color: 'var(--gold-deep)', icon: '◈', desc: 'Simple, elegant daily brand affinity.', messages: ['Stay Liftêd™', 'Lift Yourself. Lift Others.', 'Wear Encouragement.', 'The World Needs More Liftêd™'] },
   { name: 'Pick-Me-Up', color: '#5B8DB8', icon: '↑', desc: 'Direct messages of hope, resilience, and encouragement.', messages: ['You Matter Here.', 'Your Story Isn\'t Over.', 'One More Day.', 'Better Days Are Ahead.'] },
   { name: 'Athlete', color: '#1A2744', icon: '⚡', desc: 'Motivation centered on discipline, preparation, and resilience.', messages: ['Never Finished.', 'Earn Tomorrow.', 'Outwork Yesterday.', 'Built Through Adversity.'] },
   { name: 'Youth', color: '#7B9E4A', icon: '★', desc: 'Positive messaging for identity, confidence, and belonging.', messages: ['You Belong Here.', 'Different Is Not Less.', 'Your Voice Matters.', 'The Future Looks Good on You.'] },
@@ -50,8 +50,8 @@ export default function Home() {
         display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden', padding: '80px 0 60px',
       }}>
         {/* Glow */}
-        <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: '100%', height: '60%', background: 'radial-gradient(ellipse at 50% 100%, rgba(200,146,42,0.18) 0%, transparent 65%)', pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', top: '20%', right: '10%', width: 400, height: 400, background: 'radial-gradient(circle, rgba(200,146,42,0.06) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: '100%', height: '60%', background: 'radial-gradient(ellipse at 50% 100%, rgba(238,191,104,0.18) 0%, transparent 65%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '20%', right: '10%', width: 400, height: 400, background: 'radial-gradient(circle, rgba(238,191,104,0.06) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ maxWidth: 760 }}>
@@ -90,7 +90,7 @@ export default function Home() {
                 <div className="badge badge-gold" style={{ marginBottom: 16 }}>Front of Garment</div>
                 <img src="/images/shirt-front-real.jpg" alt="You Matter Here shirt front" style={{ maxHeight: 340, margin: '0 auto', borderRadius: 8 }} />
               </div>
-              <div style={{ background: 'rgba(200,146,42,0.08)', border: '1px solid rgba(200,146,42,0.2)', borderRadius: 10, padding: '16px 20px' }}>
+              <div style={{ background: 'rgba(238,191,104,0.08)', border: '1px solid rgba(238,191,104,0.2)', borderRadius: 10, padding: '16px 20px' }}>
                 <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 6 }}>Internal Lift</div>
                 <p style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600, color: 'var(--navy)' }}>The front speaks to the wearer.</p>
                 <p style={{ fontSize: 14, color: 'var(--mid-gray)', marginTop: 6 }}>A personal affirmation for the person wearing it — a quiet reminder that they matter.</p>
@@ -181,7 +181,7 @@ export default function Home() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 64, alignItems: 'center' }}>
             <div>
-              <div className="lift-in" style={{ display: 'inline-block', background: 'rgba(200,146,42,0.15)', border: '1px solid rgba(200,146,42,0.4)', borderRadius: 100, padding: '6px 16px', marginBottom: 20 }}>
+              <div className="lift-in" style={{ display: 'inline-block', background: 'rgba(238,191,104,0.15)', border: '1px solid rgba(238,191,104,0.4)', borderRadius: 100, padding: '6px 16px', marginBottom: 20 }}>
                 <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>🔥 Now in Production</span>
               </div>
               <h2 className="lift-in d1 section-title-light">The First Liftêd™ Samples Are Now in Production</h2>
@@ -293,7 +293,7 @@ export default function Home() {
 
       {/* ── Section 8: Closing CTA ── */}
       <section ref={s8} style={{ background: 'linear-gradient(160deg, #0F1A30 0%, #1A2744 100%)', padding: '96px 0', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: '100%', height: '60%', background: 'radial-gradient(ellipse at 50% 100%, rgba(200,146,42,0.2) 0%, transparent 65%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: '100%', height: '60%', background: 'radial-gradient(ellipse at 50% 100%, rgba(238,191,104,0.2) 0%, transparent 65%)', pointerEvents: 'none' }} />
         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
           <div className="lift-in">
             <div className="section-eyebrow" style={{ color: 'var(--gold)' }}>The Movement</div>

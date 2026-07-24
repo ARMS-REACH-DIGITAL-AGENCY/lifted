@@ -14,7 +14,7 @@ function useLiftIn(ref) {
 }
 
 const lanes = [
-  { n: '01', title: 'Liftêd™ Retail', desc: 'Direct-to-consumer brand sales through DTC website, subscription box, and future retail. This lane builds brand equity, customer data, and cultural relevance.', color: '#C8922A' },
+  { n: '01', title: 'Liftêd™ Retail', desc: 'Direct-to-consumer brand sales through DTC website, subscription box, and future retail. This lane builds brand equity, customer data, and cultural relevance.', color: 'var(--gold-deep)' },
   { n: '02', title: 'Liftêd™ Collaborations', desc: 'Co-branded collections with organizations, schools, teams, churches, nonprofits, and causes. Each collaboration carries the Liftêd™ meaning and identity.', color: '#5B8DB8' },
   { n: '03', title: 'Custom Apparel Services', desc: 'Production capabilities for client-owned branding. Separate from the consumer brand — generates cash flow while Liftêd™ retail scales.', color: '#7B9E4A' },
 ]
@@ -120,7 +120,7 @@ export default function Invest() {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24, marginBottom: 48 }}>
             {[
-              { phase: 'Phase 1', name: 'Basecamp', year: 'Year 1', target: '$137,500', customers: '2,500', color: '#C8922A', milestone: 'First 100 Sales' },
+              { phase: 'Phase 1', name: 'Basecamp', year: 'Year 1', target: '$137,500', customers: '2,500', color: 'var(--gold-deep)', milestone: 'First 100 Sales' },
               { phase: 'Phase 2', name: 'The Climb', year: 'Year 2', target: '$450,000', customers: '7,500', color: '#5B8DB8', milestone: '1,000 Customers' },
               { phase: 'Phase 3', name: 'The Summit', year: 'Year 3', target: '$1.3M+', customers: '20,000', color: '#7B9E4A', milestone: '10,000 Customers' },
             ].map((p, i) => (

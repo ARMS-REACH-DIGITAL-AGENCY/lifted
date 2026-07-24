@@ -67,7 +67,7 @@ export function getStatusBadge(status) {
 export function getStatusColor(status) {
   const map = {
     concept: '#6B6560',
-    samples_in_production: '#C8922A',
+    samples_in_production: 'var(--gold-deep)',
     sample_review: '#5B8DB8',
     founding_vote: '#7B9E4A',
     preorder: '#8B4513',
