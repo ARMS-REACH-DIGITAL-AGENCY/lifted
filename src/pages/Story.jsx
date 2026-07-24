@@ -18,14 +18,14 @@ export default function Story() {
 
   return (
     <div ref={ref} style={{ paddingTop: 68 }}>
-      <section style={{ background: 'linear-gradient(160deg, #0F1A30 0%, #1A2744 100%)', padding: '80px 0 64px' }}>
+      <section style={{ background: 'var(--black)', padding: '80px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
         <div className="container">
           <div style={{ maxWidth: 680 }}>
             <div className="lift-in section-eyebrow" style={{ color: 'var(--gold)' }}>Our Story</div>
             <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
               More Than Apparel.<br /><span style={{ color: 'var(--gold)' }}>A Pick-Me-Up.</span>
             </h1>
-            <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>
+            <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
               Liftêd™ was built on a simple belief: the right message, worn at the right moment, can change someone's day — or their life.
             </p>
           </div>
@@ -50,18 +50,18 @@ export default function Story() {
               </p>
             </div>
             <div className="lift-in d2">
-              <div style={{ background: 'var(--navy)', borderRadius: 16, padding: 40 }}>
+              <div style={{ background: 'var(--charcoal)', borderRadius: 4, padding: 40 }}>
                 <blockquote style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(20px, 3vw, 28px)', fontStyle: 'italic', color: 'white', lineHeight: 1.4, marginBottom: 24 }}>
                   "Most apparel tells the world what you bought. Liftêd™ tells someone what they may need to hear."
                 </blockquote>
                 <div style={{ display: 'flex', gap: 32 }}>
                   <div>
                     <div style={{ fontFamily: 'var(--font-display)', fontSize: 28, fontWeight: 700, color: 'var(--gold)' }}>Internal</div>
-                    <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>Lift for the wearer</div>
+                    <div style={{ fontSize: 13, color: 'rgba(247,244,236,0.5)' }}>Lift for the wearer</div>
                   </div>
                   <div>
                     <div style={{ fontFamily: 'var(--font-display)', fontSize: 28, fontWeight: 700, color: 'var(--gold)' }}>External</div>
-                    <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>Radiance for the world</div>
+                    <div style={{ fontSize: 13, color: 'rgba(247,244,236,0.5)' }}>Radiance for the world</div>
                   </div>
                 </div>
               </div>
@@ -70,7 +70,7 @@ export default function Story() {
         </div>
       </section>
 
-      <section style={{ background: 'var(--warm-white)', padding: '80px 0' }}>
+      <section style={{ background: 'var(--off-white)', padding: '80px 0' }}>
         <div className="container">
           <div className="lift-in" style={{ textAlign: 'center', marginBottom: 48 }}>
             <div className="section-eyebrow">Where We Are Now</div>
@@ -85,21 +85,21 @@ export default function Story() {
             ].map((item, i) => (
               <div key={item.title} className={`lift-in d${i+1} card`} style={{ padding: 28 }}>
                 <div style={{ fontSize: 32, marginBottom: 16 }}>{item.icon}</div>
-                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 700, color: 'var(--navy)', marginBottom: 10 }}>{item.title}</h3>
-                <p style={{ fontSize: 14, color: 'var(--mid-gray)', lineHeight: 1.7 }}>{item.desc}</p>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 700, color: 'var(--charcoal)', marginBottom: 10 }}>{item.title}</h3>
+                <p style={{ fontSize: 14, color: 'var(--muted-olive)', lineHeight: 1.7 }}>{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section style={{ background: 'var(--navy)', padding: '80px 0', textAlign: 'center' }}>
+      <section style={{ background: 'var(--charcoal)', padding: '80px 0', textAlign: 'center' }}>
         <div className="container">
           <div className="lift-in">
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 700, color: 'white', marginBottom: 16 }}>
               The World Needs More Liftêd™.
             </h2>
-            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.65)', maxWidth: 500, margin: '0 auto 32px', lineHeight: 1.7 }}>
+            <p style={{ fontSize: 17, color: 'rgba(247,244,236,0.65)', maxWidth: 500, margin: '0 auto 32px', lineHeight: 1.7 }}>
               Join us before the official launch. Help bring this brand to the people who need it most.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, justifyContent: 'center' }}>

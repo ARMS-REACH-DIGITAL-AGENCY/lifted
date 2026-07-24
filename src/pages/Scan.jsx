@@ -19,16 +19,16 @@ export default function Scan() {
   return (
     <div ref={ref} style={{ paddingTop: 68 }}>
       {/* Hero */}
-      <section style={{ background: 'linear-gradient(160deg, #0F1A30 0%, #1A2744 100%)', padding: '80px 0 64px', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ background: 'var(--black)', padding: '80px 0 64px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: '100%', height: '60%', background: 'radial-gradient(ellipse at 50% 100%, rgba(238,191,104,0.2) 0%, transparent 65%)', pointerEvents: 'none' }} />
         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
-          <div className="lift-in" style={{ display: 'inline-block', background: 'rgba(238,191,104,0.15)', border: '1px solid rgba(238,191,104,0.4)', borderRadius: 100, padding: '6px 20px', marginBottom: 24 }}>
+          <div className="lift-in" style={{ display: 'inline-block', background: 'rgba(238,191,104,0.15)', border: '1px solid rgba(238,191,104,0.4)', borderRadius: 4, padding: '6px 20px', marginBottom: 24 }}>
             <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>You Found Liftêd™</span>
           </div>
           <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 6vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
             You Found Liftêd™<br /><span style={{ color: 'var(--gold)' }}>Before the Official Launch.</span>
           </h1>
-          <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(255,255,255,0.75)', maxWidth: 580, margin: '0 auto 16px', lineHeight: 1.7 }}>
+          <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.75)', maxWidth: 580, margin: '0 auto 16px', lineHeight: 1.7 }}>
             The message that brought you here is part of a new apparel brand built around encouragement, resilience, hope, and people lifting people.
           </p>
           <p className="lift-in d3" style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', maxWidth: 480, margin: '0 auto 40px', fontStyle: 'italic' }}>
@@ -59,7 +59,7 @@ export default function Scan() {
       </section>
 
       {/* Quick form */}
-      <section style={{ background: 'var(--warm-white)', padding: '64px 0' }}>
+      <section style={{ background: 'var(--off-white)', padding: '64px 0' }}>
         <div className="container">
           <div style={{ maxWidth: 600, margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: 40 }}>
@@ -67,7 +67,7 @@ export default function Scan() {
               <h2 className="section-title">Tell Us How You'd Like to Be Involved</h2>
               <p className="section-body" style={{ margin: '0 auto' }}>Leave your info and we'll follow up based on your interest.</p>
             </div>
-            <div style={{ background: 'white', borderRadius: 16, padding: 40, boxShadow: 'var(--shadow-md)' }}>
+            <div style={{ background: 'white', borderRadius: 4, padding: 40, boxShadow: '3px 3px 0 var(--charcoal)' }}>
               <LiftForm type="qr" />
             </div>
           </div>

@@ -30,14 +30,14 @@ export default function Schedule() {
 
   return (
     <div ref={ref} style={{ paddingTop: 68 }}>
-      <section style={{ background: 'linear-gradient(160deg, #0F1A30 0%, #1A2744 100%)', padding: '80px 0 64px' }}>
+      <section style={{ background: 'var(--black)', padding: '80px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
         <div className="container">
           <div style={{ maxWidth: 680 }}>
             <div className="lift-in section-eyebrow" style={{ color: 'var(--gold)' }}>Let's Talk</div>
             <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
               Schedule a 20-Minute<br /><span style={{ color: 'var(--gold)' }}>Liftêd™ Conversation</span>
             </h1>
-            <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>
+            <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
               Choose the type of conversation that fits your interest. We'll confirm a time and send you a Zoom link.
             </p>
           </div>
@@ -53,15 +53,15 @@ export default function Schedule() {
               <h2 className="lift-in d1 section-title">What Would You Like to Discuss?</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                 {callTypes.map((t, i) => (
-                  <div key={t.id} className={`lift-in d${i+1}`} style={{ background: 'white', borderRadius: 10, padding: '16px 20px', boxShadow: 'var(--shadow-sm)', borderLeft: '4px solid var(--gold)' }}>
-                    <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 700, color: 'var(--navy)', marginBottom: 4 }}>{t.label}</h4>
-                    <p style={{ fontSize: 13, color: 'var(--mid-gray)', lineHeight: 1.6 }}>{t.desc}</p>
+                  <div key={t.id} className={`lift-in d${i+1}`} style={{ background: 'white', borderRadius: 10, padding: '16px 20px', boxShadow: 'none', borderLeft: '4px solid var(--gold)' }}>
+                    <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 700, color: 'var(--charcoal)', marginBottom: 4 }}>{t.label}</h4>
+                    <p style={{ fontSize: 13, color: 'var(--muted-olive)', lineHeight: 1.6 }}>{t.desc}</p>
                   </div>
                 ))}
               </div>
             </div>
             {/* Form */}
-            <div className="lift-in d2" style={{ background: 'white', borderRadius: 16, padding: 40, boxShadow: 'var(--shadow-md)' }}>
+            <div className="lift-in d2" style={{ background: 'white', borderRadius: 4, padding: 40, boxShadow: '3px 3px 0 var(--charcoal)' }}>
               <LiftForm type={defaultType} title="Book Your Conversation" subtitle="Submit your info and preferred meeting type. We'll confirm your Zoom time within 24 hours." />
             </div>
           </div>

@@ -19,7 +19,7 @@ export default function FoundingCommunity() {
 
   return (
     <div ref={ref} style={{ paddingTop: 68 }}>
-      <section style={{ background: 'linear-gradient(160deg, #0F1A30 0%, #1A2744 100%)', padding: '80px 0 64px', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ background: 'var(--black)', padding: '80px 0 64px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: '100%', height: '60%', background: 'radial-gradient(ellipse at 50% 100%, rgba(238,191,104,0.2) 0%, transparent 65%)', pointerEvents: 'none' }} />
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ maxWidth: 680 }}>
@@ -27,7 +27,7 @@ export default function FoundingCommunity() {
             <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
               Join the Liftêd™<br /><span style={{ color: 'var(--gold)' }}>Founding Community</span>
             </h1>
-            <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>
+            <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
               The founding community is for people who believe in what Liftêd™ represents — and want to be part of building it before the official launch.
             </p>
           </div>
@@ -52,8 +52,8 @@ export default function FoundingCommunity() {
                   <div key={b.title} style={{ display: 'flex', gap: 16, alignItems: 'flex-start', padding: '16px 0', borderBottom: '1px solid var(--light-gray)' }}>
                     <div style={{ fontSize: 24, flexShrink: 0 }}>{b.icon}</div>
                     <div>
-                      <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 17, fontWeight: 700, color: 'var(--navy)', marginBottom: 4 }}>{b.title}</h4>
-                      <p style={{ fontSize: 14, color: 'var(--mid-gray)', lineHeight: 1.6 }}>{b.desc}</p>
+                      <h4 style={{ fontFamily: 'var(--font-display)', fontSize: 17, fontWeight: 700, color: 'var(--charcoal)', marginBottom: 4 }}>{b.title}</h4>
+                      <p style={{ fontSize: 14, color: 'var(--muted-olive)', lineHeight: 1.6 }}>{b.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -63,7 +63,7 @@ export default function FoundingCommunity() {
                 <Link to="/collaborate" className="btn btn-ghost">Collaboration Inquiry</Link>
               </div>
             </div>
-            <div className="lift-in d2" style={{ background: 'white', borderRadius: 16, padding: 40, boxShadow: 'var(--shadow-md)' }}>
+            <div className="lift-in d2" style={{ background: 'white', borderRadius: 4, padding: 40, boxShadow: '3px 3px 0 var(--charcoal)' }}>
               <LiftForm type="founding" title="Join the Founding Community" subtitle="Submit your information and we'll send you a welcome message and your first behind-the-scenes update." />
             </div>
           </div>

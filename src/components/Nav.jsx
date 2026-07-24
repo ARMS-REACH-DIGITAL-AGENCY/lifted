@@ -1,9 +1,3 @@
-/**
- * Liftêd™ Nav
- * Uses <LiftedLogo> — NEVER text-built logo
- * Mobile: wordmark + [Join] [☰]
- * Desktop: wordmark | nav links | CTAs
- */
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { LiftedLogo } from './LiftedLogo.jsx'
@@ -16,7 +10,6 @@ const NAV_LINKS = [
   { to: '/founding-community', label: 'Founding Community' },
   { to: '/invest', label: 'Invest' },
 ]
-
 const MOBILE_EXTRA = [
   { to: '/schedule', label: 'Schedule a Call' },
   { to: '/scan', label: 'Scan a QR Code' },
@@ -29,128 +22,134 @@ export default function Nav() {
   const isHome = location.pathname === '/'
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    const h = () => setScrolled(window.scrollY > 40)
+    window.addEventListener('scroll', h, { passive: true })
+    return () => window.removeEventListener('scroll', h)
   }, [])
 
   useEffect(() => { setOpen(false) }, [location])
 
-  // Transparent only on homepage before scroll
   const transparent = isHome && !scrolled && !open
-  const bg = transparent ? 'transparent' : 'rgba(15,26,48,0.97)'
 
   return (
     <>
       <header style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
-        background: bg,
-        backdropFilter: transparent ? 'none' : 'blur(14px)',
-        WebkitBackdropFilter: transparent ? 'none' : 'blur(14px)',
-        borderBottom: transparent ? 'none' : '1px solid rgba(255,255,255,0.07)',
-        transition: 'background 0.3s ease, border-color 0.3s ease',
+        background: transparent ? 'transparent' : 'var(--black)',
+        borderBottom: transparent ? 'none' : '2px solid var(--burnt-orange)',
+        transition: 'background 0.25s, border-color 0.25s',
       }}>
         <div style={{
-          maxWidth: 1200, margin: '0 auto', padding: '0 24px',
+          maxWidth: 1200, margin: '0 auto', padding: '0 20px',
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          height: 68,
+          height: 64,
         }}>
-          {/* ── Logo ── */}
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', minWidth: 0, flexShrink: 0 }}>
-            <LiftedLogo variant="white" height={34} />
+          {/* Logo */}
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
+            <LiftedLogo variant="white" height={30} />
           </Link>
 
-          {/* ── Desktop nav ── */}
-          <nav style={{ display: 'flex', alignItems: 'center', gap: 28, flex: 1, justifyContent: 'center' }} className="nav-desktop">
+          {/* Desktop nav */}
+          <nav style={{ display: 'flex', alignItems: 'center', gap: 24, flex: 1, justifyContent: 'center' }} className="nav-desktop">
             {NAV_LINKS.map(l => (
               <Link key={l.to} to={l.to} style={{
-                fontFamily: 'var(--font-body)', fontSize: 14, fontWeight: 500,
-                color: location.pathname === l.to ? 'var(--gold)' : 'rgba(255,255,255,0.82)',
-                textDecoration: 'none',
-                transition: 'color 0.18s',
+                fontFamily: 'var(--font-body)',
+                fontSize: 11, fontWeight: 700,
+                letterSpacing: '0.1em', textTransform: 'uppercase',
+                color: location.pathname === l.to ? 'var(--sand)' : 'rgba(247,244,236,0.75)',
+                textDecoration: 'none', transition: 'color 0.15s',
                 whiteSpace: 'nowrap',
               }}
-              onMouseEnter={e => { if (location.pathname !== l.to) e.currentTarget.style.color = 'white' }}
-              onMouseLeave={e => { e.currentTarget.style.color = location.pathname === l.to ? 'var(--gold)' : 'rgba(255,255,255,0.82)' }}
+              onMouseEnter={e => { if (location.pathname !== l.to) e.currentTarget.style.color = 'var(--off-white)' }}
+              onMouseLeave={e => { e.currentTarget.style.color = location.pathname === l.to ? 'var(--sand)' : 'rgba(247,244,236,0.75)' }}
               >{l.label}</Link>
             ))}
             {SHOW_SHOP_NAV && (
-              <a href={SHOP_URL} style={{ fontFamily: 'var(--font-body)', fontSize: 14, fontWeight: 500, color: 'var(--gold)', textDecoration: 'none' }}>Shop</a>
+              <a href={SHOP_URL} style={{ fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--sand)', textDecoration: 'none' }}>Shop</a>
             )}
           </nav>
 
-          {/* ── Desktop CTAs ── */}
-          <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexShrink: 0 }} className="nav-desktop">
+          {/* Desktop CTAs */}
+          <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexShrink: 0 }} className="nav-desktop">
             <Link to="/schedule" style={{
-              fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 600,
-              color: 'rgba(255,255,255,0.75)', textDecoration: 'none', padding: '8px 16px',
-              border: '1.5px solid rgba(255,255,255,0.3)', borderRadius: 100,
-              transition: 'all 0.18s', whiteSpace: 'nowrap',
+              fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700,
+              letterSpacing: '0.08em', textTransform: 'uppercase',
+              color: 'rgba(247,244,236,0.7)', textDecoration: 'none',
+              padding: '7px 14px', border: '1.5px solid rgba(247,244,236,0.3)',
+              borderRadius: 'var(--radius)', transition: 'all 0.15s', whiteSpace: 'nowrap',
             }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = 'white'; e.currentTarget.style.color = 'white' }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'; e.currentTarget.style.color = 'rgba(255,255,255,0.75)' }}
-            >Schedule a Call</Link>
+            onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--off-white)'; e.currentTarget.style.color = 'var(--off-white)' }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(247,244,236,0.3)'; e.currentTarget.style.color = 'rgba(247,244,236,0.7)' }}
+            >Schedule</Link>
             <Link to="/founding-community" style={{
-              fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700,
-              background: 'var(--gold)', color: 'var(--navy-deep)',
-              textDecoration: 'none', padding: '9px 18px', borderRadius: 100,
-              transition: 'background 0.18s, box-shadow 0.18s', whiteSpace: 'nowrap',
+              fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700,
+              letterSpacing: '0.08em', textTransform: 'uppercase',
+              background: 'var(--burnt-orange)', color: 'var(--off-white)',
+              textDecoration: 'none', padding: '8px 16px',
+              borderRadius: 'var(--radius)', border: '2px solid var(--burnt-orange)',
+              transition: 'background 0.15s', whiteSpace: 'nowrap',
             }}
-            onMouseEnter={e => { e.currentTarget.style.background = 'var(--gold-light)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(238,191,104,0.4)' }}
-            onMouseLeave={e => { e.currentTarget.style.background = 'var(--gold)'; e.currentTarget.style.boxShadow = 'none' }}
-            >Join the Community</Link>
+            onMouseEnter={e => { e.currentTarget.style.background = '#B85C28'; e.currentTarget.style.borderColor = '#B85C28' }}
+            onMouseLeave={e => { e.currentTarget.style.background = 'var(--burnt-orange)'; e.currentTarget.style.borderColor = 'var(--burnt-orange)' }}
+            >Join Community</Link>
           </div>
 
-          {/* ── Mobile: Join + Hamburger ── */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }} className="nav-mobile">
+          {/* Mobile: Join + Hamburger */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }} className="nav-mobile">
             <Link to="/founding-community" style={{
-              fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700,
-              background: 'var(--gold)', color: 'var(--navy-deep)',
-              textDecoration: 'none', padding: '8px 14px', borderRadius: 100,
-              whiteSpace: 'nowrap',
+              fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700,
+              letterSpacing: '0.06em', textTransform: 'uppercase',
+              background: 'var(--burnt-orange)', color: 'var(--off-white)',
+              textDecoration: 'none', padding: '8px 14px',
+              borderRadius: 'var(--radius)', whiteSpace: 'nowrap',
             }}>Join</Link>
             <button
               onClick={() => setOpen(o => !o)}
               aria-label={open ? 'Close menu' : 'Open menu'}
-              aria-expanded={open}
               style={{
                 background: 'none', border: 'none', cursor: 'pointer',
                 padding: 10, display: 'flex', flexDirection: 'column', gap: 5,
                 minWidth: 44, minHeight: 44, alignItems: 'center', justifyContent: 'center',
               }}
             >
-              <span style={{ display: 'block', width: 22, height: 2, background: 'white', borderRadius: 2, transition: 'transform 0.22s, opacity 0.22s', transform: open ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
-              <span style={{ display: 'block', width: 22, height: 2, background: 'white', borderRadius: 2, transition: 'opacity 0.22s', opacity: open ? 0 : 1 }} />
-              <span style={{ display: 'block', width: 22, height: 2, background: 'white', borderRadius: 2, transition: 'transform 0.22s, opacity 0.22s', transform: open ? 'rotate(-45deg) translate(5px, -5px)' : 'none' }} />
+              {[0,1,2].map(i => (
+                <span key={i} style={{
+                  display: 'block', width: 22, height: 2,
+                  background: 'var(--off-white)', borderRadius: 0,
+                  transition: 'transform 0.2s, opacity 0.2s',
+                  transform: open ? (i===0 ? 'rotate(45deg) translate(5px,5px)' : i===2 ? 'rotate(-45deg) translate(5px,-5px)' : 'none') : 'none',
+                  opacity: open && i===1 ? 0 : 1,
+                }} />
+              ))}
             </button>
           </div>
         </div>
 
-        {/* ── Mobile menu drawer ── */}
+        {/* Mobile drawer */}
         {open && (
           <div style={{
-            background: 'var(--navy-deep)',
-            borderTop: '1px solid rgba(255,255,255,0.08)',
-            padding: '8px 24px 28px',
+            background: 'var(--black)',
+            borderTop: '2px solid var(--burnt-orange)',
+            padding: '4px 20px 24px',
           }}>
             {[...NAV_LINKS, ...MOBILE_EXTRA].map(l => (
               <Link key={l.to} to={l.to} style={{
-                display: 'block', padding: '15px 0',
-                fontFamily: 'var(--font-body)', fontSize: 16, fontWeight: 500,
-                color: location.pathname === l.to ? 'var(--gold)' : 'rgba(255,255,255,0.85)',
-                borderBottom: '1px solid rgba(255,255,255,0.06)',
+                display: 'block', padding: '14px 0',
+                fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700,
+                letterSpacing: '0.08em', textTransform: 'uppercase',
+                color: location.pathname === l.to ? 'var(--sand)' : 'rgba(247,244,236,0.8)',
+                borderBottom: '1px solid rgba(247,244,236,0.08)',
                 textDecoration: 'none',
               }}>{l.label}</Link>
             ))}
-            {SHOW_SHOP_NAV && (
-              <a href={SHOP_URL} style={{ display: 'block', padding: '15px 0', fontFamily: 'var(--font-body)', fontSize: 16, fontWeight: 500, color: 'var(--gold)', borderBottom: '1px solid rgba(255,255,255,0.06)', textDecoration: 'none' }}>Shop</a>
-            )}
             <div style={{ marginTop: 20 }}>
               <Link to="/founding-community" style={{
                 display: 'block', textAlign: 'center',
-                fontFamily: 'var(--font-body)', fontSize: 15, fontWeight: 700,
-                background: 'var(--gold)', color: 'var(--navy-deep)',
-                textDecoration: 'none', padding: '14px', borderRadius: 100,
+                fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700,
+                letterSpacing: '0.08em', textTransform: 'uppercase',
+                background: 'var(--burnt-orange)', color: 'var(--off-white)',
+                textDecoration: 'none', padding: '14px',
+                borderRadius: 'var(--radius)',
               }}>Join the Founding Community</Link>
             </div>
           </div>
@@ -158,12 +157,8 @@ export default function Nav() {
       </header>
 
       <style>{`
-        @media (min-width: 960px) {
-          .nav-mobile { display: none !important; }
-        }
-        @media (max-width: 959px) {
-          .nav-desktop { display: none !important; }
-        }
+        @media (min-width: 960px) { .nav-mobile { display: none !important; } }
+        @media (max-width: 959px) { .nav-desktop { display: none !important; } }
       `}</style>
     </>
   )

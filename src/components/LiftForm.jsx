@@ -66,14 +66,14 @@ export default function LiftForm({ type = 'founding', title, subtitle, dark = fa
     setLoading(false)
   }
 
-  const inputStyle = { background: dark ? 'rgba(255,255,255,0.07)' : 'white', color: dark ? 'white' : 'var(--navy)', borderColor: dark ? 'rgba(255,255,255,0.15)' : 'var(--light-gray)' }
-  const labelStyle = { color: dark ? 'rgba(255,255,255,0.7)' : 'var(--navy)' }
+  const inputStyle = { background: dark ? 'rgba(247,244,236,0.07)' : 'white', color: dark ? 'white' : 'var(--charcoal)', borderColor: dark ? 'rgba(247,244,236,0.15)' : 'var(--light-gray)' }
+  const labelStyle = { color: dark ? 'rgba(247,244,236,0.7)' : 'var(--charcoal)' }
 
   if (submitted) return (
     <div style={{ textAlign: 'center', padding: '48px 24px' }}>
       <div style={{ fontSize: 48, marginBottom: 16, color: 'var(--gold)' }}>↑</div>
-      <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 700, color: dark ? 'white' : 'var(--navy)', marginBottom: 12 }}>You're Liftêd™.</h3>
-      <p style={{ fontSize: 16, color: dark ? 'rgba(255,255,255,0.7)' : 'var(--mid-gray)', lineHeight: 1.7 }}>
+      <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 700, color: dark ? 'white' : 'var(--charcoal)', marginBottom: 12 }}>You're Liftêd™.</h3>
+      <p style={{ fontSize: 16, color: dark ? 'rgba(247,244,236,0.7)' : 'var(--muted-olive)', lineHeight: 1.7 }}>
         Thank you for reaching out. We'll be in touch soon. The world needs more Liftêd™ — and people like you make it happen.
       </p>
     </div>
@@ -81,8 +81,8 @@ export default function LiftForm({ type = 'founding', title, subtitle, dark = fa
 
   return (
     <form onSubmit={handleSubmit}>
-      {title && <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 22, fontWeight: 700, color: dark ? 'white' : 'var(--navy)', marginBottom: 8 }}>{title}</h3>}
-      {subtitle && <p style={{ fontSize: 15, color: dark ? 'rgba(255,255,255,0.6)' : 'var(--mid-gray)', marginBottom: 24, lineHeight: 1.6 }}>{subtitle}</p>}
+      {title && <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 22, fontWeight: 700, color: dark ? 'white' : 'var(--charcoal)', marginBottom: 8 }}>{title}</h3>}
+      {subtitle && <p style={{ fontSize: 15, color: dark ? 'rgba(247,244,236,0.6)' : 'var(--muted-olive)', marginBottom: 24, lineHeight: 1.6 }}>{subtitle}</p>}
 
       <div className="form-row">
         <div className="form-group">
@@ -175,7 +175,7 @@ export default function LiftForm({ type = 'founding', title, subtitle, dark = fa
 
       {error && <p style={{ color: '#c0392b', fontSize: 14, marginBottom: 16 }}>{error}</p>}
 
-      <p style={{ fontSize: 12, color: dark ? 'rgba(255,255,255,0.4)' : 'var(--mid-gray)', marginBottom: 16, lineHeight: 1.6 }}>
+      <p style={{ fontSize: 12, color: dark ? 'rgba(247,244,236,0.4)' : 'var(--muted-olive)', marginBottom: 16, lineHeight: 1.6 }}>
         By submitting this form, you consent to receive email and SMS communications from Liftêd™ / ARMS Reach Digital Agency. You may opt out at any time.
       </p>
 
