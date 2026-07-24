@@ -4,14 +4,14 @@ import React, { useState } from 'react'
 const HL_LOCATION_ID = 'aONTFrcg4GyEubg0xdwW'
 
 const INTEREST_TAGS = {
-  founding: 'Lifted – Founding Community',
-  investor: 'Lifted – Investor Lead',
-  sponsor: 'Lifted – Sponsor Lead',
-  partner: 'Lifted – Collaboration Lead',
-  ambassador: 'Lifted – Ambassador Lead',
-  customer: 'Lifted – Customer Interest',
-  sample: 'Lifted – Sample Recipient',
-  qr: 'Lifted – QR Scan',
+  founding: 'Liftêd™ – Founding Community',
+  investor: 'Liftêd™ – Investor Lead',
+  sponsor: 'Liftêd™ – Sponsor Lead',
+  partner: 'Liftêd™ – Collaboration Lead',
+  ambassador: 'Liftêd™ – Ambassador Lead',
+  customer: 'Liftêd™ – Customer Interest',
+  sample: 'Liftêd™ – Sample Recipient',
+  qr: 'Liftêd™ – QR Scan',
 }
 
 export default function LiftForm({ type = 'founding', title, subtitle, dark = false, onSuccess }) {

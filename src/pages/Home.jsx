@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import ProductCard from '../components/ProductCard.jsx'
+import { FEATURED_PRODUCTS } from '../data/products.js'
+import { SITE_LAUNCH_STATE } from '../config/launchState.js'
 
 function useLiftIn(ref) {
   useEffect(() => {
@@ -31,8 +34,8 @@ const pathways = [
 
 export default function Home() {
   const heroRef = useRef(null)
-  const s2 = useRef(null), s3 = useRef(null), s4 = useRef(null), s5 = useRef(null), s6 = useRef(null), s7 = useRef(null), s8 = useRef(null)
-  useLiftIn(s2); useLiftIn(s3); useLiftIn(s4); useLiftIn(s5); useLiftIn(s6); useLiftIn(s7); useLiftIn(s8)
+  const s2 = useRef(null), s3 = useRef(null), s4 = useRef(null), s5 = useRef(null), s6 = useRef(null), s7 = useRef(null), s8 = useRef(null), sProd = useRef(null)
+  useLiftIn(s2); useLiftIn(s3); useLiftIn(s4); useLiftIn(s5); useLiftIn(s6); useLiftIn(s7); useLiftIn(s8); useLiftIn(sProd)
 
   return (
     <div>
@@ -258,6 +261,32 @@ export default function Home() {
                 <Link to={p.to} className="btn btn-ghost btn-sm">{p.cta}</Link>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Founding Collection Preview ── */}
+      <section ref={sProd} style={{ background: 'var(--cream)', padding: '96px 0' }}>
+        <div className="container">
+          <div className="lift-in" style={{ textAlign: 'center', marginBottom: 56 }}>
+            <div className="section-eyebrow">Founding Collection Preview</div>
+            <h2 className="section-title" style={{ margin: '0 auto 16px' }}>The First Six Concepts</h2>
+            <p style={{ fontSize: 17, color: 'var(--mid-gray)', maxWidth: 560, margin: '0 auto 12px', lineHeight: 1.7 }}>
+              A curated preview of the founding collection. Each design carries a message for the wearer and a message for the world.
+            </p>
+            <p style={{ fontSize: 13, color: 'var(--mid-gray)', fontStyle: 'italic', maxWidth: 520, margin: '0 auto' }}>
+              Product images shown are early samples or concept placeholders. Final designs will be confirmed after sample validation.
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 24 }}>
+            {FEATURED_PRODUCTS.map((product, i) => (
+              <div key={product.id} className={`lift-in d${Math.min(i+1, 6)}`}>
+                <ProductCard product={product} />
+              </div>
+            ))}
+          </div>
+          <div className="lift-in" style={{ textAlign: 'center', marginTop: 40 }}>
+            <Link to="/collections" className="btn btn-navy">Explore All Collections</Link>
           </div>
         </div>
       </section>
