@@ -1,25 +1,32 @@
 /**
  * AuthContext — Liftêd™
  * Provides Firebase auth state and role-based access throughout the app.
- * Reads custom claims (investor, retailer, admin) from the Firebase ID token.
+ * Gracefully handles the case where Firebase credentials are not yet configured —
+ * the public site renders normally, auth features are simply unavailable.
  */
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { auth, onAuthStateChanged, signOut } from '../lib/firebase.js'
+import { auth, safeOnAuthStateChanged, safeSignOut, isConfigured } from '../lib/firebase.js'
 
 const AuthContext = createContext(null)
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
   const [claims, setClaims] = useState(null)
-  const [loading, setLoading] = useState(true)
+  // If Firebase isn't configured, skip the loading state entirely
+  const [loading, setLoading] = useState(isConfigured)
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
+    const unsubscribe = safeOnAuthStateChanged(async (firebaseUser) => {
       if (firebaseUser) {
-        // Force refresh to get latest custom claims
-        const tokenResult = await firebaseUser.getIdTokenResult(true)
-        setUser(firebaseUser)
-        setClaims(tokenResult.claims)
+        try {
+          const tokenResult = await firebaseUser.getIdTokenResult(true)
+          setUser(firebaseUser)
+          setClaims(tokenResult.claims)
+        } catch (err) {
+          console.warn('Token refresh failed:', err.message)
+          setUser(firebaseUser)
+          setClaims({})
+        }
       } else {
         setUser(null)
         setClaims(null)
@@ -30,9 +37,10 @@ export function AuthProvider({ children }) {
   }, [])
 
   const logout = async () => {
-    await signOut(auth)
-    // Clear server session cookie
-    await fetch('/api/auth/logout', { method: 'POST', credentials: 'include' }).catch(() => {})
+    await safeSignOut()
+    try {
+      await fetch('/api/auth/logout', { method: 'POST', credentials: 'include' })
+    } catch {}
   }
 
   const isAdmin    = claims?.admin    === true || claims?.role === 'admin'
@@ -40,7 +48,7 @@ export function AuthProvider({ children }) {
   const isRetailer = claims?.retailer === true || claims?.role === 'retailer' || isAdmin
 
   return (
-    <AuthContext.Provider value={{ user, claims, loading, logout, isAdmin, isInvestor, isRetailer }}>
+    <AuthContext.Provider value={{ user, claims, loading, logout, isAdmin, isInvestor, isRetailer, isConfigured }}>
       {children}
     </AuthContext.Provider>
   )

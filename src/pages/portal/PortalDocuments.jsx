@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { auth } from '../../lib/firebase.js'
+import { auth, isConfigured } from '../../lib/firebase.js'
 
 const PLACEHOLDER_DOCS = [
   { id: 'p1', name: 'Investor Pitch Deck', description: 'Full investor presentation', version: 'v1.0', status: 'pending' },
@@ -20,7 +20,7 @@ export default function PortalDocuments() {
   useEffect(() => {
     async function fetchDocs() {
       try {
-        const user = auth.currentUser
+        const user = isConfigured && auth ? auth.currentUser : null
         if (!user) return
         const idToken = await user.getIdToken()
         const res = await fetch('/api/documents/investor', {

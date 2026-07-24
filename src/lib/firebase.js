@@ -2,7 +2,11 @@
  * Firebase Client SDK — Liftêd™
  * Credentials come from VITE_FIREBASE_* environment variables.
  * Set these in Vercel → Settings → Environment Variables.
- * Never commit real credentials to the repository.
+ *
+ * IMPORTANT: Firebase is initialized lazily and gracefully handles missing
+ * credentials so the public site renders normally even before credentials
+ * are configured. Auth features simply remain unavailable until credentials
+ * are set.
  */
 import { initializeApp, getApps, getApp } from 'firebase/app'
 import {
@@ -22,14 +26,49 @@ const firebaseConfig = {
   appId:             import.meta.env.VITE_FIREBASE_APP_ID             || '',
 }
 
-const app = getApps().length ? getApp() : initializeApp(firebaseConfig)
-const auth = getAuth(app)
+// Firebase requires a non-empty apiKey to initialize.
+// If credentials aren't set yet, we skip initialization and export null stubs.
+const isConfigured = !!firebaseConfig.apiKey && !!firebaseConfig.projectId
 
-export {
-  app,
-  auth,
-  signInWithEmailAndPassword,
-  sendPasswordResetEmail,
-  signOut,
-  onAuthStateChanged,
+let app = null
+let auth = null
+
+if (isConfigured) {
+  try {
+    app = getApps().length ? getApp() : initializeApp(firebaseConfig)
+    auth = getAuth(app)
+  } catch (err) {
+    console.warn('Firebase initialization failed:', err.message)
+    app = null
+    auth = null
+  }
 }
+
+export { app, auth, isConfigured }
+
+export function safeSignIn(email, password) {
+  if (!auth) throw new Error('Firebase is not configured. Set VITE_FIREBASE_* environment variables.')
+  return signInWithEmailAndPassword(auth, email, password)
+}
+
+export function safeSendPasswordReset(email) {
+  if (!auth) throw new Error('Firebase is not configured.')
+  return sendPasswordResetEmail(auth, email)
+}
+
+export function safeSignOut() {
+  if (!auth) return Promise.resolve()
+  return signOut(auth)
+}
+
+export function safeOnAuthStateChanged(callback) {
+  if (!auth) {
+    // No Firebase — immediately call back with null user, return no-op unsubscribe
+    callback(null)
+    return () => {}
+  }
+  return onAuthStateChanged(auth, callback)
+}
+
+// Legacy named exports for backward compatibility
+export { signInWithEmailAndPassword, sendPasswordResetEmail, signOut, onAuthStateChanged }

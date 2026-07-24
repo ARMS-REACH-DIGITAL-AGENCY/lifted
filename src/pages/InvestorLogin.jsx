@@ -4,7 +4,7 @@
  */
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { auth, signInWithEmailAndPassword, sendPasswordResetEmail } from '../lib/firebase.js'
+import { safeSignIn, safeSendPasswordReset } from '../lib/firebase.js'
 
 export default function InvestorLogin() {
   const navigate = useNavigate()
@@ -20,7 +20,7 @@ export default function InvestorLogin() {
     setStatus('submitting')
     setErrorMsg('')
     try {
-      const cred = await signInWithEmailAndPassword(auth, email, password)
+      const cred = await safeSignIn(email, password)
       const idToken = await cred.user.getIdToken()
       // Exchange for server session cookie
       await fetch('/api/auth/login', {
@@ -50,7 +50,7 @@ export default function InvestorLogin() {
   const handleReset = async (e) => {
     e.preventDefault()
     try {
-      await sendPasswordResetEmail(auth, email)
+      await safeSendPasswordReset(email)
       setResetSent(true)
     } catch (err) {
       setErrorMsg(err.message)
