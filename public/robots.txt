@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /investor-portal
+Disallow: /investor-portal/
+Disallow: /retailer-portal
+Disallow: /retailer-portal/
+Disallow: /investor-login
+Allow: /
+
+Sitemap: https://wearliftedtoday.com/sitemap.xml

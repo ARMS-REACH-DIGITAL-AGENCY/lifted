@@ -1,0 +1,54 @@
+// Firebase Storage Security Rules — Liftêd™
+// Deploy with: firebase deploy --only storage
+//
+// Rule summary:
+// - investor-portal/documents/* : readable only by users with investor or admin custom claim
+// - retailer-portal/documents/* : readable only by users with retailer or admin custom claim
+// - brand-assets/*              : publicly readable (logos, product images for public site)
+// - All other paths             : deny by default
+
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    function hasRole(role) {
+      return isAuthenticated() && request.auth.token[role] == true;
+    }
+    function isAdmin() {
+      return hasRole('admin');
+    }
+    function isInvestor() {
+      return hasRole('investor') || isAdmin();
+    }
+    function isRetailer() {
+      return hasRole('retailer') || isAdmin();
+    }
+
+    // Investor portal documents — read requires investor or admin claim
+    match /investor-portal/{allPaths=**} {
+      allow read: if isInvestor();
+      allow write: if isAdmin();
+    }
+
+    // Retailer portal documents — read requires retailer or admin claim
+    match /retailer-portal/{allPaths=**} {
+      allow read: if isRetailer();
+      allow write: if isAdmin();
+    }
+
+    // Public brand assets — logos, product images for the public site
+    match /brand-assets/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Deny everything else
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
