@@ -64,7 +64,14 @@ export default function Collections() {
               <div style={{ display: 'inline-block', background: `${col.color}18`, border: `1px solid ${col.color}40`, borderRadius: 4, padding: '5px 14px', marginBottom: 16 }}>
                 <span style={{ fontSize: 12, fontWeight: 700, color: col.color, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{col.name}</span>
               </div>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 700, color: '#C76A32', marginBottom: 12, lineHeight: 1.2 }}>{col.tagline}</h2>
+              <h2 aria-label={col.tagline} style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 700, color: 'var(--charcoal)', marginBottom: 12, lineHeight: 1.2 }}>
+                {(() => {
+                  const t = col.tagline;
+                  const idx = t.indexOf('e');
+                  if (idx === -1) return t;
+                  return <>{t.slice(0, idx)}<span style={{ color: col.color, textTransform: 'none' }}>ê</span>{t.slice(idx + 1)}</>;
+                })()}
+              </h2>
               <div style={{ width: 56, height: 3, background: col.color, borderRadius: 2, margin: '0 0 20px' }} />
               <p style={{ fontSize: 16, color: 'var(--muted-olive)', lineHeight: 1.7, marginBottom: 24 }}>{col.desc}</p>
               <p style={{ fontSize: 13, color: 'var(--muted-olive)', fontStyle: 'italic', marginBottom: 32 }}>Products: {col.products}</p>
