@@ -1,317 +1,149 @@
-/**
- * /shop — Liftêd™ Storefront (Coming Soon)
- * Phase 1: Branded coming-soon storefront with collection previews, product status labels,
- *           preorder-interest CTA, and founding-community signup.
- *
- * Shopify integration placeholders are included but inactive.
- * When Shopify Storefront API is ready:
- *   1. Set VITE_SHOPIFY_STORE_DOMAIN and VITE_SHOPIFY_STOREFRONT_TOKEN in Vercel env vars
- *   2. Replace SHOPIFY_PRODUCTS array entries with real Shopify product GIDs
- *   3. Uncomment the Storefront API fetch in useEffect
- *   4. The cart/checkout flow is handled by Shopify — this page remains the branded frontend
- */
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import BrandE from '../components/BrandE.jsx'
-import { TM } from '../components/TM.jsx'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { skus } from '../data/skus.js';
+import { TM } from '../components/TM.jsx';
 
-// ── Shopify integration config (inactive until env vars are set) ──────────────
-const SHOPIFY_STORE_DOMAIN = import.meta.env.VITE_SHOPIFY_STORE_DOMAIN || null
-const SHOPIFY_STOREFRONT_TOKEN = import.meta.env.VITE_SHOPIFY_STOREFRONT_TOKEN || null
-const SHOPIFY_ENABLED = !!(SHOPIFY_STORE_DOMAIN && SHOPIFY_STOREFRONT_TOKEN)
+const COLORS = {
+  'Core': '#D4A843',
+  'Pick-Me-Up': '#4A7FB5',
+  'Athlete': '#C76A32',
+  'Youth': '#8A9A5B',
+  'Collaborations': '#C4748A',
+};
 
-// ── Founding collection product catalog ──────────────────────────────────────
-// Replace shopifyProductId with real Shopify GIDs when store is connected.
-// Status: 'coming-soon' | 'preorder' | 'available' | 'sold-out'
-const COLLECTIONS = [
-  {
-    id: 'core',
-    name: 'Core Collection',
-    tagline: 'Daily brand affinity. Wear what you believe.',
-    color: 'var(--charcoal)',
-    accent: 'var(--sand)',
-    products: [
-      {
-        sku: 'LFT-001',
-        name: 'You Matter Here — Tee',
-        description: 'Front: "You matter here." Back: "Dear person behind me: Your presence makes a difference, even on the days you feel invisible."',
-        status: 'coming-soon',
-        priceRange: '$34–$38',
-        shopifyProductId: null, // Replace with Shopify GID when live
-        image: '/products/lft-001/front.jpg',
-      },
-      {
-        sku: 'LFT-002',
-        name: 'Turn the L Up — Tee',
-        description: 'Front: "Turn the L Up." Back: "You\'re Not a Loser. You\'re Liftêd™."',
-        status: 'coming-soon',
-        priceRange: '$34–$38',
-        shopifyProductId: null,
-        image: null,
-      },
-    ],
-  },
-  {
-    id: 'pick-me-up',
-    name: 'Pick-Me-Up Collection',
-    tagline: 'Direct encouragement. For the person who needs it today.',
-    color: 'var(--earth-brown)',
-    accent: 'var(--burnt-orange)',
-    products: [
-      {
-        sku: 'LFT-003',
-        name: 'Less Labels — Tee',
-        description: 'Front: "Less Labels." Back: "More Liftêd™. The world doesn\'t need another label. It needs more encouragement."',
-        status: 'coming-soon',
-        priceRange: '$34–$38',
-        shopifyProductId: null,
-        image: null,
-      },
-    ],
-  },
-  {
-    id: 'athlete',
-    name: 'Athlete Collection',
-    tagline: 'Discipline. Resilience. Showing up.',
-    color: 'var(--muted-olive)',
-    accent: 'var(--sand)',
-    products: [
-      {
-        sku: 'LFT-004',
-        name: 'Show Up — Performance Tee',
-        description: 'Built for training. Front: "Show Up." Back: "The hardest part is already done."',
-        status: 'coming-soon',
-        priceRange: '$38–$44',
-        shopifyProductId: null,
-        image: null,
-      },
-    ],
-  },
-  {
-    id: 'youth',
-    name: 'Youth Collection',
-    tagline: 'Confidence and identity for the next generation.',
-    color: 'var(--charcoal)',
-    accent: 'var(--burnt-orange)',
-    products: [
-      {
-        sku: 'LFT-005',
-        name: 'You Belong Here — Youth Tee',
-        description: 'Front: "You belong here." Back: "This room is better because you\'re in it."',
-        status: 'coming-soon',
-        priceRange: '$28–$32',
-        shopifyProductId: null,
-        image: null,
-      },
-    ],
-  },
-  {
-    id: 'collaboration',
-    name: 'Collaboration Collection',
-    tagline: 'Co-branded editions for organizations, causes, and events.',
-    color: 'var(--black)',
-    accent: 'var(--burnt-orange)',
-    products: [
-      {
-        sku: 'LFT-006',
-        name: 'Custom Collaboration Edition',
-        description: 'Your organization\'s identity + the Liftêd™ encouragement message. Built for your event, cause, or campaign.',
-        status: 'coming-soon',
-        priceRange: 'Custom pricing',
-        shopifyProductId: null,
-        image: null,
-      },
-    ],
-  },
-]
+const TABS = ['All', 'Core', 'Pick-Me-Up', 'Athlete', 'Youth', 'Collaborations'];
 
-const STATUS_LABELS = {
-  'coming-soon': { label: 'Coming Soon', bg: 'rgba(41,42,40,0.08)', color: 'var(--muted-olive)', border: '1px solid rgba(41,42,40,0.15)' },
-  'preorder':    { label: 'Pre-Order Open', bg: 'rgba(199,106,50,0.12)', color: 'var(--burnt-orange)', border: '1px solid rgba(199,106,50,0.3)' },
-  'available':   { label: 'In Stock', bg: 'rgba(90,68,52,0.1)', color: 'var(--earth-brown)', border: '1px solid rgba(90,68,52,0.25)' },
-  'sold-out':    { label: 'Sold Out', bg: 'rgba(41,42,40,0.05)', color: 'rgba(41,42,40,0.4)', border: '1px solid rgba(41,42,40,0.1)' },
-}
-
-function StatusBadge({ status }) {
-  const s = STATUS_LABELS[status] || STATUS_LABELS['coming-soon']
+function SKUCard({ sku }) {
+  const [flipped, setFlipped] = useState(false);
+  const color = COLORS[sku.collection] || '#D4A843';
+  const isA = sku.priority === 'A';
   return (
-    <span style={{
-      fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700,
-      letterSpacing: '0.18em', textTransform: 'uppercase',
-      padding: '4px 10px', ...s,
-    }}>{s.label}</span>
-  )
-}
-
-function ProductCard({ product }) {
-  const hasImage = product.image && product.image !== null
-  return (
-    <div style={{
-      background: 'var(--off-white)',
-      border: '1.5px solid var(--charcoal)',
-      boxShadow: '3px 3px 0 var(--charcoal)',
-      display: 'flex', flexDirection: 'column',
-    }}>
-      {/* Image area */}
+    <div
+      onClick={() => setFlipped(f => !f)}
+      style={{
+        cursor: 'pointer',
+        background: 'var(--off-white)',
+        border: `1.5px solid ${flipped ? color : 'rgba(41,42,40,0.15)'}`,
+        borderTop: `3px solid ${color}`,
+        borderRadius: 4,
+        padding: '18px 16px',
+        display: 'flex', flexDirection: 'column', gap: 8,
+        minHeight: 210,
+        transition: 'border-color 0.2s, box-shadow 0.2s',
+        boxShadow: flipped ? `2px 2px 0 ${color}50` : '2px 2px 0 rgba(41,42,40,0.07)',
+        position: 'relative',
+      }}
+    >
+      {isA && (
+        <span style={{
+          position: 'absolute', top: 8, right: 8,
+          background: color, color: '#fff',
+          fontSize: 8, fontWeight: 700, letterSpacing: '0.1em',
+          padding: '2px 6px', borderRadius: 2,
+          fontFamily: 'var(--font-body)', textTransform: 'uppercase',
+        }}>Founding Sample</span>
+      )}
+      <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color, fontFamily: 'var(--font-body)' }}>
+        {sku.collection === 'Collaborations' ? 'Collaboration Collection' : `${sku.collection} Collection`}
+      </span>
+      <span style={{ fontSize: 9, color: 'var(--muted-olive)', fontFamily: 'var(--font-body)' }}>{sku.sku}</span>
+      <div style={{ display: 'flex', gap: 8, alignItems: 'center', fontSize: 9, fontFamily: 'var(--font-body)' }}>
+        <span style={{ color: !flipped ? color : 'var(--muted-olive)', fontWeight: !flipped ? 700 : 400 }}>FRONT</span>
+        <span style={{ color: 'var(--muted-olive)' }}>·</span>
+        <span style={{ color: flipped ? color : 'var(--muted-olive)', fontWeight: flipped ? 700 : 400 }}>BACK</span>
+        <span style={{ marginLeft: 'auto', opacity: 0.4 }}>tap to flip</span>
+      </div>
       <div style={{
-        background: hasImage ? 'transparent' : 'var(--charcoal)',
-        aspectRatio: '4/5',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        overflow: 'hidden', position: 'relative',
+        fontFamily: flipped ? 'var(--font-body)' : 'var(--font-display)',
+        fontWeight: flipped ? 400 : 900,
+        fontSize: flipped ? 12 : 'clamp(14px, 1.8vw, 17px)',
+        color: 'var(--charcoal)',
+        lineHeight: flipped ? 1.65 : 1.25,
+        flex: 1,
+        whiteSpace: flipped ? 'pre-line' : 'normal',
       }}>
-        {hasImage ? (
-          <img src={product.image} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
-        ) : (
-          <div style={{ textAlign: 'center', padding: 24 }}>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: 11, color: 'rgba(247,244,236,0.2)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: 8 }}>Product Photo</div>
-            <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, color: 'rgba(247,244,236,0.15)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Coming Soon</div>
-          </div>
-        )}
-        {/* SKU label */}
-        <div style={{
-          position: 'absolute', top: 10, left: 10,
-          fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700,
-          letterSpacing: '0.15em', textTransform: 'uppercase',
-          background: 'var(--burnt-orange)', color: 'var(--off-white)',
-          padding: '3px 8px',
-        }}>{product.sku}</div>
+        {flipped ? sku.back : sku.front}
       </div>
-
-      {/* Info */}
-      <div style={{ padding: '18px 16px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8, marginBottom: 10 }}>
-          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 15, color: 'var(--charcoal)', textTransform: 'uppercase', lineHeight: 1.1, margin: 0 }}>{product.name}</h3>
-          <StatusBadge status={product.status} />
-        </div>
-        <p style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--muted-olive)', lineHeight: 1.65, flex: 1, marginBottom: 14, fontStyle: 'italic' }}>{product.description}</p>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto' }}>
-          <span style={{ fontFamily: 'var(--font-display)', fontSize: 14, color: 'var(--charcoal)', fontWeight: 700 }}>{product.priceRange}</span>
-          {product.status === 'available' && product.shopifyProductId ? (
-            <button style={{ fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', background: 'var(--burnt-orange)', color: 'var(--off-white)', border: 'none', padding: '9px 16px', cursor: 'pointer', borderRadius: 'var(--radius)' }}>
-              Add to Cart
-            </button>
-          ) : (
-            <Link to="/founding-community" style={{ fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', background: 'transparent', color: 'var(--burnt-orange)', textDecoration: 'none', padding: '8px 0', borderBottom: '1.5px solid var(--burnt-orange)' }}>
-              Get Notified →
-            </Link>
-          )}
-        </div>
-      </div>
+      <span style={{ fontSize: 9, color: 'var(--muted-olive)', fontFamily: 'var(--font-body)', borderTop: '1px solid rgba(41,42,40,0.1)', paddingTop: 8 }}>
+        PRE-ORDER — COMING SOON
+      </span>
     </div>
-  )
+  );
 }
 
 export default function Shop() {
-  const [activeFilter, setActiveFilter] = useState('all')
-  const [notifyEmail, setNotifyEmail] = useState('')
-  const [notifyStatus, setNotifyStatus] = useState('idle')
-
-  const allProducts = COLLECTIONS.flatMap(c => c.products.map(p => ({ ...p, collectionId: c.id, collectionName: c.name })))
-  const filteredProducts = activeFilter === 'all' ? allProducts : allProducts.filter(p => p.collectionId === activeFilter)
-
-  const handleNotify = (e) => {
-    e.preventDefault()
-    if (!notifyEmail) return
-    // Redirect to founding community with email pre-filled
-    window.location.href = `/founding-community?email=${encodeURIComponent(notifyEmail)}&type=early-buyer`
-  }
+  const [active, setActive] = useState('All');
+  const filtered = active === 'All' ? skus : skus.filter(s => s.collection === active);
 
   return (
-    <div style={{ background: 'var(--warm-cream)', minHeight: '100vh', paddingTop: 72 }}>
-
-      {/* ── Hero ── */}
-      <div style={{ background: 'var(--black)', borderBottom: '3px solid var(--burnt-orange)', padding: '64px 0 48px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
-            <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)' }}>Shop</div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '4px 10px', border: '1px solid rgba(199,106,50,0.4)', borderRadius: 'var(--radius)' }}>
-              <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--burnt-orange)', display: 'inline-block', animation: 'pulse 2s infinite' }} />
-              <span style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--burnt-orange)' }}>Samples in Production</span>
-            </div>
-          </div>
-          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 5vw, 52px)', color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.02em', textTransform: 'none', marginBottom: 20 }}>
-            The Founding<br />Coll<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>ction
+    <div style={{ minHeight: '100vh', background: 'var(--off-white)' }}>
+      {/* Hero */}
+      <section style={{ background: 'var(--black)', padding: '120px 0 56px', borderBottom: '3px solid var(--burnt-orange)' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
+          <span style={{
+            display: 'inline-block', background: 'var(--burnt-orange)', color: 'white',
+            fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+            padding: '4px 12px', borderRadius: 2, marginBottom: 20, fontFamily: 'var(--font-body)',
+          }}>PRE-ORDER — COMING SOON</span>
+          <h1 style={{
+            fontFamily: 'var(--font-display)', fontWeight: 900,
+            fontSize: 'clamp(36px, 5vw, 64px)', color: 'var(--off-white)',
+            lineHeight: 1.05, marginBottom: 16,
+          }}>
+            The Founding Coll<span style={{ color: '#D4A843', textTransform: 'none' }}>ê</span>ctions
           </h1>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, color: 'rgba(247,244,236,0.65)', lineHeight: 1.7, maxWidth: 520, marginBottom: 28 }}>
-            The first Liftêd™ private-label garments are currently in sample production. Ordering opens after sample validation is complete. Join the founding community to be first in line.
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, color: 'rgba(238,233,222,0.7)', maxWidth: 540, lineHeight: 1.65, marginBottom: 32 }}>
+            60 founding designs across five collections. Every shirt carries a message on the front — and a note to the person behind you on the back. Tap any card to read both sides.
           </p>
-          {/* Notify form */}
-          <form onSubmit={handleNotify} style={{ display: 'flex', gap: 8, maxWidth: 420, flexWrap: 'wrap' }}>
-            <input
-              type="email"
-              value={notifyEmail}
-              onChange={e => setNotifyEmail(e.target.value)}
-              placeholder="Your email address"
-              style={{
-                flex: 1, minWidth: 200, padding: '11px 14px',
-                background: 'rgba(247,244,236,0.08)', border: '1.5px solid rgba(247,244,236,0.2)',
-                fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--off-white)',
-                outline: 'none', borderRadius: 'var(--radius)',
-              }}
-            />
-            <button type="submit" style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', background: 'var(--burnt-orange)', color: 'var(--off-white)', border: 'none', padding: '11px 20px', cursor: 'pointer', borderRadius: 'var(--radius)', whiteSpace: 'nowrap' }}>
-              Notify Me
-            </button>
-          </form>
-          <style>{`@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }`}</style>
-        </div>
-      </div>
-
-      {/* ── Collection filters ── */}
-      <div style={{ background: 'var(--charcoal)', padding: '0 24px', borderBottom: '1px solid rgba(247,244,236,0.08)', overflowX: 'auto' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', gap: 0 }}>
-          {[{ id: 'all', name: 'All Collections' }, ...COLLECTIONS.map(c => ({ id: c.id, name: c.name }))].map(f => (
-            <button
-              key={f.id}
-              onClick={() => setActiveFilter(f.id)}
-              style={{
-                fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700,
-                letterSpacing: '0.1em', textTransform: 'uppercase',
-                background: 'none', border: 'none', cursor: 'pointer',
-                padding: '16px 18px', whiteSpace: 'nowrap',
-                color: activeFilter === f.id ? 'var(--sand)' : 'rgba(247,244,236,0.45)',
-                borderBottom: activeFilter === f.id ? '2px solid var(--burnt-orange)' : '2px solid transparent',
-                transition: 'color 0.15s, border-color 0.15s',
-              }}
-            >{f.name}</button>
-          ))}
-        </div>
-      </div>
-
-      {/* ── Product grid ── */}
-      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '48px 24px 80px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 24, marginBottom: 64 }}>
-          {filteredProducts.map(product => (
-            <ProductCard key={product.sku} product={product} />
-          ))}
-        </div>
-
-        {/* Collaboration CTA */}
-        <div style={{ background: 'var(--black)', border: '1.5px solid var(--burnt-orange)', padding: '40px 32px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24, alignItems: 'center' }}>
-          <div>
-            <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 12 }}>Collaboration Collection</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(18px, 3vw, 28px)', color: 'var(--off-white)', textTransform: 'none', lineHeight: 1.1, marginBottom: 14 }}>Want a Custom Liftêd™ Edition?</h2>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'rgba(247,244,236,0.6)', lineHeight: 1.7, margin: 0 }}>
-              Organizations, schools, gyms, causes, and corporate clients can create a co-branded Liftêd™ edition for their event, campaign, or community.
-            </p>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, alignItems: 'flex-start' }}>
-            <Link to="/collaborate" style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', background: 'var(--burnt-orange)', color: 'var(--off-white)', textDecoration: 'none', padding: '13px 24px', borderRadius: 'var(--radius)' }}>
-              Start a Collaboration
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+            <Link to="/founding-community" style={{ display: 'inline-block', background: '#D4A843', color: 'var(--black)', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 4, textDecoration: 'none' }}>
+              Join the Founding Community
             </Link>
-            <Link to="/wholesale" style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', background: 'transparent', color: 'rgba(247,244,236,0.6)', textDecoration: 'none', padding: '13px 24px', border: '1.5px solid rgba(247,244,236,0.2)', borderRadius: 'var(--radius)' }}>
-              Wholesale Inquiry
+            <Link to="/collections" style={{ display: 'inline-block', border: '1.5px solid rgba(238,233,222,0.35)', color: 'var(--off-white)', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 4, textDecoration: 'none' }}>
+              Explore Collections
             </Link>
           </div>
         </div>
+      </section>
 
-        {/* Shopify integration notice (dev only) */}
-        {!SHOPIFY_ENABLED && (
-          <div style={{ marginTop: 32, padding: '12px 16px', background: 'rgba(41,42,40,0.05)', border: '1px dashed rgba(41,42,40,0.2)', fontFamily: 'var(--font-body)', fontSize: 11, color: 'rgba(41,42,40,0.4)', lineHeight: 1.6 }}>
-            <strong>Shopify Integration Placeholder:</strong> Set <code>VITE_SHOPIFY_STORE_DOMAIN</code> and <code>VITE_SHOPIFY_STOREFRONT_TOKEN</code> in Vercel environment variables to enable live product data, cart, and checkout. This notice is only visible when Shopify is not configured.
-          </div>
-        )}
+      {/* Filter tabs */}
+      <div style={{ background: 'var(--warm-cream)', borderBottom: '1px solid rgba(41,42,40,0.12)', padding: '0 24px', position: 'sticky', top: 80, zIndex: 10, overflowX: 'auto' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex' }}>
+          {TABS.map(tab => {
+            const color = tab === 'All' ? 'var(--charcoal)' : COLORS[tab];
+            const isActive = active === tab;
+            const count = tab === 'All' ? skus.length : skus.filter(s => s.collection === tab).length;
+            return (
+              <button key={tab} onClick={() => setActive(tab)} style={{
+                fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase',
+                padding: '15px 18px', border: 'none', borderBottom: isActive ? `3px solid ${color}` : '3px solid transparent',
+                background: 'transparent', color: isActive ? color : 'var(--muted-olive)', cursor: 'pointer', whiteSpace: 'nowrap',
+                transition: 'color 0.2s, border-color 0.2s',
+              }}>{tab} ({count})</button>
+            );
+          })}
+        </div>
       </div>
+
+      {/* SKU Grid */}
+      <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 24px 96px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 18 }}>
+          {filtered.map(sku => <SKUCard key={sku.id} sku={sku} />)}
+        </div>
+
+        {/* Bottom CTA */}
+        <div style={{ marginTop: 64, padding: '40px 32px', background: 'var(--charcoal)', borderRadius: 4, textAlign: 'center' }}>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: 11, color: 'rgba(238,233,222,0.5)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 10 }}>
+            Want a custom Liftêd<TM/> edition for your organization?
+          </p>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 28, color: 'var(--off-white)', marginBottom: 24 }}>
+            Collaborat<span style={{ color: '#C4748A', textTransform: 'none' }}>ê</span> With Liftêd<TM/>
+          </h3>
+          <Link to="/collaborate" style={{ display: 'inline-block', background: '#C4748A', color: 'white', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 4, textDecoration: 'none' }}>
+            Start a Collaboration
+          </Link>
+        </div>
+      </section>
     </div>
-  )
+  );
 }

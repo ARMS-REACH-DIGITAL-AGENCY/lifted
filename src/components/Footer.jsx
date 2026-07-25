@@ -17,19 +17,19 @@ export default function Footer() {
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 11, fontStyle: 'italic', color: 'rgba(247,244,236,0.35)' }}>The World Needs More Liftêd™.</p>
           </div>
           <div>
-            <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 14 }}>Navigate</div>
+            <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 14 }}>NAVIGATE</div>
             {[['/', 'Home'], ['/story', 'Our Story'], ['/collections', 'Collections'], ['/collaborate', 'Collaborate'], ['/wholesale', 'Wholesale'], ['/shop', 'Shop']].map(([to, label]) => (
               <Link key={to} to={to} style={{ display: 'block', fontFamily: 'var(--font-body)', fontSize: 13, color: 'rgba(247,244,236,0.6)', marginBottom: 9, textDecoration: 'none' }}>{label}</Link>
             ))}
           </div>
           <div>
-            <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 14 }}>Get Involved</div>
+            <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 14 }}>GET INVOLVED</div>
             {[['/founding-community', 'Join Community'], ['/support', 'Help Bring Liftêd™ to Life'], ['/schedule', 'Schedule a Call'], ['/scan', 'Scan a QR Code'], ['/sample', 'Sample Feedback']].map(([to, label]) => (
               <Link key={to} to={to} style={{ display: 'block', fontFamily: 'var(--font-body)', fontSize: 13, color: 'rgba(247,244,236,0.6)', marginBottom: 9, textDecoration: 'none' }}>{label}</Link>
             ))}
           </div>
           <div>
-            <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 14 }}>Join Us</div>
+            <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 14 }}>JOIN US</div>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 13, lineHeight: 1.65, marginBottom: 18 }}>Be part of the founding community. Help bring Liftêd™ to market.</p>
             <Link to="/founding-community" style={{
               display: 'inline-block', fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700,

@@ -24,7 +24,7 @@ export default function Story() {
             fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700,
             letterSpacing: '0.22em', textTransform: 'none',
             color: 'var(--burnt-orange)', marginBottom: 16,
-          }}>Our Story</div>
+          }}>OUR STORY</div>
           <h1 style={{
             fontFamily: 'var(--font-display)',
             fontSize: 'clamp(32px, 6vw, 64px)',
@@ -60,7 +60,7 @@ export default function Story() {
               fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700,
               letterSpacing: '0.22em', textTransform: 'none',
               color: 'var(--burnt-orange)', marginBottom: 20,
-            }}>Where It Started</div>
+            }}>WHERE IT STARTED</div>
 
             {[
               {
@@ -193,7 +193,7 @@ export default function Story() {
             fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700,
             letterSpacing: '0.22em', textTransform: 'none',
             color: 'var(--burnt-orange)', marginBottom: 16,
-          }}>The Mission Today</div>
+          }}>THE MISSION TODAY</div>
           <h2 style={{
             fontFamily: 'var(--font-display)',
             fontSize: 'clamp(26px, 4vw, 48px)',

@@ -18,11 +18,11 @@ function useLiftIn(ref) {
 }
 
 const collections = [
-  { name: 'Core', color: 'var(--charcoal)', accent: 'var(--sand)', icon: '◈', desc: 'Daily brand affinity. Clean, bold, unmistakably Liftêd™.', messages: ['Stay Liftêd™', 'Lift Yourself. Lift Others.', 'Wear Encouragement.', 'The World Needs More Liftêd™'] },
-  { name: 'Pick-Me-Up', color: 'var(--earth-brown)', accent: 'var(--burnt-orange)', icon: '↑', desc: 'Direct messages of hope, resilience, and encouragement.', messages: ['You Matter Here.', "Your Story Isn't Over.", 'One More Day.', 'Better Days Are Ahead.'] },
-  { name: 'Athlete', color: 'var(--black)', accent: 'var(--sand)', icon: '⚡', desc: 'Discipline, preparation, resilience. Built for competitors.', messages: ['Never Finished.', 'Earn Tomorrow.', 'Outwork Yesterday.', 'Built Through Adversity.'] },
-  { name: 'Youth', color: 'var(--muted-olive)', accent: 'var(--off-white)', icon: '★', desc: 'Confidence, identity, belonging. For the next generation.', messages: ['You Belong Here.', 'Different Is Not Less.', 'Your Voice Matters.', 'The Future Looks Good on You.'] },
-  { name: 'Collaboration', color: 'var(--earth-brown)', accent: 'var(--sand)', icon: '◎', desc: 'Co-branded editions for organizations, causes, and communities.', messages: ['Better Together.', 'Your Work Matters.', 'Hope Lives Here.', 'Play It Forward.'] },
+  { name: 'Core', color: 'var(--charcoal)', accent: '#D4A843', icon: '◈', desc: 'Daily brand affinity. Clean, bold, unmistakably Liftêd™.', messages: ['Stay Liftêd™', 'Lift Yourself. Lift Others.', 'Wear Encouragement.', 'The World Needs More Liftêd™'] },
+  { name: 'Pick-Me-Up', color: 'var(--charcoal)', accent: '#4A7FB5', icon: '↑', desc: 'Direct messages of hope, resilience, and encouragement.', messages: ['You Matter Here.', "Your Story Isn't Over.", 'One More Day.', 'Better Days Are Ahead.'] },
+  { name: 'Athlete', color: 'var(--charcoal)', accent: '#C76A32', icon: '⚡', desc: 'Discipline, preparation, resilience. Built for competitors.', messages: ['Never Finished.', 'Earn Tomorrow.', 'Outwork Yesterday.', 'Built Through Adversity.'] },
+  { name: 'Youth', color: 'var(--charcoal)', accent: '#8A9A5B', icon: '★', desc: 'Confidence, identity, belonging. For the next generation.', messages: ['You Belong Here.', 'Different Is Not Less.', 'Your Voice Matters.', 'The Future Looks Good on You.'] },
+  { name: 'Collaboration', color: 'var(--charcoal)', accent: '#C4748A', icon: '◎', desc: 'Co-branded editions for organizations, causes, and communities.', messages: ['Better Together.', 'Your Work Matters.', 'Hope Lives Here.', 'Play It Forward.'] },
 ]
 
 const pathways = [
@@ -69,7 +69,7 @@ export default function Home() {
             {/* Production status badge */}
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 32, padding: '6px 14px', border: '1.5px solid rgba(199,106,50,0.6)', borderRadius: 'var(--radius)' }}>
               <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--burnt-orange)', display: 'inline-block' }} />
-              <span style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--burnt-orange)' }}>Pre-Revenue · Samples in Production</span>
+              <span style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--burnt-orange)' }}>Pre-Revenue · PRE-ORDER — COMING SOON</span>
             </div>
             {/* ── Premium title-case headline ── */}
             <h1 style={{ fontFamily: '"Archivo Black", "Inter Tight", system-ui, sans-serif', fontSize: 'clamp(42px, 7.5vw, 88px)', fontWeight: 900, color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.025em', marginBottom: 28, textTransform: 'none' }}>
