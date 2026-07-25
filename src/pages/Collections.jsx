@@ -29,6 +29,14 @@ const heroImages = {
   collab:  { src: '/images/hero-colab.png',    pos: 'center' },
 }
 
+const heroEColor = {
+  core:    '#EEBF68',
+  pickup:  '#4A7FB5',
+  athlete: '#C76A32',
+  youth:   '#8A9A5B',
+  collab:  '#C4748A',
+}
+
 export default function Collections() {
   const ref = useRef(null)
   useLiftIn(ref)
@@ -44,18 +52,18 @@ export default function Collections() {
             position: 'absolute', inset: 0, zIndex: 0,
             backgroundImage: `url(${src})`,
             backgroundSize: 'cover',
-            backgroundPosition: pos,
-            opacity: active === key ? 0.22 : 0,
+            backgroundPosition: 'right center',
+            opacity: active === key ? 0.45 : 0,
             transition: 'opacity 0.8s ease',
           }} />
         ))}
         {/* Gradient overlay — protects text on left */}
-        <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'linear-gradient(110deg, rgba(23,24,22,0.97) 0%, rgba(23,24,22,0.90) 35%, rgba(23,24,22,0.60) 65%, rgba(23,24,22,0.25) 100%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'linear-gradient(to right, rgba(23,24,22,0.97) 0%, rgba(23,24,22,0.92) 40%, rgba(23,24,22,0.55) 70%, rgba(23,24,22,0.08) 100%)', pointerEvents: 'none' }} />
         <div className="container">
           <div style={{ maxWidth: 680 }}>
             <div className="lift-in section-eyebrow" style={{ position: 'relative', zIndex: 2, color: 'var(--burnt-orange)', fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: 16 }}>Five Collections. One Meaning.</div>
             <h1 className="lift-in d1" style={{ position: 'relative', zIndex: 2, fontFamily: 'var(--font-display)', fontSize: 'clamp(42px, 6vw, 72px)', fontWeight: 900, color: 'white', lineHeight: 1.05, letterSpacing: '-0.02em', marginBottom: 24 }}>
-              The Founding<br />Coll<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>ctions
+              The Founding<br />Coll<span style={{ color: heroEColor[active], textTransform: 'none', transition: 'color 0.6s ease' }}>ê</span>ctions
             </h1>
             <p className="lift-in d2" style={{ position: 'relative', zIndex: 2, fontFamily: 'var(--font-body)', fontSize: 17, color: 'rgba(247,244,236,0.7)', lineHeight: 1.75, maxWidth: 560 }}>
               A portfolio designed to follow the customer through different identities and stages of life — without ever abandoning the single promise that holds it all together.
@@ -80,8 +88,8 @@ export default function Collections() {
           </div>
 
           {/* Active collection */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 48, alignItems: 'start' }}>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 48, alignItems: 'start', paddingBottom: 88, position: 'relative' }}>
+            <div>
               <div style={{ display: 'inline-block', background: `${col.color}18`, border: `1px solid ${col.color}40`, borderRadius: 4, padding: '5px 14px', marginBottom: 16 }}>
                 <span style={{ fontSize: 12, fontWeight: 700, color: col.color, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{col.name}</span>
               </div>
@@ -99,11 +107,10 @@ export default function Collections() {
               <div className="disclaimer" style={{ borderLeft: `3px solid ${col.color}`, background: `${col.color}10` }} style={{ marginBottom: 32 }}>
                 All designs shown are concept examples. Final collection designs will be confirmed after sample validation.
               </div>
-              {/* Spacer pushes button to constant position */}
-              <div style={{ flexGrow: 1 }} />
-              <div style={{ marginTop: 32 }}>
-                <Link to="/founding-community" style={{ display: 'inline-block', background: col.color, color: 'white', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', border: 'none' }}>Get First Access</Link>
-              </div>
+            </div>
+            {/* GET FIRST ACCESS — absolutely anchored to bottom-left of section, never moves */}
+            <div style={{ position: 'absolute', bottom: 0, left: 0 }}>
+              <Link to="/founding-community" style={{ display: 'inline-block', background: col.color, color: 'white', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', border: 'none', transition: 'background 0.5s ease' }}>Get First Access</Link>
             </div>
             <div>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted-olive)', marginBottom: 16 }}>Example Messages</div>
