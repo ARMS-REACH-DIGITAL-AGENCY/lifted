@@ -44,7 +44,7 @@
   --dark-gray:     var(--earth-brown);
 
   /* ── Typography ── */
-  --font-display: 'Montserrat', Impact, sans-serif;
+  --font-display: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* ── Motion ── */

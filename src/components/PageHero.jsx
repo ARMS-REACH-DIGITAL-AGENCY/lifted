@@ -49,7 +49,7 @@ export default function PageHero({ eyebrow, heading, description, children, bgIm
 
           {/* Heading — always Archivo Black, always clamp(42px,6vw,72px) */}
           <h1 style={{
-          fontFamily: "'Montserrat', Impact, sans-serif",
+          fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
           fontSize: 'clamp(32px, 6vw, 72px)',
           fontWeight: 400,
           color: 'var(--off-white)',
