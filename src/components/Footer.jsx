@@ -34,7 +34,7 @@ export default function Footer() {
             <Link to="/founding-community" style={{
               display: 'inline-block', fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700,
               letterSpacing: '0.08em', textTransform: 'uppercase',
-              background: 'var(--burnt-orange)', color: 'var(--off-white)',
+              background: 'var(--sand)', color: 'var(--black)',
               textDecoration: 'none', padding: '10px 18px', borderRadius: 'var(--radius)',
             }}>Join the Founding Community</Link>
           </div>

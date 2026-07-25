@@ -15,11 +15,19 @@ function useLiftIn(ref) {
 
 const collections = [
   { id: 'core', name: 'Core Collection', color: '#EEBF68', icon: '◈', tagline: 'Simple, elegant daily brand affinity.', desc: 'The foundation of the Liftêd™ identity. Designed for everyday wear — clean, refined, and unmistakably Liftêd™.', messages: ['Stay Liftêd™', 'Lift Yourself. Lift Others.', 'Wear Encouragement.', 'The World Needs More Liftêd™'], products: 'Tees · Hoodies · Hats · Joggers · Quarter-zips' },
-  { id: 'pickup', name: 'Pick-Me-Up Collection', color: '#4A7FB5', icon: '↑', tagline: 'Direct messages of hope, resilience, and encouragement.', desc: 'For the days that need it most. Explicit, honest messages that speak directly to the person wearing them.', messages: ['You Matter Here.', 'Your Story Isn\'t Over.', 'One More Day.', 'Better Days Are Ahead.', 'You\'re Doing Better Than You Think.'], products: 'Message tees · Hoodies · Sweatshirts' },
+  { id: 'pickup', name: 'Pick-Me-Up Collection', color: '#4A7FB5', icon: '↑', tagline: 'Direct messages of hope, resilience, and encouragement.', desc: 'For the days that need it most. Explicit, honest messages that speak directly to the person wearing them.', messages: ['You Matter Here.', "Your Story Isn't Over.", 'One More Day.', 'Better Days Are Ahead.', "You're Doing Better Than You Think."], products: 'Message tees · Hoodies · Sweatshirts' },
   { id: 'athlete', name: 'Athlete Collection', color: '#C76A32', icon: '⚡', tagline: 'Motivation centered on discipline, preparation, and resilience.', desc: 'For competitors, coaches, and anyone who understands that the work is never finished.', messages: ['Never Finished.', 'Earn Tomorrow.', 'Outwork Yesterday.', 'Built Through Adversity.', 'Strong Mind. Strong Finish.'], products: 'Performance tees · Training gear · Shorts' },
   { id: 'youth', name: 'Youth Collection', color: '#8A9A5B', icon: '★', tagline: 'Positive messaging for identity, confidence, and belonging.', desc: 'For the next generation. Messages that build confidence, celebrate identity, and remind young people they belong.', messages: ['You Belong Here.', 'Different Is Not Less.', 'Your Voice Matters.', 'The Future Looks Good on You.', 'Stronger Than You Think.'], products: 'Youth tees · Hoodies · Hats' },
-  { id: 'collab', name: 'Collaboration Collection', color: '#C4748A', icon: '◎', tagline: 'Co-branded editions for organizations, causes, and communities.', desc: 'Custom Liftêd™ editions that carry the brand\'s meaning and identity — built for organizations that want their apparel to represent more than a logo.', messages: ['Better Together.', 'Your Work Matters.', 'Every Step Lifts Someone.', 'Hope Lives Here.', 'Play It Forward.'], products: 'Custom editions · Event gear · Fundraising collections' },
+  { id: 'collab', name: 'Collaboration Collection', color: '#C4748A', icon: '◎', tagline: 'Co-branded editions for organizations, causes, and communities.', desc: "Custom Liftêd™ editions that carry the brand's meaning and identity — built for organizations that want their apparel to represent more than a logo.", messages: ['Better Together.', 'Your Work Matters.', 'Every Step Lifts Someone.', 'Hope Lives Here.', 'Play It Forward.'], products: 'Custom editions · Event gear · Fundraising collections' },
 ]
+
+const heroImages = {
+  core:    { src: '/images/hero-core.png',     pos: 'center' },
+  pickup:  { src: '/images/hero-pickmeup.png', pos: '60% center' },
+  athlete: { src: '/images/hero-athlete.png',  pos: 'center' },
+  youth:   { src: '/images/hero-youth.png',    pos: 'center' },
+  collab:  { src: '/images/hero-colab.png',    pos: 'center' },
+}
 
 export default function Collections() {
   const ref = useRef(null)
@@ -29,14 +37,27 @@ export default function Collections() {
 
   return (
     <div ref={ref} style={{ paddingTop: 68 }}>
-      <section style={{ background: 'var(--black)', padding: '80px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
+      <section style={{ background: 'var(--black)', padding: '80px 0 64px', borderBottom: '3px solid var(--burnt-orange)', position: 'relative', overflow: 'hidden' }}>
+        {/* Hero background images — cross-dissolve on tab click */}
+        {Object.entries(heroImages).map(([key, { src, pos }]) => (
+          <div key={key} style={{
+            position: 'absolute', inset: 0, zIndex: 0,
+            backgroundImage: `url(${src})`,
+            backgroundSize: 'cover',
+            backgroundPosition: pos,
+            opacity: active === key ? 0.22 : 0,
+            transition: 'opacity 0.8s ease',
+          }} />
+        ))}
+        {/* Gradient overlay — protects text on left */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'linear-gradient(110deg, rgba(23,24,22,0.97) 0%, rgba(23,24,22,0.90) 35%, rgba(23,24,22,0.60) 65%, rgba(23,24,22,0.25) 100%)', pointerEvents: 'none' }} />
         <div className="container">
           <div style={{ maxWidth: 680 }}>
-            <div className="lift-in section-eyebrow" style={{ color: 'var(--gold)' }}>Five Collections. One Meaning.</div>
-            <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
+            <div className="lift-in section-eyebrow" style={{ position: 'relative', zIndex: 2, color: 'var(--burnt-orange)', fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: 16 }}>Five Collections. One Meaning.</div>
+            <h1 className="lift-in d1" style={{ position: 'relative', zIndex: 2, fontFamily: 'var(--font-display)', fontSize: 'clamp(42px, 6vw, 72px)', fontWeight: 900, color: 'white', lineHeight: 1.05, letterSpacing: '-0.02em', marginBottom: 24 }}>
               The Founding<br />Coll<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>ctions
             </h1>
-            <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
+            <p className="lift-in d2" style={{ position: 'relative', zIndex: 2, fontFamily: 'var(--font-body)', fontSize: 17, color: 'rgba(247,244,236,0.7)', lineHeight: 1.75, maxWidth: 560 }}>
               A portfolio designed to follow the customer through different identities and stages of life — without ever abandoning the single promise that holds it all together.
             </p>
           </div>
@@ -60,7 +81,7 @@ export default function Collections() {
 
           {/* Active collection */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 48, alignItems: 'start' }}>
-            <div>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
               <div style={{ display: 'inline-block', background: `${col.color}18`, border: `1px solid ${col.color}40`, borderRadius: 4, padding: '5px 14px', marginBottom: 16 }}>
                 <span style={{ fontSize: 12, fontWeight: 700, color: col.color, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{col.name}</span>
               </div>
@@ -78,7 +99,11 @@ export default function Collections() {
               <div className="disclaimer" style={{ borderLeft: `3px solid ${col.color}`, background: `${col.color}10` }} style={{ marginBottom: 32 }}>
                 All designs shown are concept examples. Final collection designs will be confirmed after sample validation.
               </div>
-              <Link to="/founding-community" style={{ display: 'inline-block', background: col.color, color: 'white', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', border: 'none' }}>Get First Access</Link>
+              {/* Spacer pushes button to constant position */}
+              <div style={{ flexGrow: 1 }} />
+              <div style={{ marginTop: 32 }}>
+                <Link to="/founding-community" style={{ display: 'inline-block', background: col.color, color: 'white', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', border: 'none' }}>Get First Access</Link>
+              </div>
             </div>
             <div>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted-olive)', marginBottom: 16 }}>Example Messages</div>
@@ -95,9 +120,9 @@ export default function Collections() {
       <section style={{ background: 'var(--charcoal)', padding: '64px 0', textAlign: 'center' }}>
         <div className="container">
           <div className="lift-in">
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 700, color: 'white', marginBottom: 16 }}>Be First to Know When Ordering Opens</h2>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 700, color: 'var(--sand)', marginBottom: 16 }}>Be First to Know When Ordering Opens</h2>
             <p style={{ fontSize: 16, color: 'rgba(247,244,236,0.65)', maxWidth: 480, margin: '0 auto 28px' }}>Join the founding community and get first access to the initial collection.</p>
-            <Link to="/founding-community" className="btn btn-gold btn-lg">Join the Founding Community</Link>
+            <Link to="/founding-community" style={{ display: 'inline-block', background: 'var(--sand)', color: 'var(--black)', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '16px 36px', borderRadius: 4, textDecoration: 'none' }}>Join the Founding Community</Link>
           </div>
         </div>
       </section>
