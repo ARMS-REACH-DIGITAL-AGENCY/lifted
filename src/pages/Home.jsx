@@ -328,7 +328,7 @@ export default function Home() {
           <div className="lift-in">
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 16 }}>The Movement</div>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 6vw, 64px)', color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.02em', textTransform: 'none', marginBottom: 20 }}>
-              Wear Encouragêment.<br /><span style={{ color: 'var(--burnt-orange)' }}>Wear <BrandName theme="dark" />.</span>
+              Wear Encouragement.<br />Wear <BrandName theme="dark" />.
             </h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, color: 'rgba(247,244,236,0.6)', maxWidth: 520, margin: '0 auto 36px', lineHeight: 1.7 }}>
               The world needs more people who refuse to quit. That's who we make this for. Join us before the official launch.
