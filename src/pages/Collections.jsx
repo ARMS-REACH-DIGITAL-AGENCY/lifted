@@ -72,7 +72,7 @@ export default function Collections() {
         </div>
       </section>
 
-      <section style={{ background: 'var(--cream)', padding: '80px 0' }}>
+      <section style={{ background: 'var(--cream)', padding: '80px 0', minHeight: 720 }}>
         <div className="container">
           {/* Tabs */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 48 }}>
