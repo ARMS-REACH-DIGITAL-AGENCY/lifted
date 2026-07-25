@@ -108,7 +108,7 @@ export default function Home() {
         <div className="container">
           <div className="lift-in" style={{ marginBottom: 48 }}>
             <div className="section-eyebrow">The Two-Way Impact</div>
-            <h2 className="section-title" aria-label="See How It Works"><BrandE before="S" after="e How It Works" ariaLabel="See How It Works" /></h2>
+            <h2 className="section-title" aria-label="See How It Works">S<span style={{ color: "var(--sand)", textTransform: "none" }}>ê</span>e How It Works</h2>
             <p className="section-body">Every Liftêd<TM/> garment works in two directions simultaneously.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24, alignItems: 'start', marginBottom: 32 }}>

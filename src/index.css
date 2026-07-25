@@ -151,7 +151,7 @@ sup {
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin-bottom: 18px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 .section-title-light {
   font-family: var(--font-display);
@@ -161,7 +161,7 @@ sup {
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin-bottom: 18px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 .section-body {
   font-family: var(--font-body);
