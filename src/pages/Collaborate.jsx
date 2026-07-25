@@ -25,17 +25,16 @@ export default function Collaborate() {
           <div style={{ maxWidth: 680 }}>
             <div className="lift-in section-eyebrow" style={{ color: 'var(--gold)' }}>Collaboration Model</div>
             <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
-              Organizations, Caus<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>s,<br />and Communities
-            </h1>
-            <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
               Organizations,<br />Communities &amp;<br />Caus<span style={{ color: '#C4748A', textTransform: 'none' }}>ê</span>s.
+            </h1>
+        </div>
+      </section>
             <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
               Liftêd™ collaborates with organizations that want their apparel to represent more than an event logo.
             </p>
           </div>
         </div>
       </section>
-
       <section style={{ background: 'var(--cream)', padding: '80px 0' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 64, alignItems: 'start' }}>
