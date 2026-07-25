@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero.jsx'
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import LiftForm from '../components/LiftForm.jsx'
@@ -27,23 +28,16 @@ export default function Invest() {
   return (
     <div ref={ref} style={{ background: 'var(--warm-cream)' }}>
       {/* Hero */}
-      <section style={{ background: 'var(--black)', padding: '148px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
-        <div className="container">
-          <div style={{ maxWidth: 720 }}>
-            <div className="lift-in section-eyebrow" style={{ color: 'var(--gold)' }}>Investor Overview</div>
-            <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
-              The Investment<br /><span style={{ color: 'var(--gold)' }}>Opportunity</span>
-            </h1>
-            <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7, marginBottom: 32, maxWidth: 580 }}>
-              Liftêd™ is a pre-revenue inspirational lifestyle apparel brand in its sample-development stage. We are seeking founding investors to help bring the brand to market.
-            </p>
-            <div className="lift-in d3" style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-              <Link to="/schedule?type=investor" className="btn btn-gold btn-lg">Schedule an Investor Call</Link>
-              <a href="#investor-form" className="btn btn-outline-light btn-lg">Request the Investor Deck</a>
-            </div>
-          </div>
+      <PageHero
+        eyebrow="INVESTOR OVERVIEW"
+        heading={<>The Investment<br /><span style={{ color: 'var(--sand)' }}>Opportunity</span></>}
+        description="Liftêd™ is a pre-revenue inspirational lifestyle apparel brand in its sample-development stage. We are seeking founding investors to help bring the brand to market."
+      >
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+          <Link to="/schedule?type=investor" className="btn btn-gold btn-lg">Schedule an Investor Call</Link>
+          <a href="#investor-form" className="btn btn-outline-light btn-lg">Request the Investor Deck</a>
         </div>
-      </section>
+      </PageHero>
 
       {/* Disclaimer */}
       <div style={{ background: 'var(--off-white)', padding: '20px 0' }}>

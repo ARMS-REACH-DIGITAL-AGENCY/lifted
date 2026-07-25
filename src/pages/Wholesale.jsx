@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero.jsx'
 /**
  * /wholesale — Carry Liftêd™ in Your Stor<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>
  * Submits via formBridge → HighLevel Forms API (form ID: wA5FYCmpPjckyDsPCEYF)
@@ -54,20 +55,12 @@ export default function Wholesale() {
 
   return (
     <div style={{ background: 'var(--warm-cream)', minHeight: '100vh' }}>
-     {/* Hero */}
-      <section style={{ background: 'var(--black)', padding: '148px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
-        <div className="container">
-          <div style={{ maxWidth: 680 }}>
-            <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 16 }}>WHOLESALE</div>
-            <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(42px, 6vw, 72px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'none', marginBottom: 24 }}>
-              Carry Lift<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>d<TM /><br />in Your Store
-            </h1>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, color: 'rgba(247,244,236,0.7)', lineHeight: 1.75, maxWidth: 560 }}>
-              Liftêd™ is accepting wholesale applications from retailers who want to carry encouragement-driven apparel. Complete the form below to start the conversation.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Hero */}
+      <PageHero
+        eyebrow="WHOLESALE"
+        heading={<>Carry Lift<span style={{ color: 'var(--sand)' }}>ê</span>d<TM /><br />in Your Store</>}
+        description="Liftêd™ is accepting wholesale applications from retailers who want to carry encouragement-driven apparel. Complete the form below to start the conversation."
+      />
 
       {/* Form */}
       <div style={{ maxWidth: 800, margin: '0 auto', padding: '48px 20px 80px' }}>

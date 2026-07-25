@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero.jsx'
 /**
  * /investor-access — Public investor access request page
  * Form submits via formBridge → HighLevel Forms API (form ID: eylaKSX7etKXpjDAF84s)
@@ -51,17 +52,11 @@ export default function InvestorAccess() {
   return (
     <div style={{ background: 'var(--warm-cream)', minHeight: '100vh' }}>
       {/* Hero */}
-      <div style={{ background: 'var(--black)', padding: '148px 0 48px', borderBottom: '3px solid var(--burnt-orange)' }}>
-        <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 20px' }}>
-          <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 14 }}>Private Access</div>
-          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 5vw, 52px)', color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.02em', textTransform: 'none', marginBottom: 20 }}>
-            R<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>quest Private<br />Investor Access
-          </h1>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7, maxWidth: 560 }}>
-            Liftêd™ is currently sharing its business opportunity with selected investors, strategic partners, advisors, and supporters. Submit your information below to request access to the private Liftêd™ information room.
-          </p>
-        </div>
-      </div>
+      <PageHero
+        eyebrow="PRIVATE ACCESS"
+        heading={<>R<span style={{ color: 'var(--sand)' }}>ê</span>quest Private<br />Investor Access</>}
+        description="Liftêd™ is currently sharing its business opportunity with selected investors, strategic partners, advisors, and supporters. Submit your information below to request access to the private Liftêd™ information room."
+      />
 
       {/* Form */}
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '48px 20px 80px' }}>

@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero.jsx'
 import React, { useEffect, useRef } from 'react'
 import LiftForm from '../components/LiftForm.jsx'
 import { TM } from '../components/TM.jsx'
@@ -102,19 +103,11 @@ export default function Collaborate() {
 
   return (
     <div ref={ref} style={{ background: 'var(--cream)' }}>
-      <section style={{ background: 'var(--black)', padding: '148px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
-        <div className="container">
-          <div style={{ maxWidth: 680 }}>
-            <div className="lift-in section-eyebrow" style={{ color: 'var(--gold)' }}>Collaboration Model</div>
-            <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
-              Organizations,<br />Communities &amp;<br />Caus<span style={{ color: '#C4748A', textTransform: 'none' }}>ê</span>s.
-            </h1>
-            <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
-              Liftêd™ collaborates with organizations that want their apparel to represent more than an event logo.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="COLLABORATION MODEL"
+        heading={<>Organizations,<br />Communities &amp;<br />Caus<span style={{ color: '#C4748A' }}>ê</span>s.</>}
+        description="Liftêd™ collaborates with organizations that want their apparel to represent more than an event logo."
+      />
 
       <section style={{ background: 'var(--cream)', padding: '80px 0' }}>
         <div className="container">

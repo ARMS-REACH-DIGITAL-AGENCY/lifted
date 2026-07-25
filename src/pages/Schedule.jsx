@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero.jsx'
 import React, { useEffect, useRef } from 'react'
 import { useSearchParams, Link } from 'react-router-dom'
 import LiftForm from '../components/LiftForm.jsx'
@@ -31,19 +32,11 @@ export default function Schedule() {
 
   return (
     <div ref={ref} style={{ background: 'var(--warm-cream)' }}>
-     <section style={{ background: 'var(--black)', padding: '148px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
-       <div className="container">
-         <div style={{ maxWidth: 680 }}>
-            <div className="lift-in section-eyebrow" style={{ color: 'var(--burnt-orange)', fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: 16 }}>LET'S TALK</div>
-            <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(42px, 6vw, 72px)', fontWeight: 900, color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', marginBottom: 24 }}>
-              Schedule a 20-Minute<br />Lift<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>d<TM /> Conversation
-           </h1>
-            <p className="lift-in d2" style={{ fontFamily: 'var(--font-body)', fontSize: 17, color: 'rgba(247,244,236,0.7)', lineHeight: 1.75, maxWidth: 560 }}>
-             Choose the type of conversation that fits your interest. We'll confirm a time and send you a Zoom link.
-           </p>
-         </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="LET'S TALK"
+        heading={<>Schedule a 20-Minute<br />Lift<span style={{ color: 'var(--sand)' }}>ê</span>d<TM /> Conversation</>}
+        description="Choose the type of conversation that fits your interest. We'll confirm a time and send you a Zoom link."
+      />
 
       <section style={{ background: 'var(--cream)', padding: '80px 0' }}>
         <div className="container">
