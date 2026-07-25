@@ -56,11 +56,11 @@ export default function Home() {
       }}>
         {/* ── Layered 5-panel collection imagery ── */}
         <div style={{ position: 'absolute', inset: 0, zIndex: 0, display: 'flex' }}>
-          <div style={{ flex: 1, backgroundImage: 'url(/manus-storage/hero-core_a5189ae7.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top', opacity: 0.22, filter: 'grayscale(40%) contrast(1.1)' }} />
-          <div style={{ flex: 1, backgroundImage: 'url(/manus-storage/hero-pickmeup_cf0edc01.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.18, filter: 'grayscale(30%) contrast(1.1)' }} />
-          <div style={{ flex: 1, backgroundImage: 'url(/manus-storage/hero-athlete_154fb741.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.24, filter: 'grayscale(20%) contrast(1.15)' }} />
-          <div style={{ flex: 1, backgroundImage: 'url(/manus-storage/hero-youth_adbb8859.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top', opacity: 0.18, filter: 'grayscale(35%) contrast(1.1)' }} />
-          <div style={{ flex: 1, backgroundImage: 'url(/manus-storage/hero-collab_e5c3e3aa.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.18, filter: 'grayscale(30%) contrast(1.1)' }} />
+          <div style={{ flex: 1, backgroundImage: 'url(/images/hero-core.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top', opacity: 0.22, filter: 'grayscale(40%) contrast(1.1)' }} />
+          <div style={{ flex: 1, backgroundImage: 'url(/images/hero-core.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.18, filter: 'grayscale(30%) contrast(1.1)' }} />
+          <div style={{ flex: 1, backgroundImage: 'url(/images/hero-athlete.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.24, filter: 'grayscale(20%) contrast(1.15)' }} />
+          <div style={{ flex: 1, backgroundImage: 'url(/images/hero-youth.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top', opacity: 0.18, filter: 'grayscale(35%) contrast(1.1)' }} />
+          <div style={{ flex: 1, backgroundImage: 'url(/images/hero-collab.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.18, filter: 'grayscale(30%) contrast(1.1)' }} />
         </div>
         {/* Gradient overlay — strong on left for text, lighter on right to reveal imagery */}
         <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'linear-gradient(105deg, rgba(23,24,22,0.97) 0%, rgba(23,24,22,0.90) 38%, rgba(23,24,22,0.72) 62%, rgba(23,24,22,0.85) 100%)' }} />

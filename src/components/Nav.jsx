@@ -53,7 +53,7 @@ export default function Nav() {
         }}>
           {/* Logo */}
           <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
-            <LiftedLogo variant={logoVariant} height={36} />
+            <LiftedLogo variant={logoVariant} height={80} />
           </Link>
 
           {/* Desktop nav */}
