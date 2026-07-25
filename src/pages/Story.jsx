@@ -34,7 +34,7 @@ export default function Story() {
             textTransform: 'uppercase',
             marginBottom: 24,
           }}>
-            An Idea 15 Years<br />in the Making.
+            An Id<BrandE before="" after="a 15 Years" ariaLabel="An Idea 15 Years" /><br />in the Making.
           </h1>
           <p style={{
             fontFamily: 'var(--font-body)', fontSize: 17,
