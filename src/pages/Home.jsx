@@ -52,39 +52,59 @@ export default function Home() {
         position: 'relative', overflow: 'hidden',
         padding: '80px 0 60px',
       }}>
-        {/* Subtle texture */}
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E\")", backgroundRepeat: 'repeat', pointerEvents: 'none', zIndex: 0 }} />
+        {/* ── Layered 5-panel collection imagery ── */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: 0, display: 'flex' }}>
+          <div style={{ flex: 1, backgroundImage: 'url(/manus-storage/hero-core_a5189ae7.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top', opacity: 0.22, filter: 'grayscale(40%) contrast(1.1)' }} />
+          <div style={{ flex: 1, backgroundImage: 'url(/manus-storage/hero-pickmeup_cf0edc01.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.18, filter: 'grayscale(30%) contrast(1.1)' }} />
+          <div style={{ flex: 1, backgroundImage: 'url(/manus-storage/hero-athlete_154fb741.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.24, filter: 'grayscale(20%) contrast(1.15)' }} />
+          <div style={{ flex: 1, backgroundImage: 'url(/manus-storage/hero-youth_adbb8859.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top', opacity: 0.18, filter: 'grayscale(35%) contrast(1.1)' }} />
+          <div style={{ flex: 1, backgroundImage: 'url(/manus-storage/hero-collab_e5c3e3aa.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.18, filter: 'grayscale(30%) contrast(1.1)' }} />
+        </div>
+        {/* Gradient overlay — strong on left for text, lighter on right to reveal imagery */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'linear-gradient(105deg, rgba(23,24,22,0.97) 0%, rgba(23,24,22,0.90) 38%, rgba(23,24,22,0.72) 62%, rgba(23,24,22,0.85) 100%)' }} />
+        {/* Warm vignette */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'radial-gradient(ellipse at 28% 50%, transparent 35%, rgba(23,24,22,0.55) 100%)', pointerEvents: 'none' }} />
         {/* Orange bottom accent line */}
-        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 3, background: 'var(--burnt-orange)', zIndex: 2 }} />
-
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ maxWidth: 800 }}>
-            {/* Production label */}
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 28, padding: '6px 14px', border: '1.5px solid var(--burnt-orange)', borderRadius: 'var(--radius)' }}>
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 3, background: 'var(--burnt-orange)', zIndex: 3 }} />
+        {/* ── Hero content ── */}
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div style={{ maxWidth: 820 }}>
+            {/* Production status badge */}
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 32, padding: '6px 14px', border: '1.5px solid rgba(199,106,50,0.6)', borderRadius: 'var(--radius)' }}>
               <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--burnt-orange)', display: 'inline-block' }} />
               <span style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--burnt-orange)' }}>Pre-Revenue · Samples in Production</span>
             </div>
-
-            <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(48px, 9vw, 100px)', fontWeight: 400, color: 'var(--off-white)', lineHeight: 0.95, letterSpacing: '-0.03em', marginBottom: 32, textTransform: 'uppercase' }}>
-              THE WORLD<br />NEEDS MORE<br /><span style={{ color: 'var(--burnt-orange)' }}>LIFTÊD™.</span>
+            {/* ── Premium title-case headline ── */}
+            <h1 style={{ fontFamily: '"Archivo Black", "Inter Tight", system-ui, sans-serif', fontSize: 'clamp(42px, 7.5vw, 88px)', fontWeight: 900, color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.025em', marginBottom: 28, textTransform: 'none' }}>
+              The World Needs<br />More{' '}
+              <span style={{ color: 'var(--sand)', fontStyle: 'normal', letterSpacing: '-0.02em' }}>
+                Liftêd
+                <sup style={{ fontSize: '0.30em', fontWeight: 900, letterSpacing: '0', verticalAlign: 'super', lineHeight: 0, color: 'var(--sand)', opacity: 0.70, marginLeft: '0.04em' }}>™</sup>
+              </span>
+              <span style={{ color: 'var(--burnt-orange)', marginLeft: '0.04em' }}>.</span>
             </h1>
-
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: 18, color: 'rgba(247,244,236,0.72)', lineHeight: 1.65, marginBottom: 14, maxWidth: 560 }}>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 18, color: 'rgba(247,244,236,0.75)', lineHeight: 1.7, marginBottom: 12, maxWidth: 560 }}>
               Private-label apparel designed to encourage the person wearing it — and the person standing behind them.
             </p>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'rgba(247,244,236,0.42)', lineHeight: 1.6, marginBottom: 40, maxWidth: 500 }}>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, fontStyle: 'italic', color: 'rgba(247,244,236,0.38)', lineHeight: 1.6, marginBottom: 44, maxWidth: 500 }}>
               Most apparel tells the world what you bought. Liftêd™ tells someone what they may need to hear.
             </p>
-
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
               <Link to="/founding-community" className="btn btn-gold btn-lg">Join the Founding Community</Link>
-              <Link to="/story" className="btn btn-outline-light btn-lg">Explore the Concept</Link>
+              <Link to="/story" className="btn btn-outline-light btn-lg">Our Story</Link>
               <Link to="/schedule" className="btn btn-outline-light btn-lg">Schedule a Call</Link>
+            </div>
+            {/* Collection micro-labels */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 48 }}>
+              {['Core', 'Pick-Me-Up', 'Athlete', 'Youth', 'Collaboration'].map(c => (
+                <span key={c} style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(247,244,236,0.30)', padding: '4px 10px', border: '1px solid rgba(247,244,236,0.10)', borderRadius: 2 }}>
+                  {c} Collection
+                </span>
+              ))}
             </div>
           </div>
         </div>
       </section>
-
       {/* ── HOW IT WORKS ── */}
       <section ref={s2} style={{ background: 'var(--warm-cream)', padding: '88px 0', borderBottom: '1.5px solid rgba(41,42,40,0.12)' }}>
         <div className="container">
