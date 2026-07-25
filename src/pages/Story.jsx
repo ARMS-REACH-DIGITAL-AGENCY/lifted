@@ -29,9 +29,9 @@ export default function Story() {
           width: '52%',
           height: '100%',
           backgroundImage: 'url(/brand/story/origin-team-edition-shirt.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 55%',
-          opacity: 0.38,
+         backgroundSize: 'cover',
+          backgroundPosition: 'center 30%',
+         opacity: 0.38,
           pointerEvents: 'none',
         }} />
         {/* Gradient: solid black on left protecting text, fades right */}
