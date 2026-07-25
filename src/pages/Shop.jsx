@@ -17,6 +17,7 @@ function SKUCard({ sku }) {
   const [flipped, setFlipped] = useState(false);
   const color = COLORS[sku.collection] || '#D4A843';
   const isA = sku.priority === 'A';
+  const isPMU = sku.wearerFacing === true;
   return (
     <div
       onClick={() => setFlipped(f => !f)}
@@ -61,9 +62,16 @@ function SKUCard({ sku }) {
         lineHeight: flipped ? 1.65 : 1.25,
         flex: 1,
         whiteSpace: flipped ? 'pre-line' : 'normal',
+        transform: (!flipped && isPMU) ? 'rotate(180deg)' : 'none',
+        transition: 'transform 0.3s ease',
       }}>
         {flipped ? sku.back : sku.front}
       </div>
+      {!flipped && isPMU && (
+        <span style={{ fontSize: 8, color: '#4A7FB5', fontFamily: 'var(--font-body)', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', opacity: 0.8 }}>
+          ↑ Reads correctly when you look down
+        </span>
+      )}
       <span style={{ fontSize: 9, color: 'var(--muted-olive)', fontFamily: 'var(--font-body)', borderTop: '1px solid rgba(41,42,40,0.1)', paddingTop: 8 }}>
         PRE-ORDER — COMING SOON
       </span>
@@ -127,6 +135,14 @@ export default function Shop() {
 
       {/* SKU Grid */}
       <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 24px 96px' }}>
+        {/* Pick-Me-Up wearer-facing note */}
+        {active === 'Pick-Me-Up' && (
+          <div style={{ background: 'rgba(74,127,181,0.08)', border: '1.5px solid rgba(74,127,181,0.3)', borderLeft: '4px solid #4A7FB5', padding: '14px 20px', marginBottom: 32, borderRadius: 4 }}>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--charcoal)', lineHeight: 1.65, margin: 0 }}>
+              <strong>The Pick-Me-Up Collection was created for the person wearing it.</strong> Each front message is written in first person and shown upside down so it reads correctly when the wearer looks down. The back continues the encouragement by sharing a message with the person standing behind them.
+            </p>
+          </div>
+        )}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 18 }}>
           {filtered.map(sku => <SKUCard key={sku.id} sku={sku} />)}
         </div>

@@ -19,7 +19,7 @@ function useLiftIn(ref) {
 
 const collections = [
   { name: 'Core', color: 'var(--charcoal)', accent: '#D4A843', icon: '◈', desc: 'Daily brand affinity. Clean, bold, unmistakably Liftêd™.', messages: ['Stay Liftêd™', 'Lift Yourself. Lift Others.', 'Wear Encouragement.', 'The World Needs More Liftêd™'] },
-  { name: 'Pick-Me-Up', color: 'var(--charcoal)', accent: '#4A7FB5', icon: '↑', desc: 'Direct messages of hope, resilience, and encouragement.', messages: ['You Matter Here.', "Your Story Isn't Over.", 'One More Day.', 'Better Days Are Ahead.'] },
+  { name: 'Pick-Me-Up', color: 'var(--charcoal)', accent: '#4A7FB5', icon: '↑', desc: 'First-person messages written for the wearer — shown upside down so they read correctly when you look down.', messages: ['I Matter Here.', "My Story Isn't Over.", 'Better Days Are Ahead for Me.', "I'm Doing Better Than I Think."] },
   { name: 'Athlete', color: 'var(--charcoal)', accent: '#C76A32', icon: '⚡', desc: 'Discipline, preparation, resilience. Built for competitors.', messages: ['Never Finished.', 'Earn Tomorrow.', 'Outwork Yesterday.', 'Built Through Adversity.'] },
   { name: 'Youth', color: 'var(--charcoal)', accent: '#8A9A5B', icon: '★', desc: 'Confidence, identity, belonging. For the next generation.', messages: ['You Belong Here.', 'Different Is Not Less.', 'Your Voice Matters.', 'The Future Looks Good on You.'] },
   { name: 'Collaboration', color: 'var(--charcoal)', accent: '#C4748A', icon: '◎', desc: 'Co-branded editions for organizations, causes, and communities.', messages: ['Better Together.', 'Your Work Matters.', 'Hope Lives Here.', 'Play It Forward.'] },
