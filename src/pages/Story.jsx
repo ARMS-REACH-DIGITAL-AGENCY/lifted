@@ -154,9 +154,8 @@ export default function Story() {
                   style={{
                     width: '100%',
                     display: 'block',
-                    objectFit: 'cover',
-                    objectPosition: 'center top',
-                    maxHeight: 540,
+                    objectFit: 'contain',
+                    background: 'var(--black)',
                   }}
                   loading="lazy"
                 />
