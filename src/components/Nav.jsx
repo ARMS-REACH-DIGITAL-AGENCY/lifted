@@ -53,7 +53,7 @@ export default function Nav() {
         }}>
           {/* Logo */}
           <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
-            <LiftedLogo variant={logoVariant} height={80} />
+            <LiftedLogo variant={logoVariant} height={120} />
           </Link>
 
           {/* Desktop nav */}
@@ -91,13 +91,13 @@ export default function Nav() {
             <Link to="/founding-community" style={{
               fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700,
               letterSpacing: '0.08em', textTransform: 'uppercase',
-              background: 'var(--burnt-orange)', color: 'var(--off-white)',
+              background: '#EEBF68', color: 'var(--black)',
               textDecoration: 'none', padding: '8px 16px',
-              borderRadius: 'var(--radius)', border: '2px solid var(--burnt-orange)',
+              borderRadius: 'var(--radius)', border: '2px solid #EEBF68',
               transition: 'background 0.15s', whiteSpace: 'nowrap',
             }}
             onMouseEnter={e => { e.currentTarget.style.background = '#B85C28'; e.currentTarget.style.borderColor = '#B85C28' }}
-            onMouseLeave={e => { e.currentTarget.style.background = 'var(--burnt-orange)'; e.currentTarget.style.borderColor = 'var(--burnt-orange)' }}
+            onMouseLeave={e => { e.currentTarget.style.background = '#EEBF68'; e.currentTarget.style.borderColor = '#EEBF68' }}
             >Join Community</Link>
           </div>
 
@@ -106,7 +106,7 @@ export default function Nav() {
             <Link to="/founding-community" style={{
               fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700,
               letterSpacing: '0.06em', textTransform: 'uppercase',
-              background: 'var(--burnt-orange)', color: 'var(--off-white)',
+              background: '#EEBF68', color: 'var(--black)',
               textDecoration: 'none', padding: '8px 14px',
               borderRadius: 'var(--radius)', whiteSpace: 'nowrap',
             }}>Join</Link>
@@ -154,7 +154,7 @@ export default function Nav() {
                 display: 'block', textAlign: 'center',
                 fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700,
                 letterSpacing: '0.08em', textTransform: 'uppercase',
-                background: 'var(--burnt-orange)', color: 'var(--off-white)',
+                background: '#EEBF68', color: 'var(--black)',
                 textDecoration: 'none', padding: '14px',
                 borderRadius: 'var(--radius)',
               }}>Join the Founding Community</Link>

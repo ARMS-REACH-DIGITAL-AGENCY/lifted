@@ -41,12 +41,7 @@ export default function Home() {
   return (
     <div>
       {/* ── Status Banner ── */}
-      <div className="status-banner" style={{ paddingTop: 72 }}>
-        <span>NOW IN PRODUCTION —</span> First Liftêd™ private-label samples in development.{' '}
-        <Link to="/founding-community" style={{ color: 'var(--sand)', fontWeight: 700, marginLeft: 6 }}>Join the Founding Community →</Link>
-      </div>
-
-      {/* ── HERO ── */}
+{/* ── HERO ── */}
       <section style={{
         minHeight: '100vh',
         background: 'var(--black)',
@@ -88,7 +83,7 @@ export default function Home() {
               Most apparel tells the world what you bought. Liftêd™ tells someone what they may need to hear.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-              <Link to="/founding-community" className="btn btn-gold btn-lg">Join the Founding Community</Link>
+              <Link to="/founding-community" style={{ display: 'inline-block', background: '#EEBF68', color: 'var(--black)', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '16px 28px', borderRadius: 4, textDecoration: 'none' }}>Join the Founding Community</Link>
               <Link to="/story" className="btn btn-outline-light btn-lg">Our Story</Link>
               <Link to="/schedule" className="btn btn-outline-light btn-lg">Schedule a Call</Link>
             </div>
@@ -334,7 +329,7 @@ export default function Home() {
               The world needs more people who refuse to quit. That's who we make this for. Join us before the official launch.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center' }}>
-              <Link to="/founding-community" className="btn btn-gold btn-lg">Join the Founding Community</Link>
+              <Link to="/founding-community" style={{ display: 'inline-block', background: '#EEBF68', color: 'var(--black)', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '16px 28px', borderRadius: 4, textDecoration: 'none' }}>Join the Founding Community</Link>
               <Link to="/schedule" className="btn btn-outline-light btn-lg">Schedule a Conversation</Link>
             </div>
           </div>
