@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import LiftForm from '../components/LiftForm.jsx'
 import { TM } from '../components/TM.jsx'
-import { BrandE } from '../components/BrandE.jsx'
 
 function useLiftIn(ref) {
   useEffect(() => {
@@ -27,14 +26,13 @@ export default function Collaborate() {
             <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
               Organizations,<br />Communities &amp;<br />Caus<span style={{ color: '#C4748A', textTransform: 'none' }}>ê</span>s.
             </h1>
-        </div>
-      </section>
             <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
               Liftêd™ collaborates with organizations that want their apparel to represent more than an event logo.
             </p>
           </div>
         </div>
       </section>
+
       <section style={{ background: 'var(--cream)', padding: '80px 0' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 64, alignItems: 'start' }}>
@@ -53,7 +51,7 @@ export default function Collaborate() {
               </p>
               <div className="lift-in d5" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
                 {['Corporate apparel', 'Employee appreciation', 'Leadership gifts', 'Golf tournaments', 'Charity events', 'Church retreats', 'School campaigns', 'Team programs', 'Fundraising stores', 'Awareness campaigns', 'Limited co-branded collections', 'Community events'].map(item => (
-                  <div key={item} style={{ background: 'white', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: 'var(--charcoal)', fontWeight: 500, boxShadow: 'none', display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <div key={item} style={{ background: 'white', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: 'var(--charcoal)', fontWeight: 500, display: 'flex', alignItems: 'center', gap: 8 }}>
                     <span style={{ color: 'var(--gold)', fontWeight: 700 }}>→</span> {item}
                   </div>
                 ))}
