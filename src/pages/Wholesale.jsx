@@ -53,9 +53,9 @@ export default function Wholesale() {
   }
 
   return (
-    <div style={{ background: 'var(--warm-cream)', minHeight: '100vh', paddingTop: 80 }}>
+    <div style={{ background: 'var(--black)', minHeight: '100vh' }}>
      {/* Hero */}
-      <section style={{ background: 'var(--black)', padding: '80px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
+      <section style={{ background: 'var(--black)', padding: '148px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
         <div className="container">
           <div style={{ maxWidth: 680 }}>
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 16 }}>WHOLESALE</div>

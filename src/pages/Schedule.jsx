@@ -30,8 +30,8 @@ export default function Schedule() {
   const defaultType = params.get('type') || 'founding'
 
   return (
-    <div ref={ref} style={{ paddingTop: 68 }}>
-     <section style={{ background: 'var(--black)', padding: '80px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
+    <div ref={ref} style={{ background: 'var(--black)' }}>
+     <section style={{ background: 'var(--black)', padding: '148px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
        <div className="container">
          <div style={{ maxWidth: 680 }}>
             <div className="lift-in section-eyebrow" style={{ color: 'var(--burnt-orange)', fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: 16 }}>LET'S TALK</div>

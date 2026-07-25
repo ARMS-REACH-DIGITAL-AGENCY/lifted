@@ -19,8 +19,8 @@ export default function FoundingCommunity() {
   useLiftIn(ref)
 
   return (
-    <div ref={ref} style={{ paddingTop: 68 }}>
-     <section style={{ background: 'var(--black)', padding: '80px 0 64px', position: 'relative', overflow: 'hidden' }}>
+    <div ref={ref} style={{ background: 'var(--black)' }}>
+     <section style={{ background: 'var(--black)', padding: '148px 0 64px', position: 'relative', overflow: 'hidden' }}>
        <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: '100%', height: '60%', background: 'radial-gradient(ellipse at 50% 100%, rgba(238,191,104,0.2) 0%, transparent 65%)', pointerEvents: 'none' }} />
        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
          <div style={{ maxWidth: 680 }}>

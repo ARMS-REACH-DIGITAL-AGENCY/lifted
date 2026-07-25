@@ -11,13 +11,13 @@ import { TM } from '../components/TM.jsx'
 
 export default function Story() {
   return (
-    <div style={{ background: 'var(--warm-cream)', minHeight: '100vh', paddingTop: 72 }}>
+    <div style={{ background: 'var(--black)', minHeight: '100vh' }}>
 
      {/* ── Hero ── */}
       <section style={{
         background: 'var(--black)',
         borderBottom: '3px solid var(--burnt-orange)',
-        padding: '80px 0 64px',
+        padding: '152px 0 64px',
         position: 'relative',
         overflow: 'hidden',
       }}>

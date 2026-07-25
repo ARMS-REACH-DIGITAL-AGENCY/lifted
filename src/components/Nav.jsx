@@ -54,9 +54,9 @@ export default function Nav() {
           aria-hidden="true"
           style={{
             position: 'absolute',
-            left: -4,
-            top: -14,
-            height: 118,
+            left: 0,
+            top: -8,
+            height: 96,
             width: 'auto',
             pointerEvents: 'none',
             zIndex: 1001,
@@ -70,7 +70,7 @@ export default function Nav() {
           height: 64,
         }}>
           {/* Logo */}
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0, marginLeft: 52 }}>
             <LiftedLogo variant={logoVariant} height={120} />
           </Link>
 
