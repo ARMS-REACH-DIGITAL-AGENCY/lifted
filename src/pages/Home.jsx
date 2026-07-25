@@ -87,7 +87,7 @@ export default function Home() {
             {/* Production status badge */}
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 32, padding: '6px 14px', border: '1.5px solid rgba(199,106,50,0.6)', borderRadius: 'var(--radius)' }}>
               <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--burnt-orange)', display: 'inline-block' }} />
-              <span style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--burnt-orange)' }}>Pre-Revenue · PRE-ORDER — COMING SOON</span>
+              <span style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--burnt-orange)' }}>Wear Encouragement. Wear Liftêd™.</span>
             </div>
             {/* ── Premium title-case headline ── */}
             <h1 style={{ fontFamily: '"Archivo Black", "Inter Tight", system-ui, sans-serif', fontSize: 'clamp(42px, 7.5vw, 88px)', fontWeight: 900, color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.025em', marginBottom: 28, textTransform: 'none' }}>

@@ -127,7 +127,7 @@ export default function Story() {
                 boxShadow: '6px 6px 0 var(--charcoal)',
                 overflow: 'hidden',
                 background: 'var(--black)',
-                maxWidth: 380,
+                maxWidth: 260,
               }}>
                 {/* Archive label bar */}
                 <div style={{
@@ -154,8 +154,10 @@ export default function Story() {
                   alt="Cesare 'Chaz' DeLuca, Liftêd Co-Founder, wearing the original Lifted Team Edition shirt, 2012"
                   style={{
                     width: '100%',
+                    maxHeight: 320,
                     display: 'block',
                     objectFit: 'contain',
+                    objectPosition: 'center top',
                     background: 'var(--black)',
                   }}
                   loading="lazy"
@@ -165,7 +167,7 @@ export default function Story() {
               {/* Caption */}
               <figcaption style={{
                 marginTop: 14,
-                maxWidth: 380,
+                maxWidth: 260,
                 fontFamily: 'var(--font-body)',
                 fontSize: 12,
                 color: 'var(--muted-olive)',

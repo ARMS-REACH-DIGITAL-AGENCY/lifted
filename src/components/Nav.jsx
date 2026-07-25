@@ -67,8 +67,8 @@ export default function Nav() {
                 textDecoration: 'none', transition: 'color 0.15s',
                 whiteSpace: 'nowrap',
               }}
-              onMouseEnter={e => { if (location.pathname !== l.to) e.currentTarget.style.color = 'var(--off-white)' }}
-              onMouseLeave={e => { e.currentTarget.style.color = location.pathname === l.to ? 'var(--sand)' : 'rgba(247,244,236,0.75)' }}
+              onMouseEnter={e => { if (location.pathname !== l.to) e.currentTarget.style.color = transparent ? 'var(--off-white)' : 'var(--burnt-orange)' }}
+              onMouseLeave={e => { e.currentTarget.style.color = location.pathname === l.to ? navActiveColor : navTextColor }}
               >{l.label}</Link>
             ))}
             {SHOW_SHOP_NAV && (
@@ -85,8 +85,8 @@ export default function Nav() {
               padding: '7px 14px', border: transparent ? '1.5px solid rgba(247,244,236,0.3)' : '1.5px solid rgba(41,42,40,0.25)',
               borderRadius: 'var(--radius)', transition: 'all 0.15s', whiteSpace: 'nowrap',
             }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--off-white)'; e.currentTarget.style.color = 'var(--off-white)' }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(247,244,236,0.3)'; e.currentTarget.style.color = 'rgba(247,244,236,0.7)' }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = transparent ? 'var(--off-white)' : 'var(--burnt-orange)'; e.currentTarget.style.color = transparent ? 'var(--off-white)' : 'var(--burnt-orange)' }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = transparent ? 'rgba(247,244,236,0.3)' : 'rgba(41,42,40,0.25)'; e.currentTarget.style.color = transparent ? 'rgba(247,244,236,0.7)' : 'rgba(41,42,40,0.7)' }}
             >Schedule</Link>
             <Link to="/founding-community" style={{
               fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700,
