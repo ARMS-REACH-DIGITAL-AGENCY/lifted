@@ -12,6 +12,7 @@
  */
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import BrandE from '../components/BrandE.jsx'
 
 // ── Shopify integration config (inactive until env vars are set) ──────────────
 const SHOPIFY_STORE_DOMAIN = import.meta.env.VITE_SHOPIFY_STORE_DOMAIN || null

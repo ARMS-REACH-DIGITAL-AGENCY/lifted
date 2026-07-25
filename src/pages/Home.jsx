@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import BrandE from '../components/BrandE.jsx'
 import ProductCard from '../components/ProductCard.jsx'
 import { FEATURED_PRODUCTS } from '../data/products.js'
 
@@ -89,7 +90,7 @@ export default function Home() {
         <div className="container">
           <div className="lift-in" style={{ marginBottom: 48 }}>
             <div className="section-eyebrow">The Two-Way Impact</div>
-            <h2 className="section-title">See How It Works</h2>
+            <h2 className="section-title" aria-label="See How It Works"><BrandE before="S" after="e How It Works" ariaLabel="See How It Works" /></h2>
             <p className="section-body">Every Liftêd™ garment works in two directions simultaneously.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24, alignItems: 'start', marginBottom: 32 }}>
@@ -309,7 +310,7 @@ export default function Home() {
           <div className="lift-in">
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 16 }}>The Movement</div>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 6vw, 64px)', color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: 20 }}>
-              WEAR ENCOURAGEMENT.<br /><span style={{ color: 'var(--burnt-orange)' }}>WEAR LIFTÊD™.</span>
+              WEAR ENCOUR<BrandE before="" after="GEMENT." ariaLabel="WEAR ENCOURAGEMENT." /><br /><span style={{ color: 'var(--burnt-orange)' }}>WEAR LIFTÊD™.</span>
             </h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, color: 'rgba(247,244,236,0.6)', maxWidth: 520, margin: '0 auto 36px', lineHeight: 1.7 }}>
               The world needs more people who refuse to quit. That's who we make this for. Join us before the official launch.

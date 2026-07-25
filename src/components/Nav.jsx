@@ -30,6 +30,7 @@ export default function Nav() {
   useEffect(() => { setOpen(false) }, [location])
 
   const transparent = isHome && !scrolled && !open
+  const logoVariant = transparent ? 'primary' : 'white'
 
   return (
     <>
@@ -46,7 +47,7 @@ export default function Nav() {
         }}>
           {/* Logo */}
           <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
-            <LiftedLogo variant="white" height={30} />
+            <LiftedLogo variant={logoVariant} height={30} />
           </Link>
 
           {/* Desktop nav */}

@@ -6,6 +6,7 @@
  */
 import React from 'react'
 import { Link } from 'react-router-dom'
+import BrandE from '../components/BrandE.jsx'
 
 export default function Story() {
   return (
@@ -201,7 +202,7 @@ export default function Story() {
             lineHeight: 1.0,
             letterSpacing: '-0.02em',
             marginBottom: 40,
-          }}>What the Idea Became</h2>
+          }} aria-label="What the Idea Became"><BrandE before="What the Id" after="a Became" ariaLabel="What the Idea Became" /></h2>
 
           <div style={{
             display: 'grid',
