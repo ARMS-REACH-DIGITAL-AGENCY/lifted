@@ -1,5 +1,5 @@
 /**
- * /story — The Liftêd™ Origin Story
+ * /story — The Liftêd<TM/> Origin Story
  * Historical photograph: Cesare "Chaz" DeLuca, Liftêd Co-Founder, 2012.
  * Real photograph — no AI replacement, no face retouching.
  * Light exposure correction only.
@@ -7,6 +7,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import BrandE from '../components/BrandE.jsx'
+import { TM } from '../components/TM.jsx'
 
 export default function Story() {
   return (
@@ -39,7 +40,7 @@ export default function Story() {
             fontFamily: 'var(--font-body)', fontSize: 17,
             color: 'rgba(247,244,236,0.65)', lineHeight: 1.75, maxWidth: 580,
           }}>
-            Liftêd™ did not begin in a boardroom or branding session.
+            Liftêd<TM/> did not begin in a boardroom or branding session.
           </p>
         </div>
       </div>
@@ -212,16 +213,16 @@ export default function Story() {
             {[
               {
                 label: 'Replacing Limiting Labels',
-                body: `The world is full of labels that diminish. Liftêd™ exists to replace them — with visible encouragement that travels with the wearer everywhere they go.`,
+                body: `The world is full of labels that diminish. Liftêd<TM/> exists to replace them — with visible encouragement that travels with the wearer everywhere they go.`,
                 accent: false,
               },
               {
                 label: 'Reclaiming the L',
-                body: `The L-hand gesture has long been used as a symbol of failure. Liftêd™ reclaims it. You're Not a Loser. You're Liftêd™. Turn the L Up.`,
+                body: `The L-hand gesture has long been used as a symbol of failure. Liftêd<TM/> reclaims it. You're Not a Loser. You're Liftêd<TM/>. Turn the L Up.`,
                 accent: true,
               },
               {
-                label: 'Less Labels. More Liftêd™.',
+                label: 'Less Labels. More Liftêd<TM/>.',
                 body: `Every garment carries two messages: one for the person wearing it, and one for the person standing behind them. One shirt. Two people lifted.`,
                 accent: false,
               },
@@ -249,10 +250,10 @@ export default function Story() {
           {/* Brand phrases */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 48 }}>
             {[
-              `"You're Not a Loser. You're Liftêd™."`,
+              `"You're Not a Loser. You're Liftêd<TM/>."`,
               `"Turn the L Up."`,
-              `"Less Labels. More Liftêd™."`,
-              `"The World Needs More Liftêd™."`,
+              `"Less Labels. More Liftêd<TM/>."`,
+              `"The World Needs More Liftêd<TM/>."`,
             ].map(phrase => (
               <div key={phrase} style={{
                 fontFamily: 'var(--font-display)',

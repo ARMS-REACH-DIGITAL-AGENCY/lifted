@@ -1,7 +1,7 @@
 /**
- * BrandE — Liftêd™ Brand-Detail Typography Utility
+ * BrandE — Liftêd<TM/> Brand-Detail Typography Utility
  *
- * Replaces a selected letter 'e' in a headline with the Liftêd™ ê character,
+ * Replaces a selected letter 'e' in a headline with the Liftêd<TM/> ê character,
  * styled in the approved gold accent color. Used as a deliberate brand signature
  * on 4–6 major headlines across the site.
  *
@@ -20,6 +20,7 @@
  * Wrap in your heading tag with aria-label on the heading itself.
  */
 import React from 'react'
+import { TM } from '../components/TM.jsx'
 
 export function BrandE({ before, after, ariaLabel, style = {} }) {
   return (

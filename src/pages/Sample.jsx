@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import LiftForm from '../components/LiftForm.jsx'
+import { TM } from '../components/TM.jsx'
 
 function useLiftIn(ref) {
   useEffect(() => {
@@ -26,7 +27,7 @@ export default function Sample() {
           <div style={{ maxWidth: 680 }}>
             <div className="lift-in section-eyebrow" style={{ color: 'var(--gold)' }}>Sample Feedback</div>
             <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
-              You Are Holding<br /><span style={{ color: 'var(--gold)' }}>the Beginning of Liftêd™.</span>
+              You Are Holding<br /><span style={{ color: 'var(--gold)' }}>the Beginning of Liftêd<TM/>.</span>
             </h1>
             <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
               The garment you're holding is part of our early product-validation process. Your honest feedback helps determine what moves into the first official collection.

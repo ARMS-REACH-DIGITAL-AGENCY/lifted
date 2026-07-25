@@ -1,5 +1,5 @@
 /**
- * /shop — Liftêd™ Storefront (Coming Soon)
+ * /shop — Liftêd<TM/> Storefront (Coming Soon)
  * Phase 1: Branded coming-soon storefront with collection previews, product status labels,
  *           preorder-interest CTA, and founding-community signup.
  *
@@ -13,6 +13,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import BrandE from '../components/BrandE.jsx'
+import { TM } from '../components/TM.jsx'
 
 // ── Shopify integration config (inactive until env vars are set) ──────────────
 const SHOPIFY_STORE_DOMAIN = import.meta.env.VITE_SHOPIFY_STORE_DOMAIN || null
@@ -42,7 +43,7 @@ const COLLECTIONS = [
       {
         sku: 'LFT-002',
         name: 'Turn the L Up — Tee',
-        description: 'Front: "Turn the L Up." Back: "You\'re Not a Loser. You\'re Liftêd™."',
+        description: 'Front: "Turn the L Up." Back: "You\'re Not a Loser. You\'re Liftêd<TM/>."',
         status: 'coming-soon',
         priceRange: '$34–$38',
         shopifyProductId: null,
@@ -60,7 +61,7 @@ const COLLECTIONS = [
       {
         sku: 'LFT-003',
         name: 'Less Labels — Tee',
-        description: 'Front: "Less Labels." Back: "More Liftêd™. The world doesn\'t need another label. It needs more encouragement."',
+        description: 'Front: "Less Labels." Back: "More Liftêd<TM/>. The world doesn\'t need another label. It needs more encouragement."',
         status: 'coming-soon',
         priceRange: '$34–$38',
         shopifyProductId: null,
@@ -114,7 +115,7 @@ const COLLECTIONS = [
       {
         sku: 'LFT-006',
         name: 'Custom Collaboration Edition',
-        description: 'Your organization\'s identity + the Liftêd™ encouragement message. Built for your event, cause, or campaign.',
+        description: 'Your organization\'s identity + the Liftêd<TM/> encouragement message. Built for your event, cause, or campaign.',
         status: 'coming-soon',
         priceRange: 'Custom pricing',
         shopifyProductId: null,
@@ -232,7 +233,7 @@ export default function Shop() {
             The Founding<br />Collection
           </h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, color: 'rgba(247,244,236,0.65)', lineHeight: 1.7, maxWidth: 520, marginBottom: 28 }}>
-            The first Liftêd™ private-label garments are currently in sample production. Ordering opens after sample validation is complete. Join the founding community to be first in line.
+            The first Liftêd<TM/> private-label garments are currently in sample production. Ordering opens after sample validation is complete. Join the founding community to be first in line.
           </p>
           {/* Notify form */}
           <form onSubmit={handleNotify} style={{ display: 'flex', gap: 8, maxWidth: 420, flexWrap: 'wrap' }}>
@@ -289,9 +290,9 @@ export default function Shop() {
         <div style={{ background: 'var(--black)', border: '1.5px solid var(--burnt-orange)', padding: '40px 32px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24, alignItems: 'center' }}>
           <div>
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 12 }}>Collaboration Collection</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(18px, 3vw, 28px)', color: 'var(--off-white)', textTransform: 'uppercase', lineHeight: 1.1, marginBottom: 14 }}>Want a Custom Liftêd™ Edition?</h2>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(18px, 3vw, 28px)', color: 'var(--off-white)', textTransform: 'uppercase', lineHeight: 1.1, marginBottom: 14 }}>Want a Custom Liftêd<TM/> Edition?</h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'rgba(247,244,236,0.6)', lineHeight: 1.7, margin: 0 }}>
-              Organizations, schools, gyms, causes, and corporate clients can create a co-branded Liftêd™ edition for their event, campaign, or community.
+              Organizations, schools, gyms, causes, and corporate clients can create a co-branded Liftêd<TM/> edition for their event, campaign, or community.
             </p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, alignItems: 'flex-start' }}>

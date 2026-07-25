@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
+import { TM } from '../components/TM.jsx'
 
 // HighLevel location ID for Liftêd sub-account
 const HL_LOCATION_ID = 'aONTFrcg4GyEubg0xdwW'
 
 const INTEREST_TAGS = {
-  founding: 'Liftêd™ – Founding Community',
-  investor: 'Liftêd™ – Investor Lead',
-  sponsor: 'Liftêd™ – Sponsor Lead',
-  partner: 'Liftêd™ – Collaboration Lead',
-  ambassador: 'Liftêd™ – Ambassador Lead',
-  customer: 'Liftêd™ – Customer Interest',
-  sample: 'Liftêd™ – Sample Recipient',
-  qr: 'Liftêd™ – QR Scan',
+  founding: 'Liftêd<TM/> – Founding Community',
+  investor: 'Liftêd<TM/> – Investor Lead',
+  sponsor: 'Liftêd<TM/> – Sponsor Lead',
+  partner: 'Liftêd<TM/> – Collaboration Lead',
+  ambassador: 'Liftêd<TM/> – Ambassador Lead',
+  customer: 'Liftêd<TM/> – Customer Interest',
+  sample: 'Liftêd<TM/> – Sample Recipient',
+  qr: 'Liftêd<TM/> – QR Scan',
 }
 
 export default function LiftForm({ type = 'founding', title, subtitle, dark = false, onSuccess }) {
@@ -72,9 +73,9 @@ export default function LiftForm({ type = 'founding', title, subtitle, dark = fa
   if (submitted) return (
     <div style={{ textAlign: 'center', padding: '48px 24px' }}>
       <div style={{ fontSize: 48, marginBottom: 16, color: 'var(--gold)' }}>↑</div>
-      <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 700, color: dark ? 'white' : 'var(--charcoal)', marginBottom: 12 }}>You're Liftêd™.</h3>
+      <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 700, color: dark ? 'white' : 'var(--charcoal)', marginBottom: 12 }}>You're Liftêd<TM/>.</h3>
       <p style={{ fontSize: 16, color: dark ? 'rgba(247,244,236,0.7)' : 'var(--muted-olive)', lineHeight: 1.7 }}>
-        Thank you for reaching out. We'll be in touch soon. The world needs more Liftêd™ — and people like you make it happen.
+        Thank you for reaching out. We'll be in touch soon. The world needs more Liftêd<TM/> — and people like you make it happen.
       </p>
     </div>
   )
@@ -156,7 +157,7 @@ export default function LiftForm({ type = 'founding', title, subtitle, dark = fa
       </div>
       <div className="form-group">
         <label className="form-label" style={labelStyle}>Message</label>
-        <textarea className="form-textarea" style={inputStyle} value={form.message} onChange={e => set('message', e.target.value)} placeholder="Tell us about your interest in Liftêd™..." />
+        <textarea className="form-textarea" style={inputStyle} value={form.message} onChange={e => set('message', e.target.value)} placeholder="Tell us about your interest in Liftêd<TM/>..." />
       </div>
       <div className="form-group">
         <label className="form-label" style={labelStyle}>How did you hear about us?</label>
@@ -176,7 +177,7 @@ export default function LiftForm({ type = 'founding', title, subtitle, dark = fa
       {error && <p style={{ color: '#c0392b', fontSize: 14, marginBottom: 16 }}>{error}</p>}
 
       <p style={{ fontSize: 12, color: dark ? 'rgba(247,244,236,0.4)' : 'var(--muted-olive)', marginBottom: 16, lineHeight: 1.6 }}>
-        By submitting this form, you consent to receive email and SMS communications from Liftêd™ / ARMS Reach Digital Agency. You may opt out at any time.
+        By submitting this form, you consent to receive email and SMS communications from Liftêd<TM/> / ARMS Reach Digital Agency. You may opt out at any time.
       </p>
 
       <button type="submit" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center', padding: '15px' }} disabled={loading}>

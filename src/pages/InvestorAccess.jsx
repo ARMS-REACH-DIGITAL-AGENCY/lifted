@@ -7,6 +7,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { submitInvestorAccess } from '../lib/formBridge.js'
+import { TM } from '../components/TM.jsx'
 
 export default function InvestorAccess() {
   const [form, setForm] = useState({
@@ -57,7 +58,7 @@ export default function InvestorAccess() {
             Request Private<br />Investor Access
           </h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7, maxWidth: 560 }}>
-            Liftêd™ is currently sharing its business opportunity with selected investors, strategic partners, advisors, and supporters. Submit your information below to request access to the private Liftêd™ information room.
+            Liftêd<TM/> is currently sharing its business opportunity with selected investors, strategic partners, advisors, and supporters. Submit your information below to request access to the private Liftêd<TM/> information room.
           </p>
         </div>
       </div>
@@ -70,7 +71,7 @@ export default function InvestorAccess() {
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, color: 'var(--muted-olive)', lineHeight: 1.7, marginBottom: 24 }}>
               Thank you. Your request has been received and will be reviewed. Approved applicants will receive a secure email invitation with private access instructions.
             </p>
-            <Link to="/" style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--burnt-orange)', textDecoration: 'none' }}>← Return to Liftêd™</Link>
+            <Link to="/" style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--burnt-orange)', textDecoration: 'none' }}>← Return to Liftêd<TM/></Link>
           </div>
         ) : (
           <form onSubmit={handleSubmit}>
@@ -101,7 +102,7 @@ export default function InvestorAccess() {
               </select>
             </div>
             <div style={{ marginBottom: 16 }}>
-              <label style={labelStyle}>How Did You Hear About Liftêd™?</label>
+              <label style={labelStyle}>How Did You Hear About Liftêd<TM/>?</label>
               <input style={inputStyle} value={form.howHeard} onChange={e => set('howHeard', e.target.value)} />
             </div>
             <div style={{ marginBottom: 16 }}>
@@ -123,13 +124,13 @@ export default function InvestorAccess() {
             <div style={{ marginBottom: 12, display: 'flex', gap: 10, alignItems: 'flex-start' }}>
               <input type="checkbox" id="consentEmail" checked={form.consentEmail} onChange={e => set('consentEmail', e.target.checked)} style={{ marginTop: 2, flexShrink: 0 }} />
               <label htmlFor="consentEmail" style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--charcoal)', lineHeight: 1.6, cursor: 'pointer' }}>
-                I consent to receive email follow-up from Liftêd™ regarding my access request.
+                I consent to receive email follow-up from Liftêd<TM/> regarding my access request.
               </label>
             </div>
             <div style={{ marginBottom: 28, display: 'flex', gap: 10, alignItems: 'flex-start' }}>
               <input type="checkbox" id="consentSms" checked={form.consentSms} onChange={e => set('consentSms', e.target.checked)} style={{ marginTop: 2, flexShrink: 0 }} />
               <label htmlFor="consentSms" style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--charcoal)', lineHeight: 1.6, cursor: 'pointer' }}>
-                I consent to receive SMS follow-up from Liftêd™. Message and data rates may apply.
+                I consent to receive SMS follow-up from Liftêd<TM/>. Message and data rates may apply.
               </label>
             </div>
             {status === 'error' && (

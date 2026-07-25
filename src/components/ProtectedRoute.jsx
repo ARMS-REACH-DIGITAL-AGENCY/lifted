@@ -1,5 +1,5 @@
 /**
- * ProtectedRoute — Liftêd™
+ * ProtectedRoute — Liftêd<TM/>
  * Wraps portal routes that require authentication and a specific role.
  * Unauthenticated users are redirected to /investor-access or /investor-login.
  * Authenticated users without the required role see an access-denied message.
@@ -7,6 +7,7 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext.jsx'
+import { TM } from '../components/TM.jsx'
 
 export default function ProtectedRoute({ children, requiredRole = 'investor' }) {
   const { user, claims, loading, isInvestor, isRetailer, isAdmin } = useAuth()

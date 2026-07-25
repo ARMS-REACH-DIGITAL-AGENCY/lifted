@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import LiftForm from '../components/LiftForm.jsx'
+import { TM } from '../components/TM.jsx'
 
 function useLiftIn(ref) {
   useEffect(() => {
@@ -26,7 +27,7 @@ export default function Collaborate() {
               Organizations, Caus<BrandE before="" after="s," ariaLabel="Causes," /><br /><span style={{ color: 'var(--gold)' }}>and Communitiês</span>
             </h1>
             <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
-              Liftêd™ collaborates with organizations that want their apparel to represent more than an event logo.
+              Liftêd<TM/> collaborates with organizations that want their apparel to represent more than an event logo.
             </p>
           </div>
         </div>
@@ -43,10 +44,10 @@ export default function Collaborate() {
                 "Who are we trying to lift?"
               </blockquote>
               <p className="lift-in d3 section-body" style={{ marginBottom: 16 }}>
-                Liftêd™ develops an emotionally relevant message connected to the organization, audience, occasion, or cause — converting ordinary bulk apparel into meaningful brand assets that people will continue wearing after the event.
+                Liftêd<TM/> develops an emotionally relevant message connected to the organization, audience, occasion, or cause — converting ordinary bulk apparel into meaningful brand assets that people will continue wearing after the event.
               </p>
               <p className="lift-in d4 section-body" style={{ marginBottom: 32 }}>
-                Each collaboration carries the Liftêd™ meaning and identity. Custom apparel services are available separately for client-owned branding.
+                Each collaboration carries the Liftêd<TM/> meaning and identity. Custom apparel services are available separately for client-owned branding.
               </p>
               <div className="lift-in d5" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
                 {['Corporate apparel', 'Employee appreciation', 'Leadership gifts', 'Golf tournaments', 'Charity events', 'Church retreats', 'School campaigns', 'Team programs', 'Fundraising stores', 'Awareness campaigns', 'Limited co-branded collections', 'Community events'].map(item => (

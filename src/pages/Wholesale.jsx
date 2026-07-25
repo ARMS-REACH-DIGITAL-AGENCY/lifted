@@ -1,5 +1,5 @@
 /**
- * /wholesale — Carry Liftêd™ in Your Store
+ * /wholesale — Carry Liftêd<TM/> in Your Store
  * Submits via formBridge → HighLevel Forms API (form ID: wA5FYCmpPjckyDsPCEYF)
  * Field keys confirmed from HighLevel Settings → Custom Fields (Jul 24, 2026).
  * Creates a wholesale application only — no retailer account created here.
@@ -7,6 +7,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { submitWholesale } from '../lib/formBridge.js'
+import { TM } from '../components/TM.jsx'
 
 const inputStyle = {
   width: '100%', padding: '12px 14px', background: 'var(--off-white)',
@@ -58,10 +59,10 @@ export default function Wholesale() {
         <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 20px' }}>
           <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 14 }}>Wholesale</div>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 5vw, 52px)', color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: 20 }}>
-            Carry Liftêd™<br />in Your Store
+            Carry Liftêd<TM/><br />in Your Store
           </h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7, maxWidth: 560 }}>
-            Liftêd™ is accepting wholesale applications from retailers who want to carry encouragement-driven apparel. Complete the form below to start the conversation.
+            Liftêd<TM/> is accepting wholesale applications from retailers who want to carry encouragement-driven apparel. Complete the form below to start the conversation.
           </p>
         </div>
       </div>
@@ -72,9 +73,9 @@ export default function Wholesale() {
           <div style={{ background: 'var(--off-white)', border: '2px solid var(--burnt-orange)', padding: '40px 32px', textAlign: 'center' }}>
             <div style={{ fontFamily: 'var(--font-display)', fontSize: 22, color: 'var(--charcoal)', marginBottom: 16, textTransform: 'uppercase' }}>Application Received</div>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, color: 'var(--muted-olive)', lineHeight: 1.7, marginBottom: 24 }}>
-              Thank you for your interest in carrying Liftêd™. We'll review your application and be in touch within 3–5 business days.
+              Thank you for your interest in carrying Liftêd<TM/>. We'll review your application and be in touch within 3–5 business days.
             </p>
-            <Link to="/" style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--burnt-orange)', textDecoration: 'none' }}>← Return to Liftêd™</Link>
+            <Link to="/" style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--burnt-orange)', textDecoration: 'none' }}>← Return to Liftêd<TM/></Link>
           </div>
         ) : (
           <form onSubmit={handleSubmit} noValidate>
@@ -186,7 +187,7 @@ export default function Wholesale() {
               </div>
             </div>
             <div style={field}>
-              <label style={labelStyle}>Liftêd™ Collections of Interest</label>
+              <label style={labelStyle}>Liftêd<TM/> Collections of Interest</label>
               {/* contact.liftd_collections_of_interest — Dropdown (multiple) */}
               <select style={{ ...inputStyle, height: 110, appearance: 'none' }} multiple value={form.collectionsOfInterest ? form.collectionsOfInterest.split(',') : []} onChange={e => set('collectionsOfInterest', Array.from(e.target.selectedOptions, o => o.value).join(','))}>
                 <option value="Core Collection">Core Collection</option>
@@ -201,7 +202,7 @@ export default function Wholesale() {
             {/* Section: Additional */}
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 16, paddingBottom: 8, borderBottom: '1.5px solid var(--burnt-orange)', marginTop: 32 }}>Additional Information</div>
             <div style={field}>
-              <label style={labelStyle}>How Did You Hear About Liftêd™?</label>
+              <label style={labelStyle}>How Did You Hear About Liftêd<TM/>?</label>
               {/* contact.how_did_you_hear_about_liftd — Dropdown (single) */}
               <select style={{ ...inputStyle, appearance: 'none' }} value={form.howHeard} onChange={e => set('howHeard', e.target.value)}>
                 <option value="">Select one...</option>
@@ -224,13 +225,13 @@ export default function Wholesale() {
             <div style={{ marginBottom: 12, display: 'flex', gap: 10, alignItems: 'flex-start' }}>
               <input type="checkbox" id="consentEmail" checked={form.consentEmail} onChange={e => set('consentEmail', e.target.checked)} style={{ marginTop: 2, flexShrink: 0 }} />
               <label htmlFor="consentEmail" style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--charcoal)', lineHeight: 1.6, cursor: 'pointer' }}>
-                I consent to receive email follow-up from Liftêd™ regarding my wholesale application.
+                I consent to receive email follow-up from Liftêd<TM/> regarding my wholesale application.
               </label>
             </div>
             <div style={{ marginBottom: 28, display: 'flex', gap: 10, alignItems: 'flex-start' }}>
               <input type="checkbox" id="consentSms" checked={form.consentSms} onChange={e => set('consentSms', e.target.checked)} style={{ marginTop: 2, flexShrink: 0 }} />
               <label htmlFor="consentSms" style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--charcoal)', lineHeight: 1.6, cursor: 'pointer' }}>
-                I consent to receive SMS follow-up from Liftêd™. Message and data rates may apply.
+                I consent to receive SMS follow-up from Liftêd<TM/>. Message and data rates may apply.
               </label>
             </div>
 

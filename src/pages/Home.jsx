@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import BrandE from '../components/BrandE.jsx'
 import ProductCard from '../components/ProductCard.jsx'
 import { FEATURED_PRODUCTS } from '../data/products.js'
+import { TM } from '../components/TM.jsx'
 
 function useLiftIn(ref) {
   useEffect(() => {
@@ -16,7 +17,7 @@ function useLiftIn(ref) {
 }
 
 const collections = [
-  { name: 'Core', color: 'var(--charcoal)', accent: 'var(--sand)', icon: '◈', desc: 'Daily brand affinity. Clean, bold, unmistakably Liftêd™.', messages: ['Stay Liftêd™', 'Lift Yourself. Lift Others.', 'Wear Encouragement.', 'The World Needs More Liftêd™'] },
+  { name: 'Core', color: 'var(--charcoal)', accent: 'var(--sand)', icon: '◈', desc: 'Daily brand affinity. Clean, bold, unmistakably Liftêd<TM/>.', messages: ['Stay Liftêd<TM/>', 'Lift Yourself. Lift Others.', 'Wear Encouragement.', 'The World Needs More Liftêd<TM/>'] },
   { name: 'Pick-Me-Up', color: 'var(--earth-brown)', accent: 'var(--burnt-orange)', icon: '↑', desc: 'Direct messages of hope, resilience, and encouragement.', messages: ['You Matter Here.', "Your Story Isn't Over.", 'One More Day.', 'Better Days Are Ahead.'] },
   { name: 'Athlete', color: 'var(--black)', accent: 'var(--sand)', icon: '⚡', desc: 'Discipline, preparation, resilience. Built for competitors.', messages: ['Never Finished.', 'Earn Tomorrow.', 'Outwork Yesterday.', 'Built Through Adversity.'] },
   { name: 'Youth', color: 'var(--muted-olive)', accent: 'var(--off-white)', icon: '★', desc: 'Confidence, identity, belonging. For the next generation.', messages: ['You Belong Here.', 'Different Is Not Less.', 'Your Voice Matters.', 'The Future Looks Good on You.'] },
@@ -40,7 +41,7 @@ export default function Home() {
     <div>
       {/* ── Status Banner ── */}
       <div className="status-banner" style={{ paddingTop: 72 }}>
-        <span>NOW IN PRODUCTION —</span> First Liftêd™ private-label samples in development.{' '}
+        <span>NOW IN PRODUCTION —</span> First Liftêd<TM/> private-label samples in development.{' '}
         <Link to="/founding-community" style={{ color: 'var(--sand)', fontWeight: 700, marginLeft: 6 }}>Join the Founding Community →</Link>
       </div>
 
@@ -79,7 +80,7 @@ export default function Home() {
               The World Needs<br />More{' '}
               <span style={{ color: 'var(--sand)', fontStyle: 'normal', letterSpacing: '-0.02em' }}>
                 Liftêd
-                <sup style={{ fontSize: '0.30em', fontWeight: 900, letterSpacing: '0', verticalAlign: 'super', lineHeight: 0, color: 'var(--sand)', opacity: 0.70, marginLeft: '0.04em' }}>™</sup>
+                <sup style={{ fontSize: '0.30em', fontWeight: 900, letterSpacing: '0', verticalAlign: 'super', lineHeight: 0, color: 'var(--sand)', opacity: 0.70, marginLeft: '0.04em' }}><TM/></sup>
               </span>
               <span style={{ color: 'var(--burnt-orange)', marginLeft: '0.04em' }}>.</span>
             </h1>
@@ -87,7 +88,7 @@ export default function Home() {
               Private-label apparel designed to encourage the person wearing it — and the person standing behind them.
             </p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, fontStyle: 'italic', color: 'rgba(247,244,236,0.38)', lineHeight: 1.6, marginBottom: 44, maxWidth: 500 }}>
-              Most apparel tells the world what you bought. Liftêd™ tells someone what they may need to hear.
+              Most apparel tells the world what you bought. Liftêd<TM/> tells someone what they may need to hear.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
               <Link to="/founding-community" className="btn btn-gold btn-lg">Join the Founding Community</Link>
@@ -111,7 +112,7 @@ export default function Home() {
           <div className="lift-in" style={{ marginBottom: 48 }}>
             <div className="section-eyebrow">The Two-Way Impact</div>
             <h2 className="section-title" aria-label="See How It Works"><BrandE before="S" after="e How It Works" ariaLabel="See How It Works" /></h2>
-            <p className="section-body">Every Liftêd™ garment works in two directions simultaneously.</p>
+            <p className="section-body">Every Liftêd<TM/> garment works in two directions simultaneously.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24, alignItems: 'start', marginBottom: 32 }}>
             {/* Front */}
@@ -165,11 +166,11 @@ export default function Home() {
         <div className="container">
           <div className="lift-in" style={{ marginBottom: 48 }}>
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 10 }}>What Makes It Different</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(26px, 4vw, 44px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'uppercase' }}>Why Liftêd™ Is Different</h2>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(26px, 4vw, 44px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'uppercase' }}>Why Liftêd<TM/> Is Different</h2>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 2 }}>
             {[
-              { n: '01', title: 'Private Label', body: 'Liftêd™ is being developed as its own apparel brand — not simply artwork printed on another consumer label. Every garment carries the Liftêd™ identity.' },
+              { n: '01', title: 'Private Label', body: 'Liftêd<TM/> is being developed as its own apparel brand — not simply artwork printed on another consumer label. Every garment carries the Liftêd<TM/> identity.' },
               { n: '02', title: 'Two-Way Impact', body: 'Each garment encourages the wearer and communicates something meaningful to the observer. One product. Two people lifted.' },
               { n: '03', title: 'Meaning Before Merchandise', body: 'Every product must answer one question: Will this help someone feel better, stronger, more hopeful, or more confident?' },
               { n: '04', title: 'Built to Be Shared', body: 'Every garment can start a conversation, create a connection, and introduce another person to the brand. Encouragement is contagious.' },
@@ -221,10 +222,10 @@ export default function Home() {
                 <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--burnt-orange)', display: 'inline-block', animation: 'pulse 2s infinite' }} />
                 <span style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--burnt-orange)' }}>Now in Production</span>
               </div>
-              <h2 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 4vw, 40px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: 20 }}>The First Liftêd™ Samples Are Now in Production</h2>
+              <h2 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 4vw, 40px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: 20 }}>The First Liftêd<TM/> Samples Are Now in Production</h2>
               <div style={{ width: 40, height: 3, background: 'var(--burnt-orange)', marginBottom: 20 }} />
               <p className="lift-in d2" style={{ fontFamily: 'var(--font-body)', fontSize: 15, color: 'rgba(247,244,236,0.65)', lineHeight: 1.7, marginBottom: 14 }}>
-                Liftêd™ is currently developing its first private-label apparel samples — produced with custom Liftêd™ labels, not printed on another manufacturer's consumer brand.
+                Liftêd<TM/> is currently developing its first private-label apparel samples — produced with custom Liftêd<TM/> labels, not printed on another manufacturer's consumer brand.
               </p>
               <p className="lift-in d3" style={{ fontFamily: 'var(--font-body)', fontSize: 15, color: 'rgba(247,244,236,0.65)', lineHeight: 1.7, marginBottom: 28 }}>
                 Founding supporters, partners, and investors will receive behind-the-scenes updates and may be invited to help determine which designs move into the first official collection.
@@ -258,13 +259,13 @@ export default function Home() {
               <h2 className="lift-in d1 section-title">Organizations, Causes, and Communities</h2>
               <div style={{ width: 40, height: 3, background: 'var(--burnt-orange)', marginBottom: 20 }} />
               <p className="lift-in d2 section-body" style={{ marginBottom: 16 }}>
-                Liftêd™ collaborates with organizations that want their apparel to represent more than an event logo. Each collaboration begins with a simple question:
+                Liftêd<TM/> collaborates with organizations that want their apparel to represent more than an event logo. Each collaboration begins with a simple question:
               </p>
               <blockquote className="lift-in d3" style={{ fontFamily: 'var(--font-display)', fontSize: 20, color: 'var(--charcoal)', borderLeft: '4px solid var(--burnt-orange)', paddingLeft: 18, margin: '20px 0', textTransform: 'uppercase', letterSpacing: '0.01em' }}>
                 "WHO ARE WE TRYING TO LIFT?"
               </blockquote>
               <p className="lift-in d4 section-body" style={{ marginBottom: 28 }}>
-                Liftêd™ then develops an emotionally relevant message connected to the organization, audience, occasion, or cause — converting ordinary bulk apparel into meaningful brand assets.
+                Liftêd<TM/> then develops an emotionally relevant message connected to the organization, audience, occasion, or cause — converting ordinary bulk apparel into meaningful brand assets.
               </p>
               <Link to="/collaborate" className="lift-in d5 btn btn-gold">Request a Collaboration Concept</Link>
             </div>
@@ -287,7 +288,7 @@ export default function Home() {
           <div className="lift-in" style={{ marginBottom: 48 }}>
             <div className="section-eyebrow">Find Your Path</div>
             <h2 className="section-title">How Would You Like to Be Involved?</h2>
-            <p className="section-body">Liftêd™ is building a founding community of supporters, investors, partners, and ambassadors.</p>
+            <p className="section-body">Liftêd<TM/> is building a founding community of supporters, investors, partners, and ambassadors.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
             {pathways.map((p, i) => (
@@ -330,7 +331,7 @@ export default function Home() {
           <div className="lift-in">
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 16 }}>The Movement</div>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 6vw, 64px)', color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: 20 }}>
-              WEAR ENCOUR<BrandE before="" after="GEMENT." ariaLabel="WEAR ENCOURAGEMENT." /><br /><span style={{ color: 'var(--burnt-orange)' }}>WEAR LIFTÊD™.</span>
+              WEAR ENCOUR<BrandE before="" after="GEMENT." ariaLabel="WEAR ENCOURAGEMENT." /><br /><span style={{ color: 'var(--burnt-orange)' }}>WEAR LIFTÊD<TM/>.</span>
             </h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, color: 'rgba(247,244,236,0.6)', maxWidth: 520, margin: '0 auto 36px', lineHeight: 1.7 }}>
               The world needs more people who refuse to quit. That's who we make this for. Join us before the official launch.

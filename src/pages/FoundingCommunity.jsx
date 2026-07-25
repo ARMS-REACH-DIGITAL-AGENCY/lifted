@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import LiftForm from '../components/LiftForm.jsx'
+import { TM } from '../components/TM.jsx'
 
 function useLiftIn(ref) {
   useEffect(() => {
@@ -25,10 +26,10 @@ export default function FoundingCommunity() {
           <div style={{ maxWidth: 680 }}>
             <div className="lift-in section-eyebrow" style={{ color: 'var(--gold)' }}>Be Part of the Beginning</div>
             <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
-              Join the Liftêd™<br /><span style={{ color: 'var(--gold)' }}>Founding Community</span>
+              Join the Liftêd<TM/><br /><span style={{ color: 'var(--gold)' }}>Founding Community</span>
             </h1>
             <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
-              The founding community is for people who believe in what Liftêd™ represents — and want to be part of building it before the official launch.
+              The founding community is for people who believe in what Liftêd<TM/> represents — and want to be part of building it before the official launch.
             </p>
           </div>
         </div>
@@ -47,7 +48,7 @@ export default function FoundingCommunity() {
                   { icon: '🗳️', title: 'Vote on Designs', desc: 'Help determine which messages and designs move into the first official collection.' },
                   { icon: '🎯', title: 'First Access', desc: 'Be first to know when ordering opens, crowdfunding launches, or preorders begin.' },
                   { icon: '👕', title: 'Sample Reveal Invitation', desc: 'Founding members will be invited to see the first physical samples before public launch.' },
-                  { icon: '🏆', title: 'Founding Member Status', desc: 'Recognized as a founding supporter of the Liftêd™ brand.' },
+                  { icon: '🏆', title: 'Founding Member Status', desc: 'Recognized as a founding supporter of the Liftêd<TM/> brand.' },
                 ].map(b => (
                   <div key={b.title} style={{ display: 'flex', gap: 16, alignItems: 'flex-start', padding: '16px 0', borderBottom: '1px solid var(--light-gray)' }}>
                     <div style={{ fontSize: 24, flexShrink: 0 }}>{b.icon}</div>

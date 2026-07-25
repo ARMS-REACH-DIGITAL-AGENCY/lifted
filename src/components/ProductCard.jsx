@@ -1,11 +1,12 @@
 /**
- * Liftêd™ ProductCard
+ * Liftêd<TM/> ProductCard
  * Displays a curated product concept with front/back toggle,
  * status badge, and CTA based on launch state.
  */
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getProductCTA, getStatusBadge, getStatusColor } from '../config/launchState.js'
+import { TM } from '../components/TM.jsx'
 
 const COLLECTION_COLORS = {
   core: 'var(--burnt-orange)',

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { useSearchParams, Link } from 'react-router-dom'
 import LiftForm from '../components/LiftForm.jsx'
+import { TM } from '../components/TM.jsx'
 
 function useLiftIn(ref) {
   useEffect(() => {
@@ -15,11 +16,11 @@ function useLiftIn(ref) {
 
 const callTypes = [
   { id: 'investor', label: '💼 Investor Conversation', desc: 'Discuss the investment opportunity, review the deck, and explore next steps.' },
-  { id: 'partner', label: '🤝 Collaboration Discovery', desc: 'Explore a co-branded Liftêd™ collaboration for your organization, team, or cause.' },
+  { id: 'partner', label: '🤝 Collaboration Discovery', desc: 'Explore a co-branded Liftêd<TM/> collaboration for your organization, team, or cause.' },
   { id: 'sponsor', label: '🌟 Sponsorship Conversation', desc: 'Discuss sponsoring community impact, sample production, or cause campaigns.' },
   { id: 'sample', label: '👕 Sample Feedback', desc: 'Share your feedback on a physical sample you received.' },
-  { id: 'ambassador', label: '⭐ Ambassador Conversation', desc: 'Explore becoming a founding Liftêd™ ambassador.' },
-  { id: 'founding', label: '🙌 General Founder Call', desc: 'Connect with the Liftêd™ team about anything else.' },
+  { id: 'ambassador', label: '⭐ Ambassador Conversation', desc: 'Explore becoming a founding Liftêd<TM/> ambassador.' },
+  { id: 'founding', label: '🙌 General Founder Call', desc: 'Connect with the Liftêd<TM/> team about anything else.' },
 ]
 
 export default function Schedule() {
@@ -35,7 +36,7 @@ export default function Schedule() {
           <div style={{ maxWidth: 680 }}>
             <div className="lift-in section-eyebrow" style={{ color: 'var(--gold)' }}>Let's Talk</div>
             <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
-              Schedule a 20-Minute<br /><span style={{ color: 'var(--gold)' }}>Liftêd™ Conversation</span>
+              Schedule a 20-Minute<br /><span style={{ color: 'var(--gold)' }}>Liftêd<TM/> Conversation</span>
             </h1>
             <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
               Choose the type of conversation that fits your interest. We'll confirm a time and send you a Zoom link.

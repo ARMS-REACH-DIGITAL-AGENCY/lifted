@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { TM } from '../components/TM.jsx'
 
 function useLiftIn(ref) {
   useEffect(() => {
@@ -13,11 +14,11 @@ function useLiftIn(ref) {
 }
 
 const collections = [
-  { id: 'core', name: 'Core Collection', color: 'var(--gold-deep)', icon: '◈', tagline: 'Simple, elegant daily brand affinity.', desc: 'The foundation of the Liftêd™ identity. Designed for everyday wear — clean, refined, and unmistakably Liftêd™.', messages: ['Stay Liftêd™', 'Lift Yourself. Lift Others.', 'Wear Encouragement.', 'The World Needs More Liftêd™'], products: 'Tees · Hoodies · Hats · Joggers · Quarter-zips' },
+  { id: 'core', name: 'Core Collection', color: 'var(--gold-deep)', icon: '◈', tagline: 'Simple, elegant daily brand affinity.', desc: 'The foundation of the Liftêd<TM/> identity. Designed for everyday wear — clean, refined, and unmistakably Liftêd<TM/>.', messages: ['Stay Liftêd<TM/>', 'Lift Yourself. Lift Others.', 'Wear Encouragement.', 'The World Needs More Liftêd<TM/>'], products: 'Tees · Hoodies · Hats · Joggers · Quarter-zips' },
   { id: 'pickup', name: 'Pick-Me-Up Collection', color: '#5B8DB8', icon: '↑', tagline: 'Direct messages of hope, resilience, and encouragement.', desc: 'For the days that need it most. Explicit, honest messages that speak directly to the person wearing them.', messages: ['You Matter Here.', 'Your Story Isn\'t Over.', 'One More Day.', 'Better Days Are Ahead.', 'You\'re Doing Better Than You Think.'], products: 'Message tees · Hoodies · Sweatshirts' },
   { id: 'athlete', name: 'Athlete Collection', color: 'var(--charcoal)', icon: '⚡', tagline: 'Motivation centered on discipline, preparation, and resilience.', desc: 'For competitors, coaches, and anyone who understands that the work is never finished.', messages: ['Never Finished.', 'Earn Tomorrow.', 'Outwork Yesterday.', 'Built Through Adversity.', 'Strong Mind. Strong Finish.'], products: 'Performance tees · Training gear · Shorts' },
   { id: 'youth', name: 'Youth Collection', color: '#7B9E4A', icon: '★', tagline: 'Positive messaging for identity, confidence, and belonging.', desc: 'For the next generation. Messages that build confidence, celebrate identity, and remind young people they belong.', messages: ['You Belong Here.', 'Different Is Not Less.', 'Your Voice Matters.', 'The Future Looks Good on You.', 'Stronger Than You Think.'], products: 'Youth tees · Hoodies · Hats' },
-  { id: 'collab', name: 'Collaboration Collection', color: '#8B4513', icon: '◎', tagline: 'Co-branded editions for organizations, causes, and communities.', desc: 'Custom Liftêd™ editions that carry the brand\'s meaning and identity — built for organizations that want their apparel to represent more than a logo.', messages: ['Better Together.', 'Your Work Matters.', 'Every Step Lifts Someone.', 'Hope Lives Here.', 'Play It Forward.'], products: 'Custom editions · Event gear · Fundraising collections' },
+  { id: 'collab', name: 'Collaboration Collection', color: '#8B4513', icon: '◎', tagline: 'Co-branded editions for organizations, causes, and communities.', desc: 'Custom Liftêd<TM/> editions that carry the brand\'s meaning and identity — built for organizations that want their apparel to represent more than a logo.', messages: ['Better Together.', 'Your Work Matters.', 'Every Step Lifts Someone.', 'Hope Lives Here.', 'Play It Forward.'], products: 'Custom editions · Event gear · Fundraising collections' },
 ]
 
 export default function Collections() {

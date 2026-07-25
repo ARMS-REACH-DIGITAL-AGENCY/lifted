@@ -1,7 +1,7 @@
 /**
  * LiftedLogo — Reusable brand identity component
  *
- * NEVER recreate the Liftêd™ logo with text, CSS, or AI.
+ * NEVER recreate the Liftêd<TM/> logo with text, CSS, or AI.
  * Always use the approved asset files from /public/brand/lifted/
  *
  * Usage:
@@ -12,6 +12,7 @@
  *   <LiftedIcon variant="white" />   — compact L icon only
  */
 import React from 'react'
+import { TM } from '../components/TM.jsx'
 
 const WORDMARK_SRCS = {
   white:   '/brand/lifted/lifted-wordmark-white.png',
@@ -37,7 +38,7 @@ export function LiftedLogo({
   return (
     <img
       src={src}
-      alt="Liftêd™"
+      alt="Liftêd<TM/>"
       height={height}
       style={{
         height,
@@ -62,7 +63,7 @@ export function LiftedIcon({
   return (
     <img
       src={src}
-      alt="Liftêd™ icon"
+      alt="Liftêd<TM/> icon"
       width={size}
       height={size}
       style={{

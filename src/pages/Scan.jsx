@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import LiftForm from '../components/LiftForm.jsx'
+import { TM } from '../components/TM.jsx'
 
 export default function Scan() {
   const [params] = useSearchParams()
@@ -23,10 +24,10 @@ export default function Scan() {
         <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: '100%', height: '60%', background: 'radial-gradient(ellipse at 50% 100%, rgba(238,191,104,0.2) 0%, transparent 65%)', pointerEvents: 'none' }} />
         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
           <div className="lift-in" style={{ display: 'inline-block', background: 'rgba(238,191,104,0.15)', border: '1px solid rgba(238,191,104,0.4)', borderRadius: 4, padding: '6px 20px', marginBottom: 24 }}>
-            <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>You Found Liftêd™</span>
+            <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>You Found Liftêd<TM/></span>
           </div>
           <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 6vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
-            You Found Liftêd™<br /><span style={{ color: 'var(--gold)' }}>Before the Official Launch.</span>
+            You Found Liftêd<TM/><br /><span style={{ color: 'var(--gold)' }}>Before the Official Launch.</span>
           </h1>
           <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.75)', maxWidth: 580, margin: '0 auto 16px', lineHeight: 1.7 }}>
             The message that brought you here is part of a new apparel brand built around encouragement, resilience, hope, and people lifting people.
