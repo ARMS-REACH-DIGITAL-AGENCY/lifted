@@ -1,7 +1,7 @@
 /**
  * LiftedLogo — Reusable brand identity component
  *
- * NEVER recreate the Liftêd<TM/> logo with text, CSS, or AI.
+ * NEVER recreate the Liftêd™ logo with text, CSS, or AI.
  * Always use the approved asset files from /public/brand/lifted/
  *
  * Usage:
@@ -38,7 +38,7 @@ export function LiftedLogo({
   return (
     <img
       src={src}
-      alt="Liftêd<TM/>"
+      alt="Liftêd™"
       height={height}
       style={{
         height,
@@ -63,7 +63,7 @@ export function LiftedIcon({
   return (
     <img
       src={src}
-      alt="Liftêd<TM/> icon"
+      alt="Liftêd™ icon"
       width={size}
       height={size}
       style={{

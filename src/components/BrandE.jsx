@@ -1,7 +1,7 @@
 /**
- * BrandE — Liftêd<TM/> Brand-Detail Typography Utility
+ * BrandE — Liftêd™ Brand-Detail Typography Utility
  *
- * Replaces a selected letter 'e' in a headline with the Liftêd<TM/> ê character,
+ * Replaces a selected letter 'e' in a headline with the Liftêd™ ê character,
  * styled in the approved gold accent color. Used as a deliberate brand signature
  * on 4–6 major headlines across the site.
  *

@@ -1,5 +1,5 @@
 /**
- * /shop — Liftêd<TM/> Storefront (Coming Soon)
+ * /shop — Liftêd™ Storefront (Coming Soon)
  * Phase 1: Branded coming-soon storefront with collection previews, product status labels,
  *           preorder-interest CTA, and founding-community signup.
  *
@@ -233,7 +233,7 @@ export default function Shop() {
             The Founding<br />Coll<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>ction
           </h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, color: 'rgba(247,244,236,0.65)', lineHeight: 1.7, maxWidth: 520, marginBottom: 28 }}>
-            The first Liftêd<TM/> private-label garments are currently in sample production. Ordering opens after sample validation is complete. Join the founding community to be first in line.
+            The first Liftêd™ private-label garments are currently in sample production. Ordering opens after sample validation is complete. Join the founding community to be first in line.
           </p>
           {/* Notify form */}
           <form onSubmit={handleNotify} style={{ display: 'flex', gap: 8, maxWidth: 420, flexWrap: 'wrap' }}>
@@ -292,7 +292,7 @@ export default function Shop() {
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 12 }}>Collaboration Collection</div>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(18px, 3vw, 28px)', color: 'var(--off-white)', textTransform: 'none', lineHeight: 1.1, marginBottom: 14 }}>Want a Custom Liftêd™ Edition?</h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'rgba(247,244,236,0.6)', lineHeight: 1.7, margin: 0 }}>
-              Organizations, schools, gyms, causes, and corporate clients can create a co-branded Liftêd<TM/> edition for their event, campaign, or community.
+              Organizations, schools, gyms, causes, and corporate clients can create a co-branded Liftêd™ edition for their event, campaign, or community.
             </p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, alignItems: 'flex-start' }}>

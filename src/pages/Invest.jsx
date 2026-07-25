@@ -35,7 +35,7 @@ export default function Invest() {
               The Investment<br /><span style={{ color: 'var(--gold)' }}>Opportunity</span>
             </h1>
             <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7, marginBottom: 32, maxWidth: 580 }}>
-              Liftêd<TM/> is a pre-revenue inspirational lifestyle apparel brand in its sample-development stage. We are seeking founding investors to help bring the brand to market.
+              Liftêd™ is a pre-revenue inspirational lifestyle apparel brand in its sample-development stage. We are seeking founding investors to help bring the brand to market.
             </p>
             <div className="lift-in d3" style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
               <Link to="/schedule?type=investor" className="btn btn-gold btn-lg">Schedule an Investor Call</Link>
@@ -49,7 +49,7 @@ export default function Invest() {
       <div style={{ background: 'var(--off-white)', padding: '20px 0' }}>
         <div className="container">
           <div className="disclaimer">
-            Investment Disclaimer: Nothing on this page constitutes an offer to sell or a solicitation of an offer to buy any securities. All information is provided for informational purposes only. Liftêd<TM/> is a pre-revenue brand in development. Consult your financial advisor before making any investment decisions.
+            Investment Disclaimer: Nothing on this page constitutes an offer to sell or a solicitation of an offer to buy any securities. All information is provided for informational purposes only. Liftêd™ is a pre-revenue brand in development. Consult your financial advisor before making any investment decisions.
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@ export default function Invest() {
               <h2 className="lift-in d1 section-title">More Than Apparel. A Pick-Me-Up.</h2>
               <div style={{ width: 56, height: 3, background: 'var(--gold)', borderRadius: 2, margin: '0 0 24px' }} />
               <p className="lift-in d2 section-body" style={{ marginBottom: 16 }}>
-                Liftêd<TM/> is not simply a motivational T-shirt company. It is an inspirational lifestyle apparel brand that turns encouragement into a visible, repeatable product experience.
+                Liftêd™ is not simply a motivational T-shirt company. It is an inspirational lifestyle apparel brand that turns encouragement into a visible, repeatable product experience.
               </p>
               <p className="lift-in d3 section-body" style={{ marginBottom: 24 }}>
                 The biggest opportunity is not becoming another T-shirt company. The opportunity is creating a recognizable symbol that instantly communicates hope, encouragement, resilience, and growth.

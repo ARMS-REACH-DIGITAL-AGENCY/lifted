@@ -28,7 +28,7 @@ export default function Collaborate() {
               Organizations, Caus<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>s,<br />and Communities
             </h1>
             <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
-              Liftêd<TM/> collaborates with organizations that want their apparel to represent more than an event logo.
+              Liftêd™ collaborates with organizations that want their apparel to represent more than an event logo.
             </p>
           </div>
         </div>
@@ -45,10 +45,10 @@ export default function Collaborate() {
                 "Who are we trying to lift?"
               </blockquote>
               <p className="lift-in d3 section-body" style={{ marginBottom: 16 }}>
-                Liftêd<TM/> develops an emotionally relevant message connected to the organization, audience, occasion, or cause — converting ordinary bulk apparel into meaningful brand assets that people will continue wearing after the event.
+                Liftêd™ develops an emotionally relevant message connected to the organization, audience, occasion, or cause — converting ordinary bulk apparel into meaningful brand assets that people will continue wearing after the event.
               </p>
               <p className="lift-in d4 section-body" style={{ marginBottom: 32 }}>
-                Each collaboration carries the Liftêd<TM/> meaning and identity. Custom apparel services are available separately for client-owned branding.
+                Each collaboration carries the Liftêd™ meaning and identity. Custom apparel services are available separately for client-owned branding.
               </p>
               <div className="lift-in d5" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
                 {['Corporate apparel', 'Employee appreciation', 'Leadership gifts', 'Golf tournaments', 'Charity events', 'Church retreats', 'School campaigns', 'Team programs', 'Fundraising stores', 'Awareness campaigns', 'Limited co-branded collections', 'Community events'].map(item => (

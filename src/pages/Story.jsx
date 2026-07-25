@@ -1,5 +1,5 @@
 /**
- * /story — The Liftêd<TM/> Origin Story
+ * /story — The Liftêd™ Origin Story
  * Historical photograph: Cesare "Chaz" DeLuca, Liftêd Co-Founder, 2012.
  * Real photograph — no AI replacement, no face retouching.
  * Light exposure correction only.
@@ -40,7 +40,7 @@ export default function Story() {
             fontFamily: 'var(--font-body)', fontSize: 17,
             color: 'rgba(247,244,236,0.65)', lineHeight: 1.75, maxWidth: 580,
           }}>
-            Liftêd<TM/> did not begin in a boardroom or branding session.
+            Liftêd™ did not begin in a boardroom or branding session.
           </p>
         </div>
       </div>

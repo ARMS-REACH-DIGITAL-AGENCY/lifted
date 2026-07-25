@@ -75,7 +75,7 @@ export default function LiftForm({ type = 'founding', title, subtitle, dark = fa
       <div style={{ fontSize: 48, marginBottom: 16, color: 'var(--gold)' }}>↑</div>
       <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 700, color: dark ? 'white' : 'var(--charcoal)', marginBottom: 12 }}>You're Liftêd™.</h3>
       <p style={{ fontSize: 16, color: dark ? 'rgba(247,244,236,0.7)' : 'var(--muted-olive)', lineHeight: 1.7 }}>
-        Thank you for reaching out. We'll be in touch soon. The world needs more Liftêd<TM/> — and people like you make it happen.
+        Thank you for reaching out. We'll be in touch soon. The world needs more Liftêd™ — and people like you make it happen.
       </p>
     </div>
   )
@@ -157,7 +157,7 @@ export default function LiftForm({ type = 'founding', title, subtitle, dark = fa
       </div>
       <div className="form-group">
         <label className="form-label" style={labelStyle}>Message</label>
-        <textarea className="form-textarea" style={inputStyle} value={form.message} onChange={e => set('message', e.target.value)} placeholder="Tell us about your interest in Liftêd<TM/>..." />
+        <textarea className="form-textarea" style={inputStyle} value={form.message} onChange={e => set('message', e.target.value)} placeholder="Tell us about your interest in Liftêd™..." />
       </div>
       <div className="form-group">
         <label className="form-label" style={labelStyle}>How did you hear about us?</label>
@@ -177,7 +177,7 @@ export default function LiftForm({ type = 'founding', title, subtitle, dark = fa
       {error && <p style={{ color: '#c0392b', fontSize: 14, marginBottom: 16 }}>{error}</p>}
 
       <p style={{ fontSize: 12, color: dark ? 'rgba(247,244,236,0.4)' : 'var(--muted-olive)', marginBottom: 16, lineHeight: 1.6 }}>
-        By submitting this form, you consent to receive email and SMS communications from Liftêd<TM/> / ARMS Reach Digital Agency. You may opt out at any time.
+        By submitting this form, you consent to receive email and SMS communications from Liftêd™ / ARMS Reach Digital Agency. You may opt out at any time.
       </p>
 
       <button type="submit" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center', padding: '15px' }} disabled={loading}>

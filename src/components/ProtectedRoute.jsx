@@ -1,5 +1,5 @@
 /**
- * ProtectedRoute — Liftêd<TM/>
+ * ProtectedRoute — Liftêd™
  * Wraps portal routes that require authentication and a specific role.
  * Unauthenticated users are redirected to /investor-access or /investor-login.
  * Authenticated users without the required role see an access-denied message.

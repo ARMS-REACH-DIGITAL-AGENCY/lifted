@@ -1,5 +1,5 @@
 /**
- * /support — Help Bring Liftêd<TM/> to Life
+ * /support — Help Bring Liftêd™ to Life
  * Three clearly separated pathways — no combined form.
  */
 import React from 'react'
@@ -13,10 +13,10 @@ export default function Support() {
         <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 20px' }}>
           <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 14 }}>Get Involved</div>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 5vw, 52px)', color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: 20 }}>
-            Help Bring<br />Liftêd<TM/> to Life
+            Help Bring<br />Liftêd™ to Life
           </h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7, maxWidth: 560 }}>
-            There are three distinct ways to support the Liftêd<TM/> launch. Choose the path that fits you best.
+            There are three distinct ways to support the Liftêd™ launch. Choose the path that fits you best.
           </p>
         </div>
       </div>
@@ -30,7 +30,7 @@ export default function Support() {
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 10 }}>Community</div>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 20, color: 'var(--charcoal)', marginBottom: 14, textTransform: 'uppercase', lineHeight: 1.1 }}>Join the Founding Community</h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--muted-olive)', lineHeight: 1.7, flex: 1, marginBottom: 24 }}>
-              For updates, design voting, sample reveals, and early access. Be part of the community that brings Liftêd<TM/> to life — before the official launch.
+              For updates, design voting, sample reveals, and early access. Be part of the community that brings Liftêd™ to life — before the official launch.
             </p>
             <div style={{ borderTop: '1px solid rgba(41,42,40,0.12)', paddingTop: 16, marginBottom: 20 }}>
               <div style={{ fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, color: 'var(--charcoal)', marginBottom: 8 }}>What you get:</div>
@@ -51,7 +51,7 @@ export default function Support() {
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 10 }}>Support</div>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 20, color: 'var(--charcoal)', marginBottom: 14, textTransform: 'uppercase', lineHeight: 1.1 }}>Support the Founding Collection</h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--muted-olive)', lineHeight: 1.7, flex: 1, marginBottom: 24 }}>
-              For future preorders, reward-based campaigns, merchandise, or non-investment support. Be among the first to own a Liftêd<TM/> garment when ordering opens.
+              For future preorders, reward-based campaigns, merchandise, or non-investment support. Be among the first to own a Liftêd™ garment when ordering opens.
             </p>
             <div style={{ borderTop: '1px solid rgba(41,42,40,0.12)', paddingTop: 16, marginBottom: 20 }}>
               <div style={{ fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, color: 'var(--charcoal)', marginBottom: 8 }}>What this means:</div>
@@ -72,7 +72,7 @@ export default function Support() {
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 10 }}>Private Access</div>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 20, color: 'var(--charcoal)', marginBottom: 14, textTransform: 'uppercase', lineHeight: 1.1 }}>Request Investor Information</h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--muted-olive)', lineHeight: 1.7, flex: 1, marginBottom: 24 }}>
-              For qualified individuals seeking private access to the Liftêd<TM/> investor portal. Explore the business opportunity, financial information, and growth strategy in a secure environment.
+              For qualified individuals seeking private access to the Liftêd™ investor portal. Explore the business opportunity, financial information, and growth strategy in a secure environment.
             </p>
             <div style={{ borderTop: '1px solid rgba(41,42,40,0.12)', paddingTop: 16, marginBottom: 20 }}>
               <div style={{ fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, color: 'var(--charcoal)', marginBottom: 8 }}>Access includes:</div>

@@ -1,5 +1,5 @@
 /**
- * Liftêd<TM/> ProductCard
+ * Liftêd™ ProductCard
  * Displays a curated product concept with front/back toggle,
  * status badge, and CTA based on launch state.
  */

@@ -29,7 +29,7 @@ export default function FoundingCommunity() {
               Join the Liftêd™<br /><span style={{ color: 'var(--gold)' }}>Founding Community</span>
             </h1>
             <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
-              The founding community is for people who believe in what Liftêd<TM/> represents — and want to be part of building it before the official launch.
+              The founding community is for people who believe in what Liftêd™ represents — and want to be part of building it before the official launch.
             </p>
           </div>
         </div>
