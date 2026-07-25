@@ -70,7 +70,7 @@ export default function Nav() {
           height: 64,
         }}>
           {/* Logo */}
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0, marginLeft: 28 }}>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0, marginLeft: 16 }}>
             <LiftedLogo variant={logoVariant} height={120} />
           </Link>
 
