@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import LiftForm from '../components/LiftForm.jsx'
 import { TM } from '../components/TM.jsx'
+import { BrandE } from '../components/BrandE.jsx'
 
 function useLiftIn(ref) {
   useEffect(() => {
