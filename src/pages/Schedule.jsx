@@ -36,7 +36,7 @@ export default function Schedule() {
           <div style={{ maxWidth: 680 }}>
             <div className="lift-in section-eyebrow" style={{ color: 'var(--gold)' }}>Let's Talk</div>
             <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
-              Schedule a 20-Minute<br /><span style={{ color: 'var(--gold)' }}>Liftêd<TM/> Conversation</span>
+              Schedule a 20-Minute<br />Liftêd<TM/> Conversation
             </h1>
             <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
               Choose the type of conversation that fits your interest. We'll confirm a time and send you a Zoom link.

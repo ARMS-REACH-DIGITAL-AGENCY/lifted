@@ -219,7 +219,7 @@ export default function Home() {
                 <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--burnt-orange)', display: 'inline-block', animation: 'pulse 2s infinite' }} />
                 <span style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--burnt-orange)' }}>Now in Production</span>
               </div>
-              <h2 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 4vw, 40px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: 20 }}>The First Liftêd<TM/> Samples Are Now in Production</h2>
+              <h2 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 4vw, 40px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'none', marginBottom: 20 }}>The First Liftêd<TM/> Samples Are Now in Production</h2>
               <div style={{ width: 40, height: 3, background: 'var(--burnt-orange)', marginBottom: 20 }} />
               <p className="lift-in d2" style={{ fontFamily: 'var(--font-body)', fontSize: 15, color: 'rgba(247,244,236,0.65)', lineHeight: 1.7, marginBottom: 14 }}>
                 Liftêd<TM/> is currently developing its first private-label apparel samples — produced with custom Liftêd<TM/> labels, not printed on another manufacturer's consumer brand.

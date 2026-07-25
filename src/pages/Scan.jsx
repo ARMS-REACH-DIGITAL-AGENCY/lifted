@@ -27,7 +27,7 @@ export default function Scan() {
             <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>You Found Liftêd<TM/></span>
           </div>
           <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 6vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
-            You Found Liftêd<TM/><br /><span style={{ color: 'var(--gold)' }}>Before the Official Launch.</span>
+            You Found Liftêd<TM/><br />Before the Official Launch.
           </h1>
           <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.75)', maxWidth: 580, margin: '0 auto 16px', lineHeight: 1.7 }}>
             The message that brought you here is part of a new apparel brand built around encouragement, resilience, hope, and people lifting people.

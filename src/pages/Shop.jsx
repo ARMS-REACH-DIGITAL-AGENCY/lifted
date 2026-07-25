@@ -229,8 +229,8 @@ export default function Shop() {
               <span style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--burnt-orange)' }}>Samples in Production</span>
             </div>
           </div>
-          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 5vw, 52px)', color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: 20 }}>
-            The Founding<br />Collection
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 5vw, 52px)', color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.02em', textTransform: 'none', marginBottom: 20 }}>
+            The Founding<br />Coll<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>ction
           </h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, color: 'rgba(247,244,236,0.65)', lineHeight: 1.7, maxWidth: 520, marginBottom: 28 }}>
             The first Liftêd<TM/> private-label garments are currently in sample production. Ordering opens after sample validation is complete. Join the founding community to be first in line.
@@ -290,7 +290,7 @@ export default function Shop() {
         <div style={{ background: 'var(--black)', border: '1.5px solid var(--burnt-orange)', padding: '40px 32px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24, alignItems: 'center' }}>
           <div>
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 12 }}>Collaboration Collection</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(18px, 3vw, 28px)', color: 'var(--off-white)', textTransform: 'uppercase', lineHeight: 1.1, marginBottom: 14 }}>Want a Custom Liftêd<TM/> Edition?</h2>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(18px, 3vw, 28px)', color: 'var(--off-white)', textTransform: 'none', lineHeight: 1.1, marginBottom: 14 }}>Want a Custom Liftêd<TM/> Edition?</h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'rgba(247,244,236,0.6)', lineHeight: 1.7, margin: 0 }}>
               Organizations, schools, gyms, causes, and corporate clients can create a co-branded Liftêd<TM/> edition for their event, campaign, or community.
             </p>
