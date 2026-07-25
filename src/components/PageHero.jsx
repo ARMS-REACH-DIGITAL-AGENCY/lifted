@@ -51,10 +51,10 @@ export default function PageHero({ eyebrow, heading, description, children, bgIm
           <h1 style={{
           fontFamily: "'Montserrat', Impact, sans-serif",
           fontSize: 'clamp(32px, 6vw, 72px)',
-            fontWeight: 400,
-            color: 'var(--off-white)',
-            lineHeight: 1.05,
-            letterSpacing: '-0.02em',
+          fontWeight: 400,
+          color: 'var(--off-white)',
+          lineHeight: 1.05,
+          letterSpacing: '-0.04em',
             marginBottom: 24,
             textTransform: 'none',
           }}>{heading}</h1>
