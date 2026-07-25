@@ -30,15 +30,22 @@ export default function Nav() {
   useEffect(() => { setOpen(false) }, [location])
 
   const transparent = isHome && !scrolled && !open
+  // White nav when scrolled or on non-home pages; transparent only on home hero
+  const navBg = transparent ? 'transparent' : 'var(--off-white)'
+  const navBorder = transparent ? 'none' : '2px solid var(--burnt-orange)'
+  const navTextColor = transparent ? 'rgba(247,244,236,0.75)' : 'rgba(41,42,40,0.75)'
+  const navActiveColor = transparent ? 'var(--sand)' : 'var(--burnt-orange)'
+  const logoVariant = transparent ? 'primary' : 'primary'
   const logoVariant = transparent ? 'primary' : 'white'
 
   return (
     <>
       <header style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
-        background: transparent ? 'transparent' : 'var(--black)',
-        borderBottom: transparent ? 'none' : '2px solid var(--burnt-orange)',
+        background: navBg,
+        borderBottom: navBorder,
         transition: 'background 0.25s, border-color 0.25s',
+        boxShadow: transparent ? 'none' : '0 1px 12px rgba(0,0,0,0.10)',
       }}>
         <div style={{
           maxWidth: 1200, margin: '0 auto', padding: '0 20px',
@@ -57,7 +64,7 @@ export default function Nav() {
                 fontFamily: 'var(--font-body)',
                 fontSize: 11, fontWeight: 700,
                 letterSpacing: '0.1em', textTransform: 'uppercase',
-                color: location.pathname === l.to ? 'var(--sand)' : 'rgba(247,244,236,0.75)',
+                color: location.pathname === l.to ? navActiveColor : navTextColor,
                 textDecoration: 'none', transition: 'color 0.15s',
                 whiteSpace: 'nowrap',
               }}
@@ -75,8 +82,8 @@ export default function Nav() {
             <Link to="/schedule" style={{
               fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700,
               letterSpacing: '0.08em', textTransform: 'uppercase',
-              color: 'rgba(247,244,236,0.7)', textDecoration: 'none',
-              padding: '7px 14px', border: '1.5px solid rgba(247,244,236,0.3)',
+              color: transparent ? 'rgba(247,244,236,0.7)' : 'rgba(41,42,40,0.7)', textDecoration: 'none',
+              padding: '7px 14px', border: transparent ? '1.5px solid rgba(247,244,236,0.3)' : '1.5px solid rgba(41,42,40,0.25)',
               borderRadius: 'var(--radius)', transition: 'all 0.15s', whiteSpace: 'nowrap',
             }}
             onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--off-white)'; e.currentTarget.style.color = 'var(--off-white)' }}
@@ -116,7 +123,7 @@ export default function Nav() {
               {[0,1,2].map(i => (
                 <span key={i} style={{
                   display: 'block', width: 22, height: 2,
-                  background: 'var(--off-white)', borderRadius: 0,
+                  background: transparent ? 'var(--off-white)' : 'var(--charcoal)', borderRadius: 0,
                   transition: 'transform 0.2s, opacity 0.2s',
                   transform: open ? (i===0 ? 'rotate(45deg) translate(5px,5px)' : i===2 ? 'rotate(-45deg) translate(5px,-5px)' : 'none') : 'none',
                   opacity: open && i===1 ? 0 : 1,
