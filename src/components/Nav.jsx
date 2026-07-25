@@ -36,7 +36,6 @@ export default function Nav() {
   const navTextColor = transparent ? 'rgba(247,244,236,0.75)' : 'rgba(41,42,40,0.75)'
   const navActiveColor = transparent ? 'var(--sand)' : 'var(--burnt-orange)'
   const logoVariant = transparent ? 'primary' : 'primary'
-  const logoVariant = transparent ? 'primary' : 'white'
 
   return (
     <>
