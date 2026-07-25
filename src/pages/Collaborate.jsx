@@ -25,7 +25,7 @@ export default function Collaborate() {
           <div style={{ maxWidth: 680 }}>
             <div className="lift-in section-eyebrow" style={{ color: 'var(--gold)' }}>Collaboration Model</div>
             <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
-              Organizations, Caus<BrandE before="" after="s," ariaLabel="Causes," /><br /><span style={{ color: 'var(--gold)' }}>and Communitiês</span>
+              Organizations, Caus<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>s,<br /><span style={{ color: 'var(--sand)' }}>and Communities</span>
             </h1>
             <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
               Liftêd<TM/> collaborates with organizations that want their apparel to represent more than an event logo.

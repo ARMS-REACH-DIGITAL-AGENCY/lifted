@@ -1,5 +1,5 @@
 /**
- * /wholesale — Carry Liftêd<TM/> in Your Store
+ * /wholesale — Carry Liftêd<TM/> in Your Stor<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>
  * Submits via formBridge → HighLevel Forms API (form ID: wA5FYCmpPjckyDsPCEYF)
  * Field keys confirmed from HighLevel Settings → Custom Fields (Jul 24, 2026).
  * Creates a wholesale application only — no retailer account created here.

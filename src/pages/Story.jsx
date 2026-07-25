@@ -22,7 +22,7 @@ export default function Story() {
         <div style={{ maxWidth: 760, margin: '0 auto', padding: '0 24px' }}>
           <div style={{
             fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700,
-            letterSpacing: '0.22em', textTransform: 'uppercase',
+            letterSpacing: '0.22em', textTransform: 'none',
             color: 'var(--burnt-orange)', marginBottom: 16,
           }}>Our Story</div>
           <h1 style={{
@@ -31,7 +31,7 @@ export default function Story() {
             color: 'var(--off-white)',
             lineHeight: 1.0,
             letterSpacing: '-0.02em',
-            textTransform: 'uppercase',
+            textTransform: 'none',
             marginBottom: 24,
           }}>
             An Id<BrandE before="" after="a 15 Years" ariaLabel="An Idea 15 Years" /><br />in the Making.
@@ -58,7 +58,7 @@ export default function Story() {
           <div>
             <div style={{
               fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700,
-              letterSpacing: '0.22em', textTransform: 'uppercase',
+              letterSpacing: '0.22em', textTransform: 'none',
               color: 'var(--burnt-orange)', marginBottom: 20,
             }}>Where It Started</div>
 
@@ -109,7 +109,7 @@ export default function Story() {
                 fontSize: 'clamp(16px, 2.5vw, 22px)',
                 color: 'var(--charcoal)',
                 lineHeight: 1.3,
-                textTransform: 'uppercase',
+                textTransform: 'none',
                 letterSpacing: '-0.01em',
                 margin: 0,
               }}>
@@ -143,7 +143,7 @@ export default function Story() {
                   }} />
                   <span style={{
                     fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700,
-                    letterSpacing: '0.2em', textTransform: 'uppercase',
+                    letterSpacing: '0.2em', textTransform: 'none',
                     color: 'rgba(247,244,236,0.6)',
                   }}>Brand Archive · 2012</span>
                 </div>
@@ -191,18 +191,18 @@ export default function Story() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px' }}>
           <div style={{
             fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700,
-            letterSpacing: '0.22em', textTransform: 'uppercase',
+            letterSpacing: '0.22em', textTransform: 'none',
             color: 'var(--burnt-orange)', marginBottom: 16,
           }}>The Mission Today</div>
           <h2 style={{
             fontFamily: 'var(--font-display)',
             fontSize: 'clamp(26px, 4vw, 48px)',
             color: 'var(--off-white)',
-            textTransform: 'uppercase',
+            textTransform: 'none',
             lineHeight: 1.0,
             letterSpacing: '-0.02em',
             marginBottom: 40,
-          }} aria-label="What the Idea Became"><BrandE before="What the Id" after="a Became" ariaLabel="What the Idea Became" /></h2>
+          }} aria-label="What the Idea Became">What the Id<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>a Became</h2>
 
           <div style={{
             display: 'grid',
@@ -234,7 +234,7 @@ export default function Story() {
               }}>
                 <div style={{
                   fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700,
-                  letterSpacing: '0.2em', textTransform: 'uppercase',
+                  letterSpacing: '0.2em', textTransform: 'none',
                   color: item.accent ? 'rgba(247,244,236,0.7)' : 'var(--burnt-orange)',
                   marginBottom: 14,
                 }}>{item.label}</div>
@@ -270,14 +270,14 @@ export default function Story() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16 }}>
             <Link to="/collections" style={{
               fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700,
-              letterSpacing: '0.1em', textTransform: 'uppercase',
+              letterSpacing: '0.1em', textTransform: 'none',
               background: 'var(--burnt-orange)', color: 'var(--off-white)',
               textDecoration: 'none', padding: '14px 28px',
               borderRadius: 'var(--radius)',
             }}>See the Collections</Link>
             <Link to="/founding-community" style={{
               fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700,
-              letterSpacing: '0.1em', textTransform: 'uppercase',
+              letterSpacing: '0.1em', textTransform: 'none',
               background: 'transparent', color: 'var(--off-white)',
               textDecoration: 'none', padding: '14px 28px',
               border: '1.5px solid rgba(247,244,236,0.3)',

@@ -34,7 +34,7 @@ export default function Collections() {
           <div style={{ maxWidth: 680 }}>
             <div className="lift-in section-eyebrow" style={{ color: 'var(--gold)' }}>Five Collections. One Meaning.</div>
             <h1 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 900, color: 'white', lineHeight: 1.1, marginBottom: 20 }}>
-              The Founding<br /><span style={{ color: 'var(--gold)' }}>Collections</span>
+              The Founding<br /><span style={{ color: 'var(--sand)' }}>Coll<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>ctions</span>
             </h1>
             <p className="lift-in d2" style={{ fontSize: 18, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7 }}>
               A portfolio designed to follow the customer through different identities and stages of life — without ever abandoning the single promise that holds it all together.

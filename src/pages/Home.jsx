@@ -4,6 +4,7 @@ import BrandE from '../components/BrandE.jsx'
 import ProductCard from '../components/ProductCard.jsx'
 import { FEATURED_PRODUCTS } from '../data/products.js'
 import { TM } from '../components/TM.jsx'
+import { BrandName } from '../components/BrandName.jsx'
 
 function useLiftIn(ref) {
   useEffect(() => {
@@ -77,11 +78,7 @@ export default function Home() {
             </div>
             {/* ── Premium title-case headline ── */}
             <h1 style={{ fontFamily: '"Archivo Black", "Inter Tight", system-ui, sans-serif', fontSize: 'clamp(42px, 7.5vw, 88px)', fontWeight: 900, color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.025em', marginBottom: 28, textTransform: 'none' }}>
-              The World Needs<br />More{' '}
-              <span style={{ color: 'var(--sand)', fontStyle: 'normal', letterSpacing: '-0.02em' }}>
-                Liftêd
-                <sup style={{ fontSize: '0.30em', fontWeight: 900, letterSpacing: '0', verticalAlign: 'super', lineHeight: 0, color: 'var(--sand)', opacity: 0.70, marginLeft: '0.04em' }}><TM/></sup>
-              </span>
+              The World N<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>eds More <BrandName theme="dark" />
               <span style={{ color: 'var(--burnt-orange)', marginLeft: '0.04em' }}>.</span>
             </h1>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 18, color: 'rgba(247,244,236,0.75)', lineHeight: 1.7, marginBottom: 12, maxWidth: 560 }}>
@@ -166,7 +163,7 @@ export default function Home() {
         <div className="container">
           <div className="lift-in" style={{ marginBottom: 48 }}>
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 10 }}>What Makes It Different</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(26px, 4vw, 44px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'uppercase' }}>Why Liftêd<TM/> Is Different</h2>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(26px, 4vw, 44px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'none' }}>Why <BrandName theme="dark" /> Is Diff<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>rent</h2>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 2 }}>
             {[
@@ -330,8 +327,8 @@ export default function Home() {
         <div className="container" style={{ textAlign: 'center' }}>
           <div className="lift-in">
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 16 }}>The Movement</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 6vw, 64px)', color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: 20 }}>
-              WEAR ENCOUR<BrandE before="" after="GEMENT." ariaLabel="WEAR ENCOURAGEMENT." /><br /><span style={{ color: 'var(--burnt-orange)' }}>WEAR LIFTÊD<TM/>.</span>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 6vw, 64px)', color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.02em', textTransform: 'none', marginBottom: 20 }}>
+              Wear Encouragêment.<br /><span style={{ color: 'var(--burnt-orange)' }}>Wear <BrandName theme="dark" />.</span>
             </h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, color: 'rgba(247,244,236,0.6)', maxWidth: 520, margin: '0 auto 36px', lineHeight: 1.7 }}>
               The world needs more people who refuse to quit. That's who we make this for. Join us before the official launch.
