@@ -27,6 +27,7 @@ export default function Footer() {
             {[['/founding-community', 'Join Community'], ['/support', 'Help Bring Liftêd™ to Life'], ['/schedule', 'Schedule a Call'], ['/scan', 'Scan a QR Code'], ['/sample', 'Sample Feedback']].map(([to, label]) => (
               <Link key={to} to={to} style={{ display: 'block', fontFamily: 'var(--font-body)', fontSize: 13, color: 'rgba(247,244,236,0.6)', marginBottom: 9, textDecoration: 'none' }}>{label}</Link>
             ))}
+            <Link to="/investor-access" style={{ display: 'block', fontFamily: 'var(--font-body)', fontSize: 13, color: 'rgba(212,168,67,0.7)', marginBottom: 9, textDecoration: 'none', marginTop: 6 }}>Investor Opportunity</Link>
           </div>
           <div>
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 14 }}>JOIN US</div>

@@ -14,6 +14,7 @@ const MOBILE_EXTRA = [
   { to: '/schedule', label: 'Schedule a Call' },
   { to: '/scan', label: 'Scan a QR Code' },
 ]
+const MOBILE_INVESTOR = { to: '/investor-access', label: 'Investor Opportunity' }
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -139,16 +140,26 @@ export default function Nav() {
             borderTop: '2px solid var(--burnt-orange)',
             padding: '4px 20px 24px',
           }}>
-            {[...NAV_LINKS, ...MOBILE_EXTRA].map(l => (
-              <Link key={l.to} to={l.to} style={{
+           {[...NAV_LINKS, ...MOBILE_EXTRA].map(l => (
+             <Link key={l.to} to={l.to} style={{
+               display: 'block', padding: '14px 0',
+               fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700,
+               letterSpacing: '0.08em', textTransform: 'uppercase',
+               color: location.pathname === l.to ? 'var(--sand)' : 'rgba(247,244,236,0.8)',
+               borderBottom: '1px solid rgba(247,244,236,0.08)',
+               textDecoration: 'none',
+             }}>{l.label}</Link>
+           ))}
+            {/* Investor Opportunity — discreet separator before it */}
+            <div style={{ borderTop: '1px solid rgba(247,244,236,0.15)', marginTop: 8, paddingTop: 8 }}>
+              <Link to={MOBILE_INVESTOR.to} style={{
                 display: 'block', padding: '14px 0',
-                fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700,
-                letterSpacing: '0.08em', textTransform: 'uppercase',
-                color: location.pathname === l.to ? 'var(--sand)' : 'rgba(247,244,236,0.8)',
-                borderBottom: '1px solid rgba(247,244,236,0.08)',
+                fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700,
+                letterSpacing: '0.1em', textTransform: 'uppercase',
+                color: location.pathname === MOBILE_INVESTOR.to ? 'var(--sand)' : 'rgba(212,168,67,0.75)',
                 textDecoration: 'none',
-              }}>{l.label}</Link>
-            ))}
+              }}>{MOBILE_INVESTOR.label}</Link>
+            </div>
             <div style={{ marginTop: 20 }}>
               <Link to="/founding-community" style={{
                 display: 'block', textAlign: 'center',
