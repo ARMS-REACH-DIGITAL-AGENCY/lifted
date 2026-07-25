@@ -11,7 +11,7 @@ export default function Footer() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 40, marginBottom: 40 }}>
           <div>
             <Link to="/" style={{ display: 'inline-block', marginBottom: 14 }}>
-              <LiftedLogo variant="white" height={26} />
+              <LiftedLogo variant="light" height={36} />
             </Link>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 13, lineHeight: 1.65, marginBottom: 10 }}>More Than Apparel. A Pick-Me-Up.</p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 11, fontStyle: 'italic', color: 'rgba(247,244,236,0.35)' }}>The World Needs More Liftêd™.</p>

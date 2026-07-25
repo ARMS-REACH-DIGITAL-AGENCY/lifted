@@ -35,7 +35,7 @@ export default function Nav() {
   const navBorder = transparent ? 'none' : '2px solid var(--burnt-orange)'
   const navTextColor = transparent ? 'rgba(247,244,236,0.75)' : 'rgba(41,42,40,0.75)'
   const navActiveColor = transparent ? 'var(--sand)' : 'var(--burnt-orange)'
-  const logoVariant = transparent ? 'primary' : 'primary'
+  const logoVariant = transparent ? 'light' : 'dark'
 
   return (
     <>
@@ -53,7 +53,7 @@ export default function Nav() {
         }}>
           {/* Logo */}
           <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
-            <LiftedLogo variant={logoVariant} height={30} />
+            <LiftedLogo variant={logoVariant} height={36} />
           </Link>
 
           {/* Desktop nav */}
