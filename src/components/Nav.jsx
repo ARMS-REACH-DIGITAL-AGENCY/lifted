@@ -47,30 +47,30 @@ export default function Nav() {
         transition: 'background 0.25s, border-color 0.25s',
         boxShadow: transparent ? 'none' : '0 1px 12px rgba(0,0,0,0.10)',
       }}>
-        {/* L-hand gesture — bleeds in from left edge, always visible */}
-        <img
-          src="/brand/lifted/l-hand-gesture.png"
-          alt=""
-          aria-hidden="true"
-          style={{
-            position: 'absolute',
-            left: 0,
-            top: -8,
-            height: 96,
-            width: 'auto',
-            pointerEvents: 'none',
-            zIndex: 1001,
-            opacity: 1,
-            userSelect: 'none',
-          }}
-        />
-        <div style={{
-          maxWidth: 1200, margin: '0 auto', padding: '0 20px',
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          height: 64,
-        }}>
-          {/* Logo */}
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0, marginLeft: 52 }}>
+          {/* L-hand gesture — bleeds in from left edge, always visible */}
+          <img
+            src="/brand/lifted/l-hand-gesture.png"
+            alt=""
+            aria-hidden="true"
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: -8,
+              height: 82,
+              width: 'auto',
+              pointerEvents: 'none',
+              zIndex: 1001,
+              opacity: 1,
+              userSelect: 'none',
+            }}
+          />
+          <div style={{
+            maxWidth: 1200, margin: '0 auto', padding: '0 20px',
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+            height: 64,
+          }}>
+            {/* Logo */}
+            <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0, marginLeft: 38 }}>
             <LiftedLogo variant={logoVariant} height={120} />
           </Link>
 
