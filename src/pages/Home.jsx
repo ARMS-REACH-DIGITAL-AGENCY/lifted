@@ -323,7 +323,7 @@ export default function Home() {
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: 32, color: 'var(--burnt-orange)', opacity: 0.6, lineHeight: 1, marginBottom: 12 }}>{p.icon}</div>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 16, color: 'var(--charcoal)', marginBottom: 10, textTransform: 'uppercase', letterSpacing: '0.02em' }}>{p.title}</h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--muted-olive)', lineHeight: 1.7, flex: 1, marginBottom: 18 }}>{p.desc}</p>
-                <Link to={p.to} className="btn btn-ghost btn-sm" style={{ justifyContent: 'center', textAlign: 'center' }}>{p.cta}</Link>
+                <Link to={p.to} className="btn btn-ghost btn-sm" style={{ justifyContent: 'center', textAlign: 'center', width: '100%', lineHeight: 1.3 }}>{p.cta}</Link>
               </div>
             ))}
           </div>
