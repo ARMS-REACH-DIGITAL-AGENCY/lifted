@@ -25,9 +25,9 @@ export default function Invest() {
   useLiftIn(ref)
 
   return (
-    <div ref={ref} style={{ paddingTop: 68 }}>
+    <div ref={ref} style={{ background: 'var(--warm-cream)' }}>
       {/* Hero */}
-      <section style={{ background: 'var(--black)', padding: '80px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
+      <section style={{ background: 'var(--black)', padding: '148px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
         <div className="container">
           <div style={{ maxWidth: 720 }}>
             <div className="lift-in section-eyebrow" style={{ color: 'var(--gold)' }}>Investor Overview</div>
@@ -166,4 +166,3 @@ export default function Invest() {
     </div>
   )
 }
-

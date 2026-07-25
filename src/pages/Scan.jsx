@@ -18,9 +18,9 @@ export default function Scan() {
   }, [])
 
   return (
-    <div ref={ref} style={{ paddingTop: 68 }}>
+    <div ref={ref} style={{ background: 'var(--warm-cream)' }}>
       {/* Hero */}
-      <section style={{ background: 'var(--black)', padding: '80px 0 64px', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ background: 'var(--black)', padding: '148px 0 64px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: '100%', height: '60%', background: 'radial-gradient(ellipse at 50% 100%, rgba(238,191,104,0.2) 0%, transparent 65%)', pointerEvents: 'none' }} />
         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
           <div className="lift-in" style={{ display: 'inline-block', background: 'rgba(238,191,104,0.15)', border: '1px solid rgba(238,191,104,0.4)', borderRadius: 4, padding: '6px 20px', marginBottom: 24 }}>
