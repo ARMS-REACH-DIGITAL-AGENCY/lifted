@@ -210,71 +210,134 @@ export default function Story() {
         </div>
       </div>
 
-      {/* ── What the Idea Became ── */}
+     {/* ── What the Idea Became ── */}
+      {/* ── The Evolution & Psychology of Liftêd Today ── */}
       <div style={{
         background: 'var(--black)',
         marginTop: 80,
-        padding: '72px 0 80px',
+        padding: '80px 0 96px',
         borderTop: '3px solid var(--burnt-orange)',
       }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
+
+          {/* Section header */}
           <div style={{
-            fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700,
-            letterSpacing: '0.22em', textTransform: 'none',
+            fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700,
+            letterSpacing: '0.22em', textTransform: 'uppercase',
             color: 'var(--burnt-orange)', marginBottom: 16,
-          }}>THE MISSION TODAY</div>
+          }}>THE MISSION</div>
           <h2 style={{
             fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(26px, 4vw, 48px)',
+            fontSize: 'clamp(28px, 4vw, 52px)',
             color: 'var(--off-white)',
             textTransform: 'none',
-            lineHeight: 1.0,
+            lineHeight: 1.05,
             letterSpacing: '-0.02em',
-            marginBottom: 40,
-          }} aria-label="What the Idea Became">What the Id<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>a Became</h2>
+            marginBottom: 16,
+          }}>
+            The Evolution &amp; Psychology<br />of Lift<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>d Today
+          </h2>
+          <p style={{
+            fontFamily: 'var(--font-body)', fontSize: 17,
+            color: 'rgba(247,244,236,0.6)', lineHeight: 1.75,
+            maxWidth: 640, marginBottom: 64,
+          }}>
+            What started as a seventh-grade idea became a brand built on a simple psychological truth: the words we carry shape how we see ourselves — and how others see us.
+          </p>
 
+          {/* Two-panel illustration layout */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-            gap: 2,
-            marginBottom: 56,
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: 40,
+            marginBottom: 64,
           }}>
-            {[
-              {
-                label: 'Replacing Limiting Labels',
-                body: `The world is full of labels that diminish. Liftêd™ exists to replace them — with visible encouragement that travels with the wearer everywhere they go.`,
-                accent: false,
-              },
-              {
-                label: 'Reclaiming the L',
-                body: `The L-hand gesture has long been used as a symbol of failure. Liftêd™ reclaims it. You're Not a Loser. You're Liftêd™. Turn the L Up.`,
-                accent: true,
-              },
-              {
-                label: 'Less Labels. More Liftêd™.',
-                body: `Every garment carries two messages: one for the person wearing it, and one for the person standing behind them. One shirt. Two people lifted.`,
-                accent: false,
-              },
-            ].map((item) => (
-              <div key={item.label} style={{
-                padding: '32px 28px',
-                background: item.accent ? 'var(--burnt-orange)' : 'rgba(247,244,236,0.04)',
-                borderLeft: item.accent ? 'none' : '1px solid rgba(247,244,236,0.08)',
+
+            {/* Panel 1 — Encourage Yourself */}
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <div style={{
+                position: 'relative',
+                overflow: 'hidden',
+                border: '2px solid rgba(247,244,236,0.1)',
+                background: 'var(--charcoal)',
               }}>
-                <div style={{
-                  fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700,
-                  letterSpacing: '0.2em', textTransform: 'none',
-                  color: item.accent ? 'rgba(247,244,236,0.7)' : 'var(--burnt-orange)',
-                  marginBottom: 14,
-                }}>{item.label}</div>
+                <img
+                  src="/brand/story/pete-encourage-yourself.jpg"
+                  alt="Pete DeLuca wearing a Liftêd hat, making the L hand gesture — Wear Liftêd to Encourage Yourself."
+                  style={{
+                    width: '100%',
+                    display: 'block',
+                    objectFit: 'cover',
+                  }}
+                  loading="lazy"
+                />
+              </div>
+              <div style={{
+                padding: '28px 0 0',
+                borderTop: '3px solid var(--burnt-orange)',
+                marginTop: 0,
+              }}>
+                <h3 style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: 'clamp(18px, 2.5vw, 26px)',
+                  color: 'var(--off-white)',
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.01em',
+                  textTransform: 'none',
+                  marginBottom: 16,
+                }}>The Internal Lift</h3>
                 <p style={{
                   fontFamily: 'var(--font-body)', fontSize: 15,
-                  color: item.accent ? 'var(--off-white)' : 'rgba(247,244,236,0.7)',
-                  lineHeight: 1.75, margin: 0,
-                }}>{item.body}</p>
+                  color: 'rgba(247,244,236,0.7)', lineHeight: 1.8, margin: 0,
+                }}>
+                  When you wear a message, you read it. You live in it. Liftêd™ apparel is designed to remind the wearer — first and foremost — of who they are and what they're capable of. The shirt you put on in the morning sets the tone for the day you're about to have.
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+
+            {/* Panel 2 — Encourage Others */}
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <div style={{
+                position: 'relative',
+                overflow: 'hidden',
+                border: '2px solid rgba(247,244,236,0.1)',
+                background: 'var(--charcoal)',
+              }}>
+                <img
+                  src="/brand/story/pete-encourage-others.jpg"
+                  alt="Pete DeLuca wearing a Liftêd hat, pointing outward — While Also Encouraging Others."
+                  style={{
+                    width: '100%',
+                    display: 'block',
+                    objectFit: 'cover',
+                  }}
+                  loading="lazy"
+                />
+              </div>
+              <div style={{
+                padding: '28px 0 0',
+                borderTop: '3px solid var(--burnt-orange)',
+                marginTop: 0,
+              }}>
+                <h3 style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: 'clamp(18px, 2.5vw, 26px)',
+                  color: 'var(--off-white)',
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.01em',
+                  textTransform: 'none',
+                  marginBottom: 16,
+                }}>The External Lift</h3>
+                <p style={{
+                  fontFamily: 'var(--font-body)', fontSize: 15,
+                  color: 'rgba(247,244,236,0.7)', lineHeight: 1.8, margin: 0,
+                }}>
+                 Every Liftêd™ garment carries a second message on the back — written for the person standing behind you. One shirt lifts two people. That's the psychology. That's the design.
+                </p>
+              </div>
+            </div>
+
+          </div>{/* end two-panel grid */}
 
           {/* Brand phrases */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 48 }}>
@@ -313,6 +376,7 @@ export default function Story() {
               borderRadius: 'var(--radius)',
             }}>Join the Community</Link>
           </div>
+
         </div>
       </div>
 
