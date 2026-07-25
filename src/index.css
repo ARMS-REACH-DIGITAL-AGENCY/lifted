@@ -44,7 +44,7 @@
   --dark-gray:     var(--earth-brown);
 
   /* ── Typography ── */
-  --font-display: 'Archivo Black', 'League Spartan', 'Inter', Impact, sans-serif;
+  --font-display: 'Montserrat', 'League Spartan', 'Inter', Impact, sans-serif;
   --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* ── Motion ── */

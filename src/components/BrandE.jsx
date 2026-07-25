@@ -10,7 +10,7 @@
  * - Only used in high-impact display headlines — never in body copy, nav, forms, or legal text
  * - Font, weight, size, line-height, and spacing are unchanged
  * - aria-label always contains the plain readable phrase for accessibility
- * - The gold color uses var(--sand) — the approved brand accent token
+ * - The gold color uses '#D4A843' — the approved brand accent token
  *
  * Usage:
  *   <BrandE before="More Than Appar" after="l." ariaLabel="More Than Apparel." />
@@ -30,7 +30,7 @@ export function BrandE({ before, after, ariaLabel, style = {} }) {
         className="brand-e"
         aria-hidden="true"
         style={{
-          color: 'var(--sand)',
+          color: '#D4A843',
           // Inherit all other typographic properties from parent
           font: 'inherit',
           fontWeight: 'inherit',

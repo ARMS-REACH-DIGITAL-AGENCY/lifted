@@ -69,7 +69,7 @@ export default function Collections() {
                   const t = col.tagline;
                   const idx = t.indexOf('e');
                   if (idx === -1) return t;
-                  return <>{t.slice(0, idx)}<span style={{ color: col.color, textTransform: 'none', WebkitTextStroke: '0.8px #292A28', paintOrder: 'stroke fill' }}>ê</span>{t.slice(idx + 1)}</>;
+                  return <>{t.slice(0, idx)}<span style={{ color: col.color, textTransform: 'none' }}>ê</span>{t.slice(idx + 1)}</>;
                 })()}
               </h2>
               <div style={{ width: 56, height: 3, background: col.color, borderRadius: 2, margin: '0 0 20px' }} />
