@@ -54,9 +54,9 @@ export default function Nav() {
           aria-hidden="true"
           style={{
             position: 'absolute',
-            left: -18,
-            top: -10,
-            height: 100,
+            left: -4,
+            top: -14,
+            height: 118,
             width: 'auto',
             pointerEvents: 'none',
             zIndex: 1001,
