@@ -17,13 +17,13 @@ export default function Footer() {
           </div>
           <div>
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 14 }}>Navigate</div>
-            {[['/', 'Home'], ['/story', 'Our Story'], ['/collections', 'Collections'], ['/collaborate', 'Collaborate'], ['/founding-community', 'Founding Community']].map(([to, label]) => (
+            {[['/', 'Home'], ['/story', 'Our Story'], ['/collections', 'Collections'], ['/collaborate', 'Collaborate'], ['/wholesale', 'Wholesale'], ['/shop', 'Shop']].map(([to, label]) => (
               <Link key={to} to={to} style={{ display: 'block', fontFamily: 'var(--font-body)', fontSize: 13, color: 'rgba(247,244,236,0.6)', marginBottom: 9, textDecoration: 'none' }}>{label}</Link>
             ))}
           </div>
           <div>
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 14 }}>Get Involved</div>
-            {[['/invest', 'Invest'], ['/schedule', 'Schedule a Call'], ['/scan', 'Scan a QR Code'], ['/sample', 'Sample Feedback']].map(([to, label]) => (
+            {[['/founding-community', 'Join Community'], ['/support', 'Help Bring Liftêd™ to Life'], ['/schedule', 'Schedule a Call'], ['/scan', 'Scan a QR Code'], ['/sample', 'Sample Feedback']].map(([to, label]) => (
               <Link key={to} to={to} style={{ display: 'block', fontFamily: 'var(--font-body)', fontSize: 13, color: 'rgba(247,244,236,0.6)', marginBottom: 9, textDecoration: 'none' }}>{label}</Link>
             ))}
           </div>
@@ -43,13 +43,10 @@ export default function Footer() {
           <div style={{ display: 'flex', gap: 18 }}>
             <Link to="/privacy" style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: 'rgba(247,244,236,0.45)', textDecoration: 'none' }}>Privacy Policy</Link>
             <Link to="/terms" style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: 'rgba(247,244,236,0.45)', textDecoration: 'none' }}>Terms of Use</Link>
+            <Link to="/investor-access" style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: 'rgba(247,244,236,0.3)', textDecoration: 'none' }}>Private Investor Access</Link>
           </div>
-        </div>
-        <div style={{ marginTop: 14, padding: '10px 14px', background: 'rgba(247,244,236,0.04)', borderLeft: '3px solid var(--burnt-orange)', fontSize: 11, fontFamily: 'var(--font-body)', color: 'rgba(247,244,236,0.3)', lineHeight: 1.6 }}>
-          Investment Disclaimer: Nothing on this website constitutes an offer to sell or a solicitation of an offer to buy any securities. Liftêd™ is a pre-revenue brand in development.
         </div>
       </div>
     </footer>
   )
 }
-

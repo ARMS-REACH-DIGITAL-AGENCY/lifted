@@ -5,6 +5,7 @@
  */
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { submitWholesale } from '../lib/formBridge.js'
 
 export default function Wholesale() {
   const [form, setForm] = useState({
@@ -15,23 +16,18 @@ export default function Wholesale() {
   })
   const [status, setStatus] = useState('idle')
   const [errorMsg, setErrorMsg] = useState('')
+  const [honeypot, setHoneypot] = useState('')
   const set = (k, v) => setForm(f => ({ ...f, [k]: v }))
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setStatus('submitting')
+    setErrorMsg('')
     try {
-      const res = await fetch('/api/wholesale', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-        credentials: 'include',
-      })
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.error || 'Submission failed')
+      await submitWholesale(form, honeypot)
       setStatus('success')
     } catch (err) {
-      setErrorMsg(err.message)
+      setErrorMsg(err.message || 'Something went wrong. Your information has been preserved — please try again.')
       setStatus('error')
     }
   }

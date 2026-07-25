@@ -13,6 +13,7 @@ import Collaborate from './pages/Collaborate.jsx'
 import FoundingCommunity from './pages/FoundingCommunity.jsx'
 import Support from './pages/Support.jsx'
 import Wholesale from './pages/Wholesale.jsx'
+import Shop from './pages/Shop.jsx'
 import InvestorAccess from './pages/InvestorAccess.jsx'
 import InvestorLogin from './pages/InvestorLogin.jsx'
 import Scan from './pages/Scan.jsx'
@@ -66,6 +67,7 @@ function AppRoutes() {
         <Route path="/founding-community" element={<PublicLayout><FoundingCommunity /></PublicLayout>} />
         <Route path="/support" element={<PublicLayout><Support /></PublicLayout>} />
         <Route path="/wholesale" element={<PublicLayout><Wholesale /></PublicLayout>} />
+        <Route path="/shop" element={<PublicLayout><Shop /></PublicLayout>} />
         <Route path="/scan" element={<PublicLayout><Scan /></PublicLayout>} />
         <Route path="/sample" element={<PublicLayout><Sample /></PublicLayout>} />
         <Route path="/schedule" element={<PublicLayout><Schedule /></PublicLayout>} />

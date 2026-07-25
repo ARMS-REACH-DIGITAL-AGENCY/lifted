@@ -7,8 +7,8 @@ const NAV_LINKS = [
   { to: '/story', label: 'Our Story' },
   { to: '/collections', label: 'Collections' },
   { to: '/collaborate', label: 'Collaborate' },
-  { to: '/founding-community', label: 'Founding Community' },
-  { to: '/invest', label: 'Invest' },
+  { to: '/wholesale', label: 'Wholesale' },
+  { to: '/shop', label: 'Shop' },
 ]
 const MOBILE_EXTRA = [
   { to: '/schedule', label: 'Schedule a Call' },
