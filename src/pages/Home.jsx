@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import BrandE from '../components/BrandE.jsx'
 import ProductCard from '../components/ProductCard.jsx'
@@ -37,6 +37,7 @@ const pathways = [
 export default function Home() {
   const s2 = useRef(null), s3 = useRef(null), s4 = useRef(null), s5 = useRef(null), s6 = useRef(null), s7 = useRef(null), sProd = useRef(null), s8 = useRef(null)
   useLiftIn(s2); useLiftIn(s3); useLiftIn(s4); useLiftIn(s5); useLiftIn(s6); useLiftIn(s7); useLiftIn(sProd); useLiftIn(s8)
+  const [heroImg, setHeroImg] = useState(null)
 
   return (
     <div>
@@ -49,14 +50,23 @@ export default function Home() {
         position: 'relative', overflow: 'hidden',
         padding: '80px 0 60px',
       }}>
-        {/* ── Layered 5-panel collection imagery ── */}
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0, display: 'flex' }}>
-          <div style={{ flex: 1, backgroundImage: 'url(/images/hero-core.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top', opacity: 0.22, filter: 'grayscale(40%) contrast(1.1)' }} />
-          <div style={{ flex: 1, backgroundImage: 'url(/images/hero-core.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.18, filter: 'grayscale(30%) contrast(1.1)' }} />
-          <div style={{ flex: 1, backgroundImage: 'url(/images/hero-athlete.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.24, filter: 'grayscale(20%) contrast(1.15)' }} />
-          <div style={{ flex: 1, backgroundImage: 'url(/images/hero-youth.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top', opacity: 0.18, filter: 'grayscale(35%) contrast(1.1)' }} />
-          <div style={{ flex: 1, backgroundImage: 'url(/images/hero-collab.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.18, filter: 'grayscale(30%) contrast(1.1)' }} />
-        </div>
+        {/* ── Hero background — cross-dissolves on collection pill hover ── */}
+        {[
+          { key: 'core',     src: '/images/hero-core.png' },
+          { key: 'pickmeup', src: '/images/hero-pickmeup.png' },
+          { key: 'athlete',  src: '/images/hero-athlete.png' },
+          { key: 'youth',    src: '/images/hero-youth.png' },
+          { key: 'collab',   src: '/images/hero-colab.png' },
+        ].map(({ key, src }) => (
+          <div key={key} style={{
+            position: 'absolute', inset: 0, zIndex: 0,
+            backgroundImage: `url(${src})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: heroImg === key ? 0.60 : (heroImg === null && key === 'core' ? 0.40 : 0),
+            transition: 'opacity 0.8s ease',
+          }} />
+        ))}
         {/* Gradient overlay — strong on left for text, lighter on right to reveal imagery */}
         <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'linear-gradient(105deg, rgba(23,24,22,0.97) 0%, rgba(23,24,22,0.90) 38%, rgba(23,24,22,0.72) 62%, rgba(23,24,22,0.85) 100%)' }} />
         {/* Warm vignette */}
@@ -87,12 +97,29 @@ export default function Home() {
               <Link to="/story" className="btn btn-outline-light btn-lg">Our Story</Link>
               <Link to="/schedule" className="btn btn-outline-light btn-lg">Schedule a Call</Link>
             </div>
-            {/* Collection micro-labels */}
+            {/* Collection pills — hover to cross-dissolve hero image */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 48 }}>
-              {['Core', 'Pick-Me-Up', 'Athlete', 'Youth', 'Collaboration'].map(c => (
-                <span key={c} style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(247,244,236,0.30)', padding: '4px 10px', border: '1px solid rgba(247,244,236,0.10)', borderRadius: 2 }}>
-                  {c} Collection
-                </span>
+              {[
+                { label: 'Core',          key: 'core',     color: '#D4A843' },
+                { label: 'Pick-Me-Up',    key: 'pickmeup', color: '#4A7FB5' },
+                { label: 'Athlete',       key: 'athlete',  color: '#C76A32' },
+                { label: 'Youth',         key: 'youth',    color: '#8A9A5B' },
+                { label: 'Collaboration', key: 'collab',   color: '#C4748A' },
+              ].map(col => (
+                <span
+                  key={col.key}
+                  onMouseEnter={() => setHeroImg(col.key)}
+                  onMouseLeave={() => setHeroImg(null)}
+                  style={{
+                    fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700,
+                    letterSpacing: '0.14em', textTransform: 'uppercase',
+                    color: heroImg === col.key ? col.color : 'rgba(247,244,236,0.40)',
+                    padding: '5px 12px',
+                    border: `1px solid ${heroImg === col.key ? col.color : 'rgba(247,244,236,0.15)'}`,
+                    borderRadius: 2, cursor: 'default',
+                    transition: 'color 0.3s, border-color 0.3s',
+                  }}
+                >{col.label} Collection</span>
               ))}
             </div>
           </div>
