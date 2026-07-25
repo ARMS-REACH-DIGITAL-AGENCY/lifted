@@ -49,8 +49,8 @@ export default function PageHero({ eyebrow, heading, description, children, bgIm
 
           {/* Heading — always Archivo Black, always clamp(42px,6vw,72px) */}
           <h1 style={{
-            fontFamily: "'Archivo Black', Impact, sans-serif",
-            fontSize: 'clamp(42px, 6vw, 72px)',
+          fontFamily: "'Archivo Black', Impact, sans-serif",
+          fontSize: 'clamp(32px, 6vw, 72px)',
             fontWeight: 400,
             color: 'var(--off-white)',
             lineHeight: 1.05,
