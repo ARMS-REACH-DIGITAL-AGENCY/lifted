@@ -72,7 +72,7 @@ export default function Collections() {
         </div>
       </section>
 
-      <section style={{ background: 'var(--cream)', padding: '80px 0', minHeight: 720 }}>
+      <section style={{ background: 'var(--cream)', padding: '80px 0 64px' }}>
         <div className="container">
           {/* Tabs */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 48 }}>
@@ -88,7 +88,7 @@ export default function Collections() {
           </div>
 
           {/* Active collection */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 48, alignItems: 'start', paddingBottom: 88, position: 'relative' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 48, alignItems: 'start', minHeight: 480 }}>
             <div>
               <div style={{ display: 'inline-block', background: `${col.color}18`, border: `1px solid ${col.color}40`, borderRadius: 4, padding: '5px 14px', marginBottom: 16 }}>
                 <span style={{ fontSize: 12, fontWeight: 700, color: col.color, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{col.name}</span>
@@ -108,10 +108,6 @@ export default function Collections() {
                 All designs shown are concept examples. Final collection designs will be confirmed after sample validation.
               </div>
             </div>
-            {/* GET FIRST ACCESS — absolutely anchored to bottom-left of section, never moves */}
-            <div style={{ position: 'absolute', bottom: 0, left: 0 }}>
-              <Link to="/founding-community" style={{ display: 'inline-block', background: col.color, color: 'white', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', border: 'none', transition: 'background 0.5s ease' }}>Get First Access</Link>
-            </div>
             <div>
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted-olive)', marginBottom: 16 }}>Example Messages</div>
               {col.messages.map(m => (
@@ -120,6 +116,11 @@ export default function Collections() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* GET FIRST ACCESS — outside the grid, always same distance from grid bottom */}
+          <div style={{ marginTop: 40 }}>
+            <Link to="/founding-community" style={{ display: 'inline-block', background: col.color, color: 'white', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '14px 28px', borderRadius: 4, textDecoration: 'none', border: 'none', transition: 'background 0.5s ease' }}>Get First Access</Link>
           </div>
         </div>
       </section>
