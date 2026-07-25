@@ -34,7 +34,12 @@ export default function ProtectedRoute({ children, requiredRole = 'investor' }) 
     (requiredRole === 'investor' && isInvestor) ||
     (requiredRole === 'retailer' && isRetailer)
 
-  if (!hasAccess) {
+  // TEMPORARY: while backend is not yet active (no custom claims set),
+  // any authenticated Firebase user is granted access.
+  // Replace with hasAccess check once backend sets investor/retailer claims.
+  const canEnter = !!user
+
+  if (!canEnter) {
     return (
       <div style={{ minHeight: '100vh', background: 'var(--black)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 20px' }}>
         <div style={{ maxWidth: 480, textAlign: 'center' }}>
@@ -51,4 +56,3 @@ export default function ProtectedRoute({ children, requiredRole = 'investor' }) 
 
   return children
 }
-
