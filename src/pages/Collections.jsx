@@ -84,7 +84,7 @@ export default function Collections() {
               <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted-olive)', marginBottom: 16 }}>Example Messages</div>
               {col.messages.map(m => (
                 <div key={m} style={{ background: 'white', borderRadius: 10, padding: '20px 24px', marginBottom: 12, boxShadow: 'none', borderLeft: `4px solid ${col.color}` }}>
-                  <p style={{ fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 600, color: '#C76A32' }}>{m}</p>
+                  <p style={{ fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 600, color: 'var(--charcoal)' }}>{m}</p>
                 </div>
               ))}
             </div>
