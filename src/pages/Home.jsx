@@ -90,7 +90,7 @@ export default function Home() {
               <span style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--burnt-orange)' }}>Wear Encouragement. Wear Liftêd™.</span>
             </div>
             {/* ── Premium title-case headline ── */}
-            <h1 style={{ fontFamily: '"Archivo Black", "Inter Tight", system-ui, sans-serif', fontSize: 'clamp(42px, 7.5vw, 88px)', fontWeight: 900, color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.025em', marginBottom: 28, textTransform: 'none' }}>
+            <h1 style={{ fontFamily: "'Montserrat', Impact, sans-serif", fontSize: 'clamp(42px, 7.5vw, 88px)', fontWeight: 900, color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.025em', marginBottom: 28, textTransform: 'none' }}>
               The World Needs More <BrandName theme="dark" />
               <span style={{ color: 'var(--burnt-orange)', marginLeft: '0.04em' }}>.</span>
             </h1>
