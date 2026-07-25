@@ -92,7 +92,7 @@ export default function Support() {
         </div>
 
         <div style={{ marginTop: 48, padding: '20px 24px', background: 'rgba(41,42,40,0.06)', borderLeft: '3px solid var(--burnt-orange)', fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--muted-olive)', lineHeight: 1.7 }}>
-          <strong style={{ color: 'var(--charcoal)' }}>Important:</strong> These are three separate and distinct pathways. Do not combine donations, preorders, sponsorships, and investments into one form or CTA. Liftêd<TM/> is a for-profit company. Payments to Liftêd<TM/> are not tax-deductible donations. Liftêd<TM/> does not publicly promise equity, ownership, returns, profit participation, or investment terms.
+          <strong style={{ color: 'var(--charcoal)' }}>Important:</strong> These are three separate and distinct pathways. Do not combine donations, preorders, sponsorships, and investments into one form or CTA. Liftêd™ is a for-profit company. Payments to Liftêd™ are not tax-deductible donations. Liftêd™ does not publicly promise equity, ownership, returns, profit participation, or investment terms.
         </div>
       </div>
     </div>

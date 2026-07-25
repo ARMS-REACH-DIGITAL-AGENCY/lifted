@@ -213,16 +213,16 @@ export default function Story() {
             {[
               {
                 label: 'Replacing Limiting Labels',
-                body: `The world is full of labels that diminish. Liftêd<TM/> exists to replace them — with visible encouragement that travels with the wearer everywhere they go.`,
+                body: `The world is full of labels that diminish. Liftêd™ exists to replace them — with visible encouragement that travels with the wearer everywhere they go.`,
                 accent: false,
               },
               {
                 label: 'Reclaiming the L',
-                body: `The L-hand gesture has long been used as a symbol of failure. Liftêd<TM/> reclaims it. You're Not a Loser. You're Liftêd<TM/>. Turn the L Up.`,
+                body: `The L-hand gesture has long been used as a symbol of failure. Liftêd™ reclaims it. You're Not a Loser. You're Liftêd™. Turn the L Up.`,
                 accent: true,
               },
               {
-                label: 'Less Labels. More Liftêd<TM/>.',
+                label: 'Less Labels. More Liftêd™.',
                 body: `Every garment carries two messages: one for the person wearing it, and one for the person standing behind them. One shirt. Two people lifted.`,
                 accent: false,
               },
@@ -250,10 +250,10 @@ export default function Story() {
           {/* Brand phrases */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 48 }}>
             {[
-              `"You're Not a Loser. You're Liftêd<TM/>."`,
+              `"You're Not a Loser. You're Liftêd™."`,
               `"Turn the L Up."`,
-              `"Less Labels. More Liftêd<TM/>."`,
-              `"The World Needs More Liftêd<TM/>."`,
+              `"Less Labels. More Liftêd™."`,
+              `"The World Needs More Liftêd™."`,
             ].map(phrase => (
               <div key={phrase} style={{
                 fontFamily: 'var(--font-display)',

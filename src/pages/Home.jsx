@@ -18,7 +18,7 @@ function useLiftIn(ref) {
 }
 
 const collections = [
-  { name: 'Core', color: 'var(--charcoal)', accent: 'var(--sand)', icon: '◈', desc: 'Daily brand affinity. Clean, bold, unmistakably Liftêd<TM/>.', messages: ['Stay Liftêd<TM/>', 'Lift Yourself. Lift Others.', 'Wear Encouragement.', 'The World Needs More Liftêd<TM/>'] },
+  { name: 'Core', color: 'var(--charcoal)', accent: 'var(--sand)', icon: '◈', desc: 'Daily brand affinity. Clean, bold, unmistakably Liftêd™.', messages: ['Stay Liftêd™', 'Lift Yourself. Lift Others.', 'Wear Encouragement.', 'The World Needs More Liftêd™'] },
   { name: 'Pick-Me-Up', color: 'var(--earth-brown)', accent: 'var(--burnt-orange)', icon: '↑', desc: 'Direct messages of hope, resilience, and encouragement.', messages: ['You Matter Here.', "Your Story Isn't Over.", 'One More Day.', 'Better Days Are Ahead.'] },
   { name: 'Athlete', color: 'var(--black)', accent: 'var(--sand)', icon: '⚡', desc: 'Discipline, preparation, resilience. Built for competitors.', messages: ['Never Finished.', 'Earn Tomorrow.', 'Outwork Yesterday.', 'Built Through Adversity.'] },
   { name: 'Youth', color: 'var(--muted-olive)', accent: 'var(--off-white)', icon: '★', desc: 'Confidence, identity, belonging. For the next generation.', messages: ['You Belong Here.', 'Different Is Not Less.', 'Your Voice Matters.', 'The Future Looks Good on You.'] },
@@ -167,7 +167,7 @@ export default function Home() {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 2 }}>
             {[
-              { n: '01', title: 'Private Label', body: 'Liftêd<TM/> is being developed as its own apparel brand — not simply artwork printed on another consumer label. Every garment carries the Liftêd<TM/> identity.' },
+              { n: '01', title: 'Private Label', body: 'Liftêd™ is being developed as its own apparel brand — not simply artwork printed on another consumer label. Every garment carries the Liftêd™ identity.' },
               { n: '02', title: 'Two-Way Impact', body: 'Each garment encourages the wearer and communicates something meaningful to the observer. One product. Two people lifted.' },
               { n: '03', title: 'Meaning Before Merchandise', body: 'Every product must answer one question: Will this help someone feel better, stronger, more hopeful, or more confident?' },
               { n: '04', title: 'Built to Be Shared', body: 'Every garment can start a conversation, create a connection, and introduce another person to the brand. Encouragement is contagious.' },
@@ -219,7 +219,7 @@ export default function Home() {
                 <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--burnt-orange)', display: 'inline-block', animation: 'pulse 2s infinite' }} />
                 <span style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--burnt-orange)' }}>Now in Production</span>
               </div>
-              <h2 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 4vw, 40px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'none', marginBottom: 20 }}>The First Liftêd<TM/> Samples Are Now in Production</h2>
+              <h2 className="lift-in d1" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 4vw, 40px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'none', marginBottom: 20 }}>The First Liftêd™ Samples Are Now in Production</h2>
               <div style={{ width: 40, height: 3, background: 'var(--burnt-orange)', marginBottom: 20 }} />
               <p className="lift-in d2" style={{ fontFamily: 'var(--font-body)', fontSize: 15, color: 'rgba(247,244,236,0.65)', lineHeight: 1.7, marginBottom: 14 }}>
                 Liftêd<TM/> is currently developing its first private-label apparel samples — produced with custom Liftêd<TM/> labels, not printed on another manufacturer's consumer brand.

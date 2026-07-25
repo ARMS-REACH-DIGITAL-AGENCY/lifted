@@ -16,7 +16,7 @@ export default function RetailerPortal() {
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 56 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <Link to="/" style={{ textDecoration: 'none' }}>
-              <img src="/brand/lifted/lifted-wordmark-white.png" alt="Liftêd<TM/>" style={{ height: 22 }} />
+              <img src="/brand/lifted/lifted-wordmark-white.png" alt="Liftêd™" style={{ height: 22 }} />
             </Link>
             <span style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--burnt-orange)', borderLeft: '1px solid rgba(247,244,236,0.2)', paddingLeft: 12 }}>Retailer Portal</span>
           </div>

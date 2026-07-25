@@ -5,14 +5,14 @@ import { TM } from '../components/TM.jsx'
 const HL_LOCATION_ID = 'aONTFrcg4GyEubg0xdwW'
 
 const INTEREST_TAGS = {
-  founding: 'Liftêd<TM/> – Founding Community',
-  investor: 'Liftêd<TM/> – Investor Lead',
-  sponsor: 'Liftêd<TM/> – Sponsor Lead',
-  partner: 'Liftêd<TM/> – Collaboration Lead',
-  ambassador: 'Liftêd<TM/> – Ambassador Lead',
-  customer: 'Liftêd<TM/> – Customer Interest',
-  sample: 'Liftêd<TM/> – Sample Recipient',
-  qr: 'Liftêd<TM/> – QR Scan',
+  founding: 'Liftêd™ – Founding Community',
+  investor: 'Liftêd™ – Investor Lead',
+  sponsor: 'Liftêd™ – Sponsor Lead',
+  partner: 'Liftêd™ – Collaboration Lead',
+  ambassador: 'Liftêd™ – Ambassador Lead',
+  customer: 'Liftêd™ – Customer Interest',
+  sample: 'Liftêd™ – Sample Recipient',
+  qr: 'Liftêd™ – QR Scan',
 }
 
 export default function LiftForm({ type = 'founding', title, subtitle, dark = false, onSuccess }) {
@@ -73,7 +73,7 @@ export default function LiftForm({ type = 'founding', title, subtitle, dark = fa
   if (submitted) return (
     <div style={{ textAlign: 'center', padding: '48px 24px' }}>
       <div style={{ fontSize: 48, marginBottom: 16, color: 'var(--gold)' }}>↑</div>
-      <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 700, color: dark ? 'white' : 'var(--charcoal)', marginBottom: 12 }}>You're Liftêd<TM/>.</h3>
+      <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 700, color: dark ? 'white' : 'var(--charcoal)', marginBottom: 12 }}>You're Liftêd™.</h3>
       <p style={{ fontSize: 16, color: dark ? 'rgba(247,244,236,0.7)' : 'var(--muted-olive)', lineHeight: 1.7 }}>
         Thank you for reaching out. We'll be in touch soon. The world needs more Liftêd<TM/> — and people like you make it happen.
       </p>

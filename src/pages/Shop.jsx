@@ -43,7 +43,7 @@ const COLLECTIONS = [
       {
         sku: 'LFT-002',
         name: 'Turn the L Up — Tee',
-        description: 'Front: "Turn the L Up." Back: "You\'re Not a Loser. You\'re Liftêd<TM/>."',
+        description: 'Front: "Turn the L Up." Back: "You\'re Not a Loser. You\'re Liftêd™."',
         status: 'coming-soon',
         priceRange: '$34–$38',
         shopifyProductId: null,
@@ -61,7 +61,7 @@ const COLLECTIONS = [
       {
         sku: 'LFT-003',
         name: 'Less Labels — Tee',
-        description: 'Front: "Less Labels." Back: "More Liftêd<TM/>. The world doesn\'t need another label. It needs more encouragement."',
+        description: 'Front: "Less Labels." Back: "More Liftêd™. The world doesn\'t need another label. It needs more encouragement."',
         status: 'coming-soon',
         priceRange: '$34–$38',
         shopifyProductId: null,
@@ -115,7 +115,7 @@ const COLLECTIONS = [
       {
         sku: 'LFT-006',
         name: 'Custom Collaboration Edition',
-        description: 'Your organization\'s identity + the Liftêd<TM/> encouragement message. Built for your event, cause, or campaign.',
+        description: 'Your organization\'s identity + the Liftêd™ encouragement message. Built for your event, cause, or campaign.',
         status: 'coming-soon',
         priceRange: 'Custom pricing',
         shopifyProductId: null,
@@ -290,7 +290,7 @@ export default function Shop() {
         <div style={{ background: 'var(--black)', border: '1.5px solid var(--burnt-orange)', padding: '40px 32px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24, alignItems: 'center' }}>
           <div>
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 12 }}>Collaboration Collection</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(18px, 3vw, 28px)', color: 'var(--off-white)', textTransform: 'none', lineHeight: 1.1, marginBottom: 14 }}>Want a Custom Liftêd<TM/> Edition?</h2>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(18px, 3vw, 28px)', color: 'var(--off-white)', textTransform: 'none', lineHeight: 1.1, marginBottom: 14 }}>Want a Custom Liftêd™ Edition?</h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'rgba(247,244,236,0.6)', lineHeight: 1.7, margin: 0 }}>
               Organizations, schools, gyms, causes, and corporate clients can create a co-branded Liftêd<TM/> edition for their event, campaign, or community.
             </p>

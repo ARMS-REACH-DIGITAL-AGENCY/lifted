@@ -16,11 +16,11 @@ function useLiftIn(ref) {
 
 const callTypes = [
   { id: 'investor', label: '💼 Investor Conversation', desc: 'Discuss the investment opportunity, review the deck, and explore next steps.' },
-  { id: 'partner', label: '🤝 Collaboration Discovery', desc: 'Explore a co-branded Liftêd<TM/> collaboration for your organization, team, or cause.' },
+  { id: 'partner', label: '🤝 Collaboration Discovery', desc: 'Explore a co-branded Liftêd™ collaboration for your organization, team, or cause.' },
   { id: 'sponsor', label: '🌟 Sponsorship Conversation', desc: 'Discuss sponsoring community impact, sample production, or cause campaigns.' },
   { id: 'sample', label: '👕 Sample Feedback', desc: 'Share your feedback on a physical sample you received.' },
-  { id: 'ambassador', label: '⭐ Ambassador Conversation', desc: 'Explore becoming a founding Liftêd<TM/> ambassador.' },
-  { id: 'founding', label: '🙌 General Founder Call', desc: 'Connect with the Liftêd<TM/> team about anything else.' },
+  { id: 'ambassador', label: '⭐ Ambassador Conversation', desc: 'Explore becoming a founding Liftêd™ ambassador.' },
+  { id: 'founding', label: '🙌 General Founder Call', desc: 'Connect with the Liftêd™ team about anything else.' },
 ]
 
 export default function Schedule() {

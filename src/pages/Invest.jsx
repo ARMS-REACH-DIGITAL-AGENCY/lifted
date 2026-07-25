@@ -15,9 +15,9 @@ function useLiftIn(ref) {
 }
 
 const lanes = [
-  { n: '01', title: 'Liftêd<TM/> Retail', desc: 'Direct-to-consumer brand sales through DTC website, subscription box, and future retail. This lane builds brand equity, customer data, and cultural relevance.', color: 'var(--gold-deep)' },
-  { n: '02', title: 'Liftêd<TM/> Collaborations', desc: 'Co-branded collections with organizations, schools, teams, churches, nonprofits, and causes. Each collaboration carries the Liftêd<TM/> meaning and identity.', color: '#5B8DB8' },
-  { n: '03', title: 'Custom Apparel Services', desc: 'Production capabilities for client-owned branding. Separate from the consumer brand — generates cash flow while Liftêd<TM/> retail scales.', color: '#7B9E4A' },
+  { n: '01', title: 'Liftêd™ Retail', desc: 'Direct-to-consumer brand sales through DTC website, subscription box, and future retail. This lane builds brand equity, customer data, and cultural relevance.', color: 'var(--gold-deep)' },
+  { n: '02', title: 'Liftêd™ Collaborations', desc: 'Co-branded collections with organizations, schools, teams, churches, nonprofits, and causes. Each collaboration carries the Liftêd™ meaning and identity.', color: '#5B8DB8' },
+  { n: '03', title: 'Custom Apparel Services', desc: 'Production capabilities for client-owned branding. Separate from the consumer brand — generates cash flow while Liftêd™ retail scales.', color: '#7B9E4A' },
 ]
 
 export default function Invest() {
@@ -69,7 +69,7 @@ export default function Invest() {
                 The biggest opportunity is not becoming another T-shirt company. The opportunity is creating a recognizable symbol that instantly communicates hope, encouragement, resilience, and growth.
               </p>
               <blockquote className="lift-in d4" style={{ fontFamily: 'var(--font-display)', fontSize: 20, fontStyle: 'italic', color: 'var(--charcoal)', borderLeft: '4px solid var(--gold)', paddingLeft: 20 }}>
-                "Most apparel tells the world what you bought. Liftêd<TM/> tells someone what they may need to hear."
+                "Most apparel tells the world what you bought. Liftêd™ tells someone what they may need to hear."
               </blockquote>
             </div>
             <div className="lift-in d2">

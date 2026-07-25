@@ -71,7 +71,7 @@ export default function InvestorAccess() {
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, color: 'var(--muted-olive)', lineHeight: 1.7, marginBottom: 24 }}>
               Thank you. Your request has been received and will be reviewed. Approved applicants will receive a secure email invitation with private access instructions.
             </p>
-            <Link to="/" style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--burnt-orange)', textDecoration: 'none' }}>← Return to Liftêd<TM/></Link>
+            <Link to="/" style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--burnt-orange)', textDecoration: 'none' }}>← Return to Liftêd™</Link>
           </div>
         ) : (
           <form onSubmit={handleSubmit}>

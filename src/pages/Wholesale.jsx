@@ -1,5 +1,5 @@
 /**
- * /wholesale — Carry Liftêd<TM/> in Your Stor<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>
+ * /wholesale — Carry Liftêd™ in Your Stor<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>
  * Submits via formBridge → HighLevel Forms API (form ID: wA5FYCmpPjckyDsPCEYF)
  * Field keys confirmed from HighLevel Settings → Custom Fields (Jul 24, 2026).
  * Creates a wholesale application only — no retailer account created here.
@@ -75,7 +75,7 @@ export default function Wholesale() {
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, color: 'var(--muted-olive)', lineHeight: 1.7, marginBottom: 24 }}>
               Thank you for your interest in carrying Liftêd<TM/>. We'll review your application and be in touch within 3–5 business days.
             </p>
-            <Link to="/" style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--burnt-orange)', textDecoration: 'none' }}>← Return to Liftêd<TM/></Link>
+            <Link to="/" style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--burnt-orange)', textDecoration: 'none' }}>← Return to Liftêd™</Link>
           </div>
         ) : (
           <form onSubmit={handleSubmit} noValidate>
