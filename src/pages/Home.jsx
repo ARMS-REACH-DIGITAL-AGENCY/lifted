@@ -38,6 +38,15 @@ export default function Home() {
   const s2 = useRef(null), s3 = useRef(null), s4 = useRef(null), s5 = useRef(null), s6 = useRef(null), s7 = useRef(null), sProd = useRef(null), s8 = useRef(null)
   useLiftIn(s2); useLiftIn(s3); useLiftIn(s4); useLiftIn(s5); useLiftIn(s6); useLiftIn(s7); useLiftIn(sProd); useLiftIn(s8)
   const [heroImg, setHeroImg] = useState(null)
+  const heroKeys = ['core', 'pickmeup', 'athlete', 'youth', 'collab']
+  const [autoIdx, setAutoIdx] = useState(0)
+  const [userHovering, setUserHovering] = useState(false)
+  useEffect(() => {
+    if (userHovering) return
+    const t = setInterval(() => setAutoIdx(i => (i + 1) % heroKeys.length), 4000)
+    return () => clearInterval(t)
+  }, [userHovering])
+  const activeKey = userHovering ? heroImg : heroKeys[autoIdx]
 
   return (
     <div>
@@ -63,14 +72,13 @@ export default function Home() {
             backgroundImage: `url(${src})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            opacity: heroImg === key ? 0.60 : (heroImg === null && key === 'core' ? 0.40 : 0),
+            opacity: activeKey === key ? 0.80 : 0,
             transition: 'opacity 0.8s ease',
           }} />
         ))}
         {/* Gradient overlay — strong on left for text, lighter on right to reveal imagery */}
-        <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'linear-gradient(105deg, rgba(23,24,22,0.97) 0%, rgba(23,24,22,0.90) 38%, rgba(23,24,22,0.72) 62%, rgba(23,24,22,0.85) 100%)' }} />
-        {/* Warm vignette */}
-        <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'radial-gradient(ellipse at 28% 50%, transparent 35%, rgba(23,24,22,0.55) 100%)', pointerEvents: 'none' }} />
+        {/* Gradient: dark on left/top where text lives, transparent on right so image shows */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'linear-gradient(110deg, rgba(23,24,22,0.96) 0%, rgba(23,24,22,0.88) 30%, rgba(23,24,22,0.55) 58%, rgba(23,24,22,0.18) 100%)' }} />
         {/* Orange bottom accent line */}
         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 3, background: 'var(--burnt-orange)', zIndex: 3 }} />
         {/* ── Hero content ── */}
@@ -108,8 +116,8 @@ export default function Home() {
               ].map(col => (
                 <span
                   key={col.key}
-                  onMouseEnter={() => setHeroImg(col.key)}
-                  onMouseLeave={() => setHeroImg(null)}
+                  onMouseEnter={() => { setHeroImg(col.key); setUserHovering(true) }}
+                  onMouseLeave={() => { setHeroImg(null); setUserHovering(false) }}
                   style={{
                     fontFamily: 'var(--font-body)', fontSize: 9, fontWeight: 700,
                     letterSpacing: '0.14em', textTransform: 'uppercase',
