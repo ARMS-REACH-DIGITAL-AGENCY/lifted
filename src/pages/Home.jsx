@@ -163,7 +163,7 @@ export default function Home() {
         <div className="container">
           <div className="lift-in" style={{ marginBottom: 48 }}>
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 10 }}>What Makes It Different</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(26px, 4vw, 44px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'none' }}>Why <BrandName theme="dark" /> Is Diff<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>rent</h2>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(26px, 4vw, 44px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'none' }}>Why <BrandName theme="dark" /> Is Different</h2>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 2 }}>
             {[
