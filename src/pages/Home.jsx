@@ -78,7 +78,7 @@ export default function Home() {
             </div>
             {/* ── Premium title-case headline ── */}
             <h1 style={{ fontFamily: '"Archivo Black", "Inter Tight", system-ui, sans-serif', fontSize: 'clamp(42px, 7.5vw, 88px)', fontWeight: 900, color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.025em', marginBottom: 28, textTransform: 'none' }}>
-              The World N<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>eds More <BrandName theme="dark" />
+              The World Needs More <BrandName theme="dark" />
               <span style={{ color: 'var(--burnt-orange)', marginLeft: '0.04em' }}>.</span>
             </h1>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 18, color: 'rgba(247,244,236,0.75)', lineHeight: 1.7, marginBottom: 12, maxWidth: 560 }}>
