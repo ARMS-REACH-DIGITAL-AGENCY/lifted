@@ -34,10 +34,10 @@ export function BrandE({ before, after, ariaLabel, style = {} }) {
           font: 'inherit',
           fontWeight: 'inherit',
           fontSize: 'inherit',
-          lineHeight: 'inherit',
-          letterSpacing: 'inherit',
-          textTransform: 'inherit',
-          ...style,
+         lineHeight: 'inherit',
+         letterSpacing: 'inherit',
+          textTransform: 'none',  // ALWAYS lowercase ê — never uppercase, even inside all-caps headings
+         ...style,
         }}
       >ê</span>
       {after}
