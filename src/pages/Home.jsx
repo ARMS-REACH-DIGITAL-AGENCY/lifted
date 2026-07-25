@@ -60,22 +60,22 @@ export default function Home() {
         padding: '80px 0 60px',
       }}>
         {/* ── Hero background — cross-dissolves on collection pill hover ── */}
-        {[
-          { key: 'core',     src: '/images/hero-core.png' },
-          { key: 'pickmeup', src: '/images/hero-pickmeup.png' },
-          { key: 'athlete',  src: '/images/hero-athlete.png' },
-          { key: 'youth',    src: '/images/hero-youth.png' },
-          { key: 'collab',   src: '/images/hero-colab.png' },
-        ].map(({ key, src }) => (
-          <div key={key} style={{
-            position: 'absolute', inset: 0, zIndex: 0,
-            backgroundImage: `url(${src})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: activeKey === key ? 0.80 : 0,
-            transition: 'opacity 0.8s ease',
-          }} />
-        ))}
+       {[
+         { key: 'core',     src: '/images/hero-core.png' },
+         { key: 'pickmeup', src: '/images/hero-pickmeup.png' },
+         { key: 'athlete',  src: '/images/hero-athlete.png' },
+         { key: 'youth',    src: '/images/hero-youth.png' },
+         { key: 'collab',   src: '/images/hero-colab.png' },
+       ].map(({ key, src }) => (
+         <div key={key} style={{
+           position: 'absolute', inset: 0, zIndex: 0,
+           backgroundImage: `url(${src})`,
+           backgroundSize: 'cover',
+            backgroundPosition: key === 'pickmeup' ? '60% center' : 'center',
+           opacity: activeKey === key ? 0.80 : 0,
+           transition: 'opacity 0.8s ease',
+         }} />
+       ))}
         {/* Gradient overlay — strong on left for text, lighter on right to reveal imagery */}
         {/* Gradient: dark on left/top where text lives, transparent on right so image shows */}
         <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'linear-gradient(110deg, rgba(23,24,22,0.96) 0%, rgba(23,24,22,0.88) 30%, rgba(23,24,22,0.55) 58%, rgba(23,24,22,0.18) 100%)' }} />
