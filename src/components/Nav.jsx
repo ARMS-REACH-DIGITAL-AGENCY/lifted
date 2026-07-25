@@ -55,8 +55,8 @@ export default function Nav() {
           style={{
             position: 'absolute',
             left: 0,
-            top: -28,
-            height: 110,
+            top: 0,
+            height: 64,
             width: 'auto',
             pointerEvents: 'none',
             zIndex: 1001,
