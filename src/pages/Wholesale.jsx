@@ -53,7 +53,7 @@ export default function Wholesale() {
   }
 
   return (
-    <div style={{ background: 'var(--black)', minHeight: '100vh' }}>
+    <div style={{ background: 'var(--warm-cream)', minHeight: '100vh' }}>
      {/* Hero */}
       <section style={{ background: 'var(--black)', padding: '148px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
         <div className="container">

@@ -101,7 +101,7 @@ export default function Collaborate() {
   useLiftIn(ref)
 
   return (
-    <div ref={ref} style={{ background: 'var(--black)' }}>
+    <div ref={ref} style={{ background: 'var(--cream)' }}>
       <section style={{ background: 'var(--black)', padding: '148px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
         <div className="container">
           <div style={{ maxWidth: 680 }}>

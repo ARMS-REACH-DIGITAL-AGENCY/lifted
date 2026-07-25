@@ -11,7 +11,7 @@ import { TM } from '../components/TM.jsx'
 
 export default function Story() {
   return (
-    <div style={{ background: 'var(--black)', minHeight: '100vh' }}>
+    <div style={{ background: 'var(--warm-cream)', minHeight: '100vh' }}>
 
      {/* ── Hero ── */}
       <section style={{

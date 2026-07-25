@@ -44,7 +44,7 @@ export default function Collections() {
   const col = collections.find(c => c.id === active)
 
   return (
-    <div ref={ref} style={{ background: 'var(--black)' }}>
+    <div ref={ref} style={{ background: 'var(--warm-cream)' }}>
       <section style={{ background: 'var(--black)', padding: '148px 0 64px', borderBottom: '3px solid var(--burnt-orange)', position: 'relative', overflow: 'hidden' }}>
         {/* Hero background images — cross-dissolve on tab click */}
         {Object.entries(heroImages).map(([key, { src, pos }]) => (
