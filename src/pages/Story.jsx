@@ -13,37 +13,64 @@ export default function Story() {
   return (
     <div style={{ background: 'var(--warm-cream)', minHeight: '100vh', paddingTop: 72 }}>
 
-      {/* ── Hero ── */}
-      <div style={{
+     {/* ── Hero ── */}
+      <section style={{
         background: 'var(--black)',
         borderBottom: '3px solid var(--burnt-orange)',
-        padding: '72px 0 56px',
+        padding: '80px 0 64px',
+        position: 'relative',
+        overflow: 'hidden',
       }}>
-        <div style={{ maxWidth: 760, margin: '0 auto', padding: '0 24px' }}>
-          <div style={{
-            fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700,
-            letterSpacing: '0.22em', textTransform: 'none',
-            color: 'var(--burnt-orange)', marginBottom: 16,
-          }}>OUR STORY</div>
-          <h1 style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(32px, 6vw, 64px)',
-            color: 'var(--off-white)',
-            lineHeight: 1.0,
-            letterSpacing: '-0.02em',
-            textTransform: 'none',
-            marginBottom: 24,
-          }}>
-            An Id<BrandE before="" after="a 15 Years" ariaLabel="An Idea 15 Years" /><br />in the Making.
-          </h1>
-          <p style={{
-            fontFamily: 'var(--font-body)', fontSize: 17,
-            color: 'rgba(247,244,236,0.65)', lineHeight: 1.75, maxWidth: 580,
-          }}>
-            Liftêd™ did not begin in a boardroom or branding session.
-          </p>
+        {/* Screened Chaz photo — right side, shirt logo prominent */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          width: '52%',
+          height: '100%',
+          backgroundImage: 'url(/brand/story/origin-team-edition-shirt.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 55%',
+          opacity: 0.38,
+          pointerEvents: 'none',
+        }} />
+        {/* Gradient: solid black on left protecting text, fades right */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          background: 'linear-gradient(105deg, var(--black) 0%, var(--black) 42%, rgba(23,24,22,0.72) 62%, rgba(23,24,22,0.0) 100%)',
+          pointerEvents: 'none',
+        }} />
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div style={{ maxWidth: 680 }}>
+            <div style={{
+              fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700,
+              letterSpacing: '0.22em', textTransform: 'uppercase',
+              color: 'var(--burnt-orange)', marginBottom: 16,
+            }}>OUR STORY</div>
+            <h1 style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(42px, 6vw, 72px)',
+              color: 'var(--off-white)',
+              lineHeight: 1.05,
+              letterSpacing: '-0.02em',
+              textTransform: 'none',
+              marginBottom: 24,
+            }}>
+              An Id<BrandE before="" after="a 15 Years" ariaLabel="An Idea 15 Years" /><br />in the Making.
+            </h1>
+            <p style={{
+              fontFamily: 'var(--font-body)', fontSize: 17,
+              color: 'rgba(247,244,236,0.7)', lineHeight: 1.75, maxWidth: 560,
+            }}>
+              Liftêd™ did not begin in a boardroom or branding session.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* ── Origin Story + Photo ── */}
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '72px 24px 0' }}>

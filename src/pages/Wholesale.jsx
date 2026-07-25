@@ -54,18 +54,20 @@ export default function Wholesale() {
 
   return (
     <div style={{ background: 'var(--warm-cream)', minHeight: '100vh', paddingTop: 80 }}>
-      {/* Hero */}
-      <div style={{ background: 'var(--black)', padding: '64px 0 48px', borderBottom: '3px solid var(--burnt-orange)' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 20px' }}>
-          <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 14 }}>Wholesale</div>
-          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 5vw, 52px)', color: 'var(--off-white)', lineHeight: 1.0, letterSpacing: '-0.02em', textTransform: 'none', marginBottom: 20 }}>
-            Carry Liftêd™<br />in Your Store
-          </h1>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, color: 'rgba(247,244,236,0.7)', lineHeight: 1.7, maxWidth: 560 }}>
-            Liftêd™ is accepting wholesale applications from retailers who want to carry encouragement-driven apparel. Complete the form below to start the conversation.
-          </p>
+     {/* Hero */}
+      <section style={{ background: 'var(--black)', padding: '80px 0 64px', borderBottom: '3px solid var(--burnt-orange)' }}>
+        <div className="container">
+          <div style={{ maxWidth: 680 }}>
+            <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--burnt-orange)', marginBottom: 16 }}>WHOLESALE</div>
+            <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(42px, 6vw, 72px)', color: 'var(--off-white)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'none', marginBottom: 24 }}>
+              Carry Lift<span style={{ color: 'var(--sand)', textTransform: 'none' }}>ê</span>d<TM /><br />in Your Store
+            </h1>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, color: 'rgba(247,244,236,0.7)', lineHeight: 1.75, maxWidth: 560 }}>
+              Liftêd™ is accepting wholesale applications from retailers who want to carry encouragement-driven apparel. Complete the form below to start the conversation.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Form */}
       <div style={{ maxWidth: 800, margin: '0 auto', padding: '48px 20px 80px' }}>
